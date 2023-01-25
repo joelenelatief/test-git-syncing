@@ -1,0 +1,535 @@
+version: 43.0.9
+pageUuid: 4877588e-1ff5-11ed-ad6e-43adb26a4041
+appTemplate:
+  plugins:
+    ordered:
+      - form1:
+          pluginTemplate:
+            id: form1
+            type: widget
+            subtype: FormWidget2
+            template:
+              ordered:
+                - disableSubmit: false
+                - heightType: auto
+                - resetAfterSubmit: true
+                - submitting: false
+                - hidden: false
+                - data:
+                    object: {}
+                - showHeader: true
+                - hoistFetching: true
+                - initialData: null
+                - showInEditor: false
+                - tooltipText: ''
+                - invalid: false
+                - showFooter: true
+                - events:
+                    - ordered:
+                        - event: submit
+                        - type: datasource
+                        - method: trigger
+                        - pluginId: query1
+                        - targetId: null
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '3000'
+                - loading: false
+                - overflowType: scroll
+                - disabled: false
+                - requireValidation: true
+                - maintainSpaceWhenHidden: false
+                - showBody: true
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1.8
+                height: 0.2
+                width: 10
+            createdAt: 2022-08-19T19:29:57.700Z
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: false
+            style:
+              ordered: []
+            createdAt: 2022-08-19T19:29:57.728Z
+      - formTitle1:
+          pluginTemplate:
+            id: formTitle1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '#### Form title'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: form1
+                rowGroup: header
+                height: 0.6
+                width: 12
+            createdAt: 2022-08-19T19:29:57.773Z
+      - formButton1:
+          pluginTemplate:
+            id: formButton1
+            type: widget
+            subtype: ButtonWidget2
+            template:
+              ordered:
+                - horizontalAlign: stretch
+                - clickable: false
+                - iconAfter: ''
+                - submitTargetId: form1
+                - hidden: false
+                - text: Submit
+                - showInEditor: false
+                - tooltipText: ''
+                - submit: true
+                - iconBefore: ''
+                - events:
+                    ordered: []
+                - loading: false
+                - loaderPosition: auto
+                - disabled: false
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: form1
+                rowGroup: footer
+                col: 8
+                height: 1
+                width: 4
+            createdAt: 2022-08-19T19:29:57.807Z
+      - textInput1:
+          pluginTemplate:
+            id: textInput1
+            type: widget
+            subtype: TextInputWidget2
+            template:
+              ordered:
+                - spellCheck: false
+                - readOnly: false
+                - iconAfter: ''
+                - showCharacterCount: false
+                - autoComplete: false
+                - maxLength: null
+                - hidden: false
+                - customValidation: ''
+                - patternType: ''
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: false
+                - pattern: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: ''
+                - labelCaption: ''
+                - labelWidth: '33'
+                - autoFill: ''
+                - placeholder: Enter value
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - iconBefore: ''
+                - minLength: null
+                - inputTooltip: ''
+                - events:
+                    ordered: []
+                - autoCapitalize: none
+                - loading: false
+                - disabled: false
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: form1
+                height: 1
+                width: 9
+            createdAt: 2022-08-19T19:30:01.508Z
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: JavascriptQuery
+            resourceName: JavascriptQuery
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - showFailureToaster: true
+                - query: |-
+                    await new Promise(resolve => setTimeout(resolve,2000))
+                    utils.showNotification({title: "submitted"})
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - error: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - metadata: null
+                - changesetObject: ''
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-08-19T19:30:19.762Z
+      - submitButton:
+          pluginTemplate:
+            id: submitButton
+            type: widget
+            subtype: ButtonWidget2
+            template:
+              ordered:
+                - horizontalAlign: stretch
+                - clickable: false
+                - iconAfter: ''
+                - submitTargetId: null
+                - hidden: false
+                - text: Button
+                - showInEditor: false
+                - tooltipText: ''
+                - styleVariant: solid
+                - submit: false
+                - iconBefore: ''
+                - events:
+                    - ordered:
+                        - event: click
+                        - type: widget
+                        - method: submit
+                        - pluginId: form1
+                        - targetId: null
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: ''
+                    - ordered:
+                        - event: click
+                        - type: widget
+                        - method: submit
+                        - pluginId: form2
+                        - targetId: null
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '0'
+                - loading: false
+                - loaderPosition: auto
+                - disabled: false
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 6.661338147750939e-16
+                height: 1
+                width: 3
+            createdAt: 2022-08-19T20:25:23.719Z
+      - $header:
+          pluginTemplate:
+            id: $header
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: header
+                - sticky: true
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: false
+            style:
+              ordered: []
+            createdAt: 2022-08-19T23:33:35.101Z
+      - form2:
+          pluginTemplate:
+            id: form2
+            type: widget
+            subtype: FormWidget2
+            template:
+              ordered:
+                - disableSubmit: false
+                - heightType: auto
+                - resetAfterSubmit: true
+                - submitting: false
+                - hidden: false
+                - data:
+                    object: {}
+                - showHeader: true
+                - hoistFetching: true
+                - initialData: null
+                - showInEditor: false
+                - tooltipText: ''
+                - invalid: false
+                - showFooter: true
+                - events:
+                    - ordered:
+                        - event: submit
+                        - type: datasource
+                        - method: trigger
+                        - pluginId: query1
+                        - targetId: null
+                        - params:
+                            ordered: []
+                        - waitType: throttle
+                        - waitMs: '3000'
+                - loading: false
+                - overflowType: scroll
+                - disabled: false
+                - requireValidation: true
+                - maintainSpaceWhenHidden: false
+                - showBody: true
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 2
+                height: 4
+                width: 10
+            createdAt: 2022-08-22T17:33:34.975Z
+      - formTitle2:
+          pluginTemplate:
+            id: formTitle2
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '#### Form title'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: form2
+                rowGroup: header
+                height: 0.8
+                width: 12
+            createdAt: 2022-08-22T17:33:35.131Z
+      - formButton2:
+          pluginTemplate:
+            id: formButton2
+            type: widget
+            subtype: ButtonWidget2
+            template:
+              ordered:
+                - horizontalAlign: stretch
+                - clickable: false
+                - iconAfter: ''
+                - submitTargetId: form2
+                - hidden: false
+                - text: Submit
+                - showInEditor: false
+                - tooltipText: ''
+                - submit: true
+                - iconBefore: ''
+                - events:
+                    ordered: []
+                - loading: false
+                - loaderPosition: auto
+                - disabled: false
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: form2
+                rowGroup: footer
+                col: 8
+                height: 1
+                width: 4
+            createdAt: 2022-08-22T17:33:35.201Z
+      - textInput2:
+          pluginTemplate:
+            id: textInput2
+            type: widget
+            subtype: TextInputWidget2
+            template:
+              ordered:
+                - spellCheck: false
+                - readOnly: false
+                - iconAfter: ''
+                - showCharacterCount: false
+                - autoComplete: false
+                - maxLength: null
+                - hidden: false
+                - customValidation: ''
+                - patternType: ''
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: false
+                - pattern: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: ''
+                - labelCaption: ''
+                - labelWidth: '33'
+                - autoFill: ''
+                - placeholder: Enter value
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - iconBefore: ''
+                - minLength: null
+                - inputTooltip: ''
+                - events:
+                    ordered: []
+                - autoCapitalize: none
+                - loading: false
+                - disabled: false
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: form2
+                height: 1
+                width: 9
+            createdAt: 2022-08-22T17:33:35.278Z
+      - form1Submitting:
+          pluginTemplate:
+            id: form1Submitting
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '{{form1.submitting}}'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                col: 8
+                height: 0.6
+                width: 3
+            createdAt: 2022-08-22T17:34:16.544Z
+      - form2Submitting:
+          pluginTemplate:
+            id: form2Submitting
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '{{form2.submitting}}'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 0.6
+                col: 8
+                height: 0.6
+                width: 3
+            createdAt: 2022-08-22T17:34:41.657Z
+  rootScreen: null
+  version: 2.98.1
+  markdownLinkBehavior: auto
