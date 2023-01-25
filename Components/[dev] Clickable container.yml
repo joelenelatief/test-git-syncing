@@ -1,0 +1,439 @@
+version: 43.0.9
+pageUuid: 0c78cc6a-4985-11ec-be28-4f5f91780bb2
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: SqlQuery
+            resourceName: '[dev] bigquery'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - metadata: null
+                - triggersOnFailure: null
+                - changesetObject: ''
+                - shouldUseLegacySql: false
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10001'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2021-11-19T22:07:13.306Z
+      - outerContainer:
+          pluginTemplate:
+            id: outerContainer
+            type: widget
+            subtype: ContainerWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - clickable: false
+                - hidden: false
+                - showHeader: false
+                - hoistFetching: true
+                - showInEditor: false
+                - tooltipText: ''
+                - showFooter: false
+                - events:
+                    - ordered:
+                        - event: click
+                        - type: widget
+                        - method: setValue
+                        - pluginId: containerClickCount
+                        - params:
+                            ordered:
+                              - value: '{{ containerClickCount.value + 1 }}'
+                        - waitType: debounce
+                        - waitMs: '0'
+                - loading: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 0.2
+                col: 3
+                height: 6
+                width: 6
+            createdAt: 2021-11-19T22:07:17.632Z
+      - containerClickCount:
+          pluginTemplate:
+            id: containerClickCount
+            type: widget
+            subtype: NumberInputWidget
+            template:
+              ordered:
+                - readOnly: false
+                - iconAfter: ''
+                - max: null
+                - hidden: false
+                - customValidation: ''
+                - showSeparators: true
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - showInEditor: false
+                - allowNull: false
+                - showClear: false
+                - tooltipText: ''
+                - currency: USD
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: 0
+                - min: null
+                - labelWidth: '33'
+                - placeholder: Enter value
+                - showStepper: true
+                - label: Click count
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - format: decimal
+                - iconBefore: ''
+                - textAlign: left
+                - inputTooltip: ''
+                - events:
+                    ordered: []
+                - disabled: false
+                - labelPosition: left
+                - decimalPlaces: null
+                - labelWrap: false
+                - padDecimal: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 0.4
+                col: 9
+                height: 1
+                width: 3
+            createdAt: 2021-11-19T22:09:50.135Z
+      - clickableButton:
+          pluginTemplate:
+            id: clickableButton
+            type: widget
+            subtype: ButtonWidget2
+            template:
+              ordered:
+                - clickable: false
+                - iconAfter: ''
+                - submitTargetId: null
+                - hidden: false
+                - text: Clickable
+                - showInEditor: false
+                - tooltipText: ''
+                - styleVariant: solid
+                - submit: false
+                - iconBefore: ''
+                - events:
+                    - ordered:
+                        - event: click
+                        - type: widget
+                        - method: setValue
+                        - pluginId: otherClickCount
+                        - params:
+                            ordered:
+                              - value: '{{ otherClickCount.value + 1 }}'
+                        - waitType: debounce
+                        - waitMs: '0'
+                - loading: false
+                - disabled: false
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: outerContainer
+                height: 1
+                width: 3
+            createdAt: 2021-11-19T22:10:34.330Z
+      - notClickableButton:
+          pluginTemplate:
+            id: notClickableButton
+            type: widget
+            subtype: ButtonWidget2
+            template:
+              ordered:
+                - clickable: false
+                - iconAfter: ''
+                - submitTargetId: null
+                - hidden: false
+                - text: Not Clickable
+                - showInEditor: false
+                - tooltipText: ''
+                - styleVariant: solid
+                - submit: false
+                - iconBefore: ''
+                - events:
+                    ordered: []
+                - loading: false
+                - disabled: false
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: outerContainer
+                col: 3
+                height: 1
+                width: 3
+            createdAt: 2021-11-19T22:10:37.715Z
+      - text1:
+          pluginTemplate:
+            id: text1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: 👋 **Hello {{ current_user.firstName || 'friend' }}!**
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: outerContainer
+                col: 6
+                height: 0.6
+                width: 3
+            createdAt: 2021-11-19T22:10:54.623Z
+      - innerContainer:
+          pluginTemplate:
+            id: innerContainer
+            type: widget
+            subtype: ContainerWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - clickable: false
+                - hidden: false
+                - showHeader: false
+                - hoistFetching: true
+                - showInEditor: false
+                - tooltipText: ''
+                - showFooter: false
+                - events:
+                    ordered: []
+                - loading: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: outerContainer
+                row: 1
+                height: 6
+                width: 7
+            createdAt: 2021-11-19T22:11:08.713Z
+      - containerTitle1:
+          pluginTemplate:
+            id: containerTitle1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '#### Container title'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: innerContainer
+                rowGroup: header
+                height: 0.6
+                width: 12
+            createdAt: 2021-11-19T22:11:08.945Z
+      - otherClickCount:
+          pluginTemplate:
+            id: otherClickCount
+            type: widget
+            subtype: NumberInputWidget
+            template:
+              ordered:
+                - readOnly: false
+                - iconAfter: ''
+                - max: null
+                - hidden: false
+                - customValidation: ''
+                - showSeparators: true
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - showInEditor: false
+                - allowNull: false
+                - showClear: false
+                - tooltipText: ''
+                - currency: USD
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: 0
+                - min: null
+                - labelWidth: '33'
+                - placeholder: Enter value
+                - showStepper: true
+                - label: Other click count
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - format: decimal
+                - iconBefore: ''
+                - textAlign: left
+                - inputTooltip: ''
+                - events:
+                    ordered: []
+                - disabled: false
+                - labelPosition: left
+                - decimalPlaces: null
+                - labelWrap: false
+                - padDecimal: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1.4
+                col: 9
+                height: 1
+                width: 3
+            createdAt: 2021-11-19T22:11:29.697Z
+      - textInput1:
+          pluginTemplate:
+            id: textInput1
+            type: widget
+            subtype: TextInputWidget2
+            template:
+              ordered:
+                - spellCheck: false
+                - readOnly: false
+                - iconAfter: ''
+                - showCharacterCount: false
+                - autoComplete: false
+                - maxLength: null
+                - hidden: false
+                - customValidation: ''
+                - patternType: ''
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: false
+                - pattern: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: ''
+                - labelWidth: '33'
+                - autoFill: ''
+                - placeholder: Enter value
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - iconBefore: ''
+                - minLength: null
+                - inputTooltip: ''
+                - events:
+                    ordered: []
+                - autoCapitalize: none
+                - disabled: false
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: outerContainer
+                row: 1
+                col: 7
+                height: 1
+                width: 5
+            createdAt: 2021-11-19T22:15:24.987Z
+  rootScreen: null
+  version: 2.81.6
