@@ -1,0 +1,256 @@
+version: 43.0.9
+pageUuid: e713c290-5a3b-11ed-bd54-bf255c3cda89
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: SqlQuery
+            resourceName: main
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - error: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - databaseHostOverride: ''
+                - metadata: null
+                - changesetObject: ''
+                - shouldUseLegacySql: false
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10001'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-11-01T23:21:24.463Z
+      - listView1:
+          pluginTemplate:
+            id: listView1
+            type: widget
+            subtype: ListViewWidget
+            template:
+              ordered:
+                - heightType: auto
+                - showBorder: true
+                - data: ''
+                - showDropShadow: true
+                - formDataKey: '{{ self.id }}'
+                - dynamicHeightsEnabled: true
+                - itemHeight: '3'
+                - overflowType: scroll
+                - instances: '2'
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 0.3999999999999999
+                col: 3
+                height: 5
+                width: 6
+            createdAt: 2022-11-01T23:21:29.440Z
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: false
+            style:
+              ordered: []
+            createdAt: 2022-11-01T23:21:29.470Z
+      - text1:
+          pluginTemplate:
+            id: text1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: 👋 **Hello {{ current_user.firstName || 'friend' }}!**
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: listView1
+                row: 5.199999999999999
+                height: 0.6
+                width: 7
+            createdAt: 2022-11-01T23:21:37.631Z
+      - listView2:
+          pluginTemplate:
+            id: listView2
+            type: widget
+            subtype: ListViewWidget
+            template:
+              ordered:
+                - heightType: auto
+                - showBorder: true
+                - data: ''
+                - showDropShadow: true
+                - formDataKey: '{{ self.id }}'
+                - dynamicHeightsEnabled: true
+                - itemHeight: '3'
+                - overflowType: scroll
+                - instances: '3'
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: listView1
+                row: 0.2
+                height: 5
+                width: 12
+            createdAt: 2022-11-01T23:21:55.940Z
+      - text2:
+          pluginTemplate:
+            id: text2
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: 👋 **Hello {{ current_user.firstName || 'friend' }}!**
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: listView2
+                row: 5
+                height: 0.6
+                width: 7
+            createdAt: 2022-11-01T23:22:09.617Z
+      - listView3:
+          pluginTemplate:
+            id: listView3
+            type: widget
+            subtype: ListViewWidget
+            template:
+              ordered:
+                - heightType: auto
+                - showBorder: true
+                - data: ''
+                - showDropShadow: true
+                - formDataKey: '{{ self.id }}'
+                - dynamicHeightsEnabled: true
+                - itemHeight: '3'
+                - overflowType: scroll
+                - instances: '1'
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: listView2
+                height: 5
+                width: 11
+            createdAt: 2022-11-01T23:22:23.330Z
+      - text3:
+          pluginTemplate:
+            id: text3
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: 👋 **Hello {{ current_user.firstName || 'friend' }}!**
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: listView3
+                height: 0.6
+                width: 9
+            createdAt: 2022-11-01T23:22:27.423Z
+  queryStatusVisibility: false
+  rootScreen: null
+  version: 2.103.0
+  markdownLinkBehavior: auto
+  experimentalDataTabEnabled: true
