@@ -1,0 +1,1134 @@
+version: 43.0.9
+pageUuid: 322bacba-3eb8-11ed-b1c5-af7c2a0d2670
+appTemplate:
+  plugins:
+    ordered:
+      - container1:
+          pluginTemplate:
+            id: container1
+            type: widget
+            subtype: ContainerWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                - heightType: auto
+                - currentViewKey: null
+                - iconByIndex:
+                    array: []
+                - clickable: false
+                - _iconByIndex:
+                    - ''
+                - hidden: false
+                - showHeader: true
+                - hoistFetching: true
+                - views:
+                    array: []
+                - showInEditor: false
+                - tooltipText: ''
+                - style:
+                    ordered:
+                      - background: rgba(255, 255, 255, 1)
+                      - border: ''
+                      - borderRadius: ''
+                      - headerBackground: ''
+                      - footerBackground: ''
+                - hiddenByIndex:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                - currentViewIndex: null
+                - _hasMigratedNestedItems: true
+                - transition: none
+                - itemMode: static
+                - _tooltipByIndex:
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - showFooter: false
+                - _viewKeys:
+                    - View 1
+                - events:
+                    ordered: []
+                - _ids:
+                    - 09eb7
+                - viewKeys:
+                    array: []
+                - iconPositionByIndex:
+                    array: []
+                - _iconPositionByIndex:
+                    - ''
+                - loading: false
+                - overflowType: scroll
+                - disabled: false
+                - _labels:
+                    - ''
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - showBody: true
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                height: 0.2
+                width: 12
+            createdAt: 2022-09-27T23:00:45.948Z
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: false
+                - style:
+                    ordered:
+                      - canvas: rgba(255, 255, 255, 1)
+            style:
+              ordered: []
+            createdAt: 2022-09-27T23:00:45.996Z
+      - checkbox1:
+          pluginTemplate:
+            id: checkbox1
+            type: widget
+            subtype: CheckboxWidget2
+            template:
+              ordered:
+                - hidden: false
+                - customValidation: ''
+                - hideValidationMessage: false
+                - validationMessage: ''
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: false
+                - labelCaption: ''
+                - label: Label
+                - _validate: false
+                - invalid: false
+                - events:
+                    ordered: []
+                - disabled: false
+                - labelPosition: right
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container1
+                rowGroup: header
+                height: 0.6
+                width: 12
+            createdAt: 2022-09-27T23:00:52.847Z
+      - container2:
+          pluginTemplate:
+            id: container2
+            type: widget
+            subtype: ContainerWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                - heightType: auto
+                - currentViewKey: null
+                - iconByIndex:
+                    array: []
+                - clickable: false
+                - _iconByIndex:
+                    - ''
+                - hidden: false
+                - showHeader: true
+                - hoistFetching: true
+                - views:
+                    array: []
+                - showInEditor: false
+                - tooltipText: ''
+                - style:
+                    ordered:
+                      - background: rgba(0, 0, 0, 0.05)
+                      - border: ''
+                      - borderRadius: ''
+                      - headerBackground: ''
+                      - footerBackground: ''
+                - hiddenByIndex:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                - currentViewIndex: null
+                - _hasMigratedNestedItems: true
+                - transition: none
+                - itemMode: static
+                - _tooltipByIndex:
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - showFooter: false
+                - _viewKeys:
+                    - View 1
+                - events:
+                    ordered: []
+                - _ids:
+                    - 09eb7
+                - viewKeys:
+                    array: []
+                - iconPositionByIndex:
+                    array: []
+                - _iconPositionByIndex:
+                    - ''
+                - loading: false
+                - overflowType: scroll
+                - disabled: false
+                - _labels:
+                    - ''
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - showBody: true
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container1
+                subcontainer: 09eb7
+                height: 0.2
+                width: 12
+            createdAt: 2022-09-27T23:02:49.977Z
+      - checkbox2:
+          pluginTemplate:
+            id: checkbox2
+            type: widget
+            subtype: CheckboxWidget2
+            template:
+              ordered:
+                - hidden: false
+                - customValidation: ''
+                - hideValidationMessage: false
+                - validationMessage: ''
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: false
+                - labelCaption: ''
+                - label: Label
+                - _validate: false
+                - invalid: false
+                - events:
+                    ordered: []
+                - disabled: false
+                - labelPosition: right
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container2
+                rowGroup: header
+                height: 0.6
+                width: 12
+            createdAt: 2022-09-27T23:02:50.145Z
+      - container3:
+          pluginTemplate:
+            id: container3
+            type: widget
+            subtype: ContainerWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                - heightType: auto
+                - currentViewKey: null
+                - iconByIndex:
+                    array: []
+                - clickable: false
+                - _iconByIndex:
+                    - ''
+                - hidden: false
+                - showHeader: true
+                - hoistFetching: true
+                - views:
+                    array: []
+                - showInEditor: false
+                - tooltipText: ''
+                - style:
+                    ordered:
+                      - background: rgba(0, 0, 0, 0.05)
+                      - border: ''
+                      - borderRadius: ''
+                      - headerBackground: ''
+                      - footerBackground: ''
+                - hiddenByIndex:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                - currentViewIndex: null
+                - _hasMigratedNestedItems: true
+                - transition: none
+                - itemMode: static
+                - _tooltipByIndex:
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - showFooter: false
+                - _viewKeys:
+                    - View 1
+                - events:
+                    ordered: []
+                - _ids:
+                    - 09eb7
+                - viewKeys:
+                    array: []
+                - iconPositionByIndex:
+                    array: []
+                - _iconPositionByIndex:
+                    - ''
+                - loading: false
+                - overflowType: scroll
+                - disabled: false
+                - _labels:
+                    - ''
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - showBody: true
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container2
+                subcontainer: 09eb7
+                height: 0.2
+                width: 12
+            createdAt: 2022-09-27T23:03:03.114Z
+      - checkbox3:
+          pluginTemplate:
+            id: checkbox3
+            type: widget
+            subtype: CheckboxWidget2
+            template:
+              ordered:
+                - hidden: false
+                - customValidation: ''
+                - hideValidationMessage: false
+                - validationMessage: ''
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: false
+                - labelCaption: ''
+                - label: Label
+                - _validate: false
+                - invalid: false
+                - events:
+                    ordered: []
+                - disabled: false
+                - labelPosition: right
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container3
+                rowGroup: header
+                height: 0.6
+                width: 12
+            createdAt: 2022-09-27T23:03:03.359Z
+      - container4:
+          pluginTemplate:
+            id: container4
+            type: widget
+            subtype: ContainerWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                - heightType: auto
+                - currentViewKey: null
+                - iconByIndex:
+                    array: []
+                - clickable: false
+                - _iconByIndex:
+                    - ''
+                - hidden: false
+                - showHeader: true
+                - hoistFetching: true
+                - views:
+                    array: []
+                - showInEditor: false
+                - tooltipText: ''
+                - style:
+                    ordered:
+                      - background: rgba(0, 0, 0, 0.05)
+                      - border: ''
+                      - borderRadius: ''
+                      - headerBackground: ''
+                      - footerBackground: ''
+                - hiddenByIndex:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                - currentViewIndex: null
+                - _hasMigratedNestedItems: true
+                - transition: none
+                - itemMode: static
+                - _tooltipByIndex:
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - showFooter: false
+                - _viewKeys:
+                    - View 1
+                - events:
+                    ordered: []
+                - _ids:
+                    - 09eb7
+                - viewKeys:
+                    array: []
+                - iconPositionByIndex:
+                    array: []
+                - _iconPositionByIndex:
+                    - ''
+                - loading: false
+                - overflowType: scroll
+                - disabled: false
+                - _labels:
+                    - ''
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - showBody: true
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container3
+                subcontainer: 09eb7
+                height: 0.2
+                width: 12
+            createdAt: 2022-09-27T23:03:05.910Z
+      - checkbox4:
+          pluginTemplate:
+            id: checkbox4
+            type: widget
+            subtype: CheckboxWidget2
+            template:
+              ordered:
+                - hidden: false
+                - customValidation: ''
+                - hideValidationMessage: false
+                - validationMessage: ''
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: false
+                - labelCaption: ''
+                - label: Label
+                - _validate: false
+                - invalid: false
+                - events:
+                    ordered: []
+                - disabled: false
+                - labelPosition: right
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container4
+                rowGroup: header
+                height: 0.6
+                width: 12
+            createdAt: 2022-09-27T23:03:06.107Z
+      - container5:
+          pluginTemplate:
+            id: container5
+            type: widget
+            subtype: ContainerWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                - heightType: auto
+                - currentViewKey: null
+                - iconByIndex:
+                    array: []
+                - clickable: false
+                - _iconByIndex:
+                    - ''
+                - hidden: false
+                - showHeader: true
+                - hoistFetching: true
+                - views:
+                    array: []
+                - showInEditor: false
+                - tooltipText: ''
+                - style:
+                    ordered:
+                      - background: rgba(0, 0, 0, 0.05)
+                      - border: ''
+                      - borderRadius: ''
+                      - headerBackground: ''
+                      - footerBackground: ''
+                - hiddenByIndex:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                - currentViewIndex: null
+                - _hasMigratedNestedItems: true
+                - transition: none
+                - itemMode: static
+                - _tooltipByIndex:
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - showFooter: false
+                - _viewKeys:
+                    - View 1
+                - events:
+                    ordered: []
+                - _ids:
+                    - 09eb7
+                - viewKeys:
+                    array: []
+                - iconPositionByIndex:
+                    array: []
+                - _iconPositionByIndex:
+                    - ''
+                - loading: false
+                - overflowType: scroll
+                - disabled: false
+                - _labels:
+                    - ''
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - showBody: true
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container4
+                subcontainer: 09eb7
+                height: 0.2
+                width: 12
+            createdAt: 2022-09-27T23:03:07.043Z
+      - checkbox5:
+          pluginTemplate:
+            id: checkbox5
+            type: widget
+            subtype: CheckboxWidget2
+            template:
+              ordered:
+                - hidden: false
+                - customValidation: ''
+                - hideValidationMessage: false
+                - validationMessage: ''
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: false
+                - labelCaption: ''
+                - label: Label
+                - _validate: false
+                - invalid: false
+                - events:
+                    ordered: []
+                - disabled: false
+                - labelPosition: right
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container5
+                rowGroup: header
+                height: 0.6
+                width: 12
+            createdAt: 2022-09-27T23:03:07.271Z
+      - container6:
+          pluginTemplate:
+            id: container6
+            type: widget
+            subtype: ContainerWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                - heightType: auto
+                - currentViewKey: null
+                - iconByIndex:
+                    array: []
+                - clickable: false
+                - _iconByIndex:
+                    - ''
+                - hidden: false
+                - showHeader: true
+                - hoistFetching: true
+                - views:
+                    array: []
+                - showInEditor: false
+                - tooltipText: ''
+                - style:
+                    ordered:
+                      - background: rgba(0, 0, 0, 0.05)
+                      - border: ''
+                      - borderRadius: ''
+                      - headerBackground: ''
+                      - footerBackground: ''
+                - hiddenByIndex:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                - currentViewIndex: null
+                - _hasMigratedNestedItems: true
+                - transition: none
+                - itemMode: static
+                - _tooltipByIndex:
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - showFooter: false
+                - _viewKeys:
+                    - View 1
+                - events:
+                    ordered: []
+                - _ids:
+                    - 09eb7
+                - viewKeys:
+                    array: []
+                - iconPositionByIndex:
+                    array: []
+                - _iconPositionByIndex:
+                    - ''
+                - loading: false
+                - overflowType: scroll
+                - disabled: false
+                - _labels:
+                    - ''
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - showBody: true
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container5
+                subcontainer: 09eb7
+                height: 0.2
+                width: 12
+            createdAt: 2022-09-27T23:03:08.175Z
+      - checkbox6:
+          pluginTemplate:
+            id: checkbox6
+            type: widget
+            subtype: CheckboxWidget2
+            template:
+              ordered:
+                - hidden: false
+                - customValidation: ''
+                - hideValidationMessage: false
+                - validationMessage: ''
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: false
+                - labelCaption: ''
+                - label: Label
+                - _validate: false
+                - invalid: false
+                - events:
+                    ordered: []
+                - disabled: false
+                - labelPosition: right
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container6
+                rowGroup: header
+                height: 0.6
+                width: 12
+            createdAt: 2022-09-27T23:03:08.418Z
+      - container7:
+          pluginTemplate:
+            id: container7
+            type: widget
+            subtype: ContainerWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                - heightType: auto
+                - currentViewKey: null
+                - iconByIndex:
+                    array: []
+                - clickable: false
+                - _iconByIndex:
+                    - ''
+                - hidden: false
+                - showHeader: true
+                - hoistFetching: true
+                - views:
+                    array: []
+                - showInEditor: false
+                - tooltipText: ''
+                - style:
+                    ordered:
+                      - background: rgba(0, 0, 0, 0.05)
+                      - border: ''
+                      - borderRadius: ''
+                      - headerBackground: ''
+                      - footerBackground: ''
+                - hiddenByIndex:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                - currentViewIndex: null
+                - _hasMigratedNestedItems: true
+                - transition: none
+                - itemMode: static
+                - _tooltipByIndex:
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - showFooter: false
+                - _viewKeys:
+                    - View 1
+                - events:
+                    ordered: []
+                - _ids:
+                    - 09eb7
+                - viewKeys:
+                    array: []
+                - iconPositionByIndex:
+                    array: []
+                - _iconPositionByIndex:
+                    - ''
+                - loading: false
+                - overflowType: scroll
+                - disabled: false
+                - _labels:
+                    - ''
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - showBody: true
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container6
+                subcontainer: 09eb7
+                height: 0.2
+                width: 12
+            createdAt: 2022-09-27T23:03:09.221Z
+      - checkbox7:
+          pluginTemplate:
+            id: checkbox7
+            type: widget
+            subtype: CheckboxWidget2
+            template:
+              ordered:
+                - hidden: false
+                - customValidation: ''
+                - hideValidationMessage: false
+                - validationMessage: ''
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: false
+                - labelCaption: ''
+                - label: Label
+                - _validate: false
+                - invalid: false
+                - events:
+                    ordered: []
+                - disabled: false
+                - labelPosition: right
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container7
+                rowGroup: header
+                height: 0.6
+                width: 12
+            createdAt: 2022-09-27T23:03:09.486Z
+      - container8:
+          pluginTemplate:
+            id: container8
+            type: widget
+            subtype: ContainerWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                - heightType: auto
+                - currentViewKey: null
+                - iconByIndex:
+                    array: []
+                - clickable: false
+                - _iconByIndex:
+                    - ''
+                - hidden: false
+                - showHeader: true
+                - hoistFetching: true
+                - views:
+                    array: []
+                - showInEditor: false
+                - tooltipText: ''
+                - style:
+                    ordered:
+                      - background: rgba(0, 0, 0, 0.05)
+                      - border: ''
+                      - borderRadius: ''
+                      - headerBackground: ''
+                      - footerBackground: ''
+                - hiddenByIndex:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                - currentViewIndex: null
+                - _hasMigratedNestedItems: true
+                - transition: none
+                - itemMode: static
+                - _tooltipByIndex:
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - showFooter: false
+                - _viewKeys:
+                    - View 1
+                - events:
+                    ordered: []
+                - _ids:
+                    - 09eb7
+                - viewKeys:
+                    array: []
+                - iconPositionByIndex:
+                    array: []
+                - _iconPositionByIndex:
+                    - ''
+                - loading: false
+                - overflowType: scroll
+                - disabled: false
+                - _labels:
+                    - ''
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - showBody: true
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container7
+                subcontainer: 09eb7
+                height: 0.2
+                width: 12
+            createdAt: 2022-09-27T23:03:10.389Z
+      - checkbox8:
+          pluginTemplate:
+            id: checkbox8
+            type: widget
+            subtype: CheckboxWidget2
+            template:
+              ordered:
+                - hidden: false
+                - customValidation: ''
+                - hideValidationMessage: false
+                - validationMessage: ''
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: false
+                - labelCaption: ''
+                - label: Label
+                - _validate: false
+                - invalid: false
+                - events:
+                    ordered: []
+                - disabled: false
+                - labelPosition: right
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container8
+                rowGroup: header
+                height: 0.6
+                width: 12
+            createdAt: 2022-09-27T23:03:10.684Z
+      - container9:
+          pluginTemplate:
+            id: container9
+            type: widget
+            subtype: ContainerWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                - heightType: auto
+                - currentViewKey: null
+                - iconByIndex:
+                    array: []
+                - clickable: false
+                - _iconByIndex:
+                    - ''
+                - hidden: false
+                - showHeader: true
+                - hoistFetching: true
+                - views:
+                    array: []
+                - showInEditor: false
+                - tooltipText: ''
+                - style:
+                    ordered:
+                      - background: rgba(0, 0, 0, 0.05)
+                      - border: ''
+                      - borderRadius: ''
+                      - headerBackground: ''
+                      - footerBackground: ''
+                - hiddenByIndex:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                - currentViewIndex: null
+                - _hasMigratedNestedItems: true
+                - transition: none
+                - itemMode: static
+                - _tooltipByIndex:
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - showFooter: false
+                - _viewKeys:
+                    - View 1
+                - events:
+                    ordered: []
+                - _ids:
+                    - 09eb7
+                - viewKeys:
+                    array: []
+                - iconPositionByIndex:
+                    array: []
+                - _iconPositionByIndex:
+                    - ''
+                - loading: false
+                - overflowType: scroll
+                - disabled: false
+                - _labels:
+                    - ''
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - showBody: true
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container8
+                subcontainer: 09eb7
+                height: 0.2
+                width: 12
+            createdAt: 2022-09-27T23:03:11.647Z
+      - checkbox9:
+          pluginTemplate:
+            id: checkbox9
+            type: widget
+            subtype: CheckboxWidget2
+            template:
+              ordered:
+                - hidden: false
+                - customValidation: ''
+                - hideValidationMessage: false
+                - validationMessage: ''
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: false
+                - labelCaption: ''
+                - label: Label
+                - _validate: false
+                - invalid: false
+                - events:
+                    ordered: []
+                - disabled: false
+                - labelPosition: right
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container9
+                rowGroup: header
+                height: 0.6
+                width: 12
+            createdAt: 2022-09-27T23:03:11.949Z
+      - container10:
+          pluginTemplate:
+            id: container10
+            type: widget
+            subtype: ContainerWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                - heightType: auto
+                - currentViewKey: null
+                - iconByIndex:
+                    array: []
+                - clickable: false
+                - _iconByIndex:
+                    - ''
+                - hidden: false
+                - showHeader: true
+                - hoistFetching: true
+                - views:
+                    array: []
+                - showInEditor: false
+                - tooltipText: ''
+                - style:
+                    ordered:
+                      - background: rgba(0, 0, 0, 0.05)
+                      - border: ''
+                      - borderRadius: ''
+                      - headerBackground: ''
+                      - footerBackground: ''
+                - hiddenByIndex:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                - currentViewIndex: null
+                - _hasMigratedNestedItems: true
+                - transition: none
+                - itemMode: static
+                - _tooltipByIndex:
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - showFooter: false
+                - _viewKeys:
+                    - View 1
+                - events:
+                    ordered: []
+                - _ids:
+                    - 09eb7
+                - viewKeys:
+                    array: []
+                - iconPositionByIndex:
+                    array: []
+                - _iconPositionByIndex:
+                    - ''
+                - loading: false
+                - overflowType: scroll
+                - disabled: false
+                - _labels:
+                    - ''
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - showBody: false
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container9
+                subcontainer: 09eb7
+                height: 0.2
+                width: 12
+            createdAt: 2022-09-27T23:03:13.013Z
+      - checkbox10:
+          pluginTemplate:
+            id: checkbox10
+            type: widget
+            subtype: CheckboxWidget2
+            template:
+              ordered:
+                - hidden: false
+                - customValidation: ''
+                - hideValidationMessage: false
+                - validationMessage: ''
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: false
+                - labelCaption: ''
+                - label: Label
+                - _validate: false
+                - invalid: false
+                - events:
+                    ordered: []
+                - disabled: false
+                - labelPosition: right
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container10
+                rowGroup: header
+                height: 0.6
+                width: 12
+            createdAt: 2022-09-27T23:03:13.338Z
+  queryStatusVisibility: false
+  rootScreen: null
+  version: 2.101.1
+  markdownLinkBehavior: auto
