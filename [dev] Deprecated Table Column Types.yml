@@ -1,0 +1,303 @@
+version: 43.0.9
+pageUuid: 3fcab2be-7034-11ed-b808-a33dec26d1b8
+appTemplate:
+  plugins:
+    ordered:
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: false
+            style:
+              ordered: []
+            createdAt: 2022-11-29T22:23:11.173Z
+      - transformer1:
+          pluginTemplate:
+            id: transformer1
+            type: function
+            subtype: Function
+            template:
+              ordered:
+                - funcBody: |-
+                    const data = 
+                    [{
+                      "id": 1,
+                      "float": 1.5,
+                      "dollars": 100,
+                      "cents": 50,
+                      "percent": 0.1,
+                      "boolean": false,
+                      "checkbox": false,
+                      "date": "04/08/1998",
+                      "dateTimeLocal": "04/08/1998",
+                      "dateTimeTz": "04/08/1998",
+                      "datePicker": "1998-04-08 00:03:00",
+                      "dropdown": "dropdown",
+                      "string": "String",
+                      "text": "Row",
+                      "object": {"foo": "bar"},
+                      "modal": "Modal",
+                      "radio": false,
+                      "url": "https://retool.com"
+                    },
+                    {
+                      "id": "bad",
+                      "float": "bad",
+                      "dollars": "bad",
+                      "cents": "bad",
+                      "percent": "bad",
+                      "boolean": "bad",
+                      "checkbox": "bad",
+                      "date": "bad",
+                      "dateTimeLocal": "bad",
+                      "dateTimeTz": "bad",
+                      "datePicker": false,
+                      "dropdown": 3,
+                      "string": false,
+                      "text": false,
+                      "object": false,
+                      "modal": 3,
+                      "radio": "bad",
+                      "url": 3
+                    }]
+
+                    return data
+                - value: ''
+            createdAt: 2022-11-29T22:25:24.112Z
+      - $header:
+          pluginTemplate:
+            id: $header
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: header
+                - sticky: true
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: true
+            style:
+              ordered: []
+            createdAt: 2022-11-29T22:25:29.827Z
+      - table1:
+          pluginTemplate:
+            id: table1
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - showCustomButton: false
+                - sortMappedValue:
+                    ordered: []
+                - _filteredSortedRenderedDataWithTypes: null
+                - heightType: fixed
+                - normalizedData: null
+                - rowHeight: standard
+                - saveChangesDisabled: ''
+                - columnTypeProperties:
+                    ordered: []
+                - columnWidths: []
+                - showSummaryFooter: false
+                - disableRowSelectInteraction: false
+                - columnWidthsMobile: []
+                - hasNextAfterCursor: ''
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered: []
+                - columnFrozenAlignments:
+                    ordered: []
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered:
+                      - dateTimeTz: datetime_tz
+                      - checkbox: checkbox
+                      - percent: percent
+                      - boolean: boolean
+                      - cents: usd_cents
+                      - text: textinput
+                      - modal: modal
+                      - date: date
+                      - url: link
+                      - dateTimeLocal: datetime
+                      - dropdown: dropdown
+                      - string: string
+                      - dollars: usd_dollars
+                      - id: integer
+                      - radio: radio
+                      - datePicker: datepicker
+                      - float: float
+                      - object: object
+                - columnRestrictedEditing:
+                    ordered: []
+                - showFilterButton: true
+                - _columnVisibility:
+                    ordered: []
+                - _columnSummaryTypes:
+                    ordered: []
+                - _columnsWithLegacyBackgroundColor:
+                    set: []
+                - showAddRowButton: false
+                - _unfilteredSelectedIndex: null
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered: []
+                - selectedPageIndex: '0'
+                - applyDynamicSettingsToColumnOrder: true
+                - rowColor:
+                    array: []
+                - actionButtonColumnName: Actions
+                - resetAfterSave: true
+                - filterStackType: and
+                - downloadRawData: false
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{ transformer1.value}}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: true
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - columnAlignment:
+                    ordered:
+                      - dateTimeTz: right
+                      - checkbox: left
+                      - percent: right
+                      - boolean: center
+                      - cents: right
+                      - text: left
+                      - modal: left
+                      - date: right
+                      - url: left
+                      - dateTimeLocal: right
+                      - dropdown: left
+                      - string: left
+                      - dollars: right
+                      - id: right
+                      - radio: left
+                      - datePicker: left
+                      - float: right
+                      - object: left
+                - columnSummaries:
+                    object: {}
+                - showBoxShadow: false
+                - sortedDesc: false
+                - customButtonName: ''
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - showRefreshButton: true
+                - pageSize: '20'
+                - useDynamicColumnSettings: false
+                - actionButtonPosition: left
+                - dynamicRowHeights: false
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - onCustomButtonPressQueryName: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - _columnSummaryValues:
+                    ordered: []
+                - checkboxRowSelect: true
+                - _compatibilityMode: true
+                - showColumnBorders: false
+                - clearSelectionLabel: Clear selection
+                - _renderedDataWithTypes: null
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: null
+                - defaultSortDescending: false
+                - _sortedDisplayedDataIndices: null
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    array: []
+                - newRow: null
+                - emptyMessage: No rows found
+                - columnEditable:
+                    ordered:
+                      - dateTimeTz: false
+                      - checkbox: true
+                      - percent: false
+                      - boolean: false
+                      - cents: false
+                      - text: true
+                      - modal: false
+                      - date: false
+                      - url: false
+                      - dateTimeLocal: false
+                      - dropdown: true
+                      - string: false
+                      - dollars: false
+                      - id: false
+                      - radio: true
+                      - datePicker: true
+                      - float: false
+                      - object: false
+                - _viewerColumnSummaryTypes:
+                    object: {}
+                - filters:
+                    array: []
+                - displayedDataIndices: null
+                - disableSorting:
+                    ordered: []
+                - columnMappers:
+                    ordered: []
+                - showClearSelection: false
+                - doubleClickToEdit: true
+                - overflowType: pagination
+                - _reverseSortedDisplayedDataIndices: null
+                - showTableBorder: true
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns: []
+                - defaultSelectedRow: first
+                - freezeActionButtonColumns: false
+                - sort: null
+                - _columns: []
+                - sortByRawValue:
+                    ordered: []
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - _reverseDisplayedDataIndices: null
+                - nextAfterCursor: ''
+                - useCompactMode: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 0.4
+                height: 8
+                width: 12
+            createdAt: 2022-12-08T01:51:52.211Z
+  queryStatusVisibility: false
+  experimentalPerfFeatures:
+    object:
+      batchCommitModelEnabled: false
+      skipDepCycleCheckingEnabled: false
+      serverDepGraphEnabled: false
+      useRuntimeV2: false
+  rootScreen: null
+  version: 2.106.0
+  markdownLinkBehavior: auto
