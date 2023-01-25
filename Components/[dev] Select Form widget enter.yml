@@ -1,0 +1,363 @@
+version: 43.0.9
+pageUuid: a747bdce-1373-11ed-83a0-330bb4a8b2c0
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: SqlQuery
+            resourceName: d57b73b3-57b1-4c6c-93d9-715f0ca2cd35
+            resourceDisplayName: '[dev] bigquery'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - databaseHostOverride: ''
+                - metadata: null
+                - changesetObject: ''
+                - shouldUseLegacySql: false
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10001'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-08-03T21:31:36.685Z
+      - form1:
+          pluginTemplate:
+            id: form1
+            type: widget
+            subtype: FormWidget2
+            template:
+              ordered:
+                - disableSubmit: false
+                - heightType: auto
+                - resetAfterSubmit: true
+                - submitting: false
+                - hidden: false
+                - data:
+                    object: {}
+                - showHeader: true
+                - hoistFetching: true
+                - initialData: null
+                - showInEditor: false
+                - tooltipText: ''
+                - invalid: false
+                - showFooter: true
+                - events:
+                    - ordered:
+                        - event: submit
+                        - type: widget
+                        - method: setValue
+                        - pluginId: text1
+                        - targetId: null
+                        - params:
+                            ordered:
+                              - value: submitted
+                        - waitType: debounce
+                        - waitMs: '0'
+                - loading: false
+                - overflowType: scroll
+                - disabled: false
+                - requireValidation: true
+                - maintainSpaceWhenHidden: false
+                - showBody: true
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1
+                col: 2
+                height: 0.2
+                width: 6
+            createdAt: 2022-08-03T21:32:13.590Z
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+            style:
+              ordered: []
+            createdAt: 2022-08-03T21:32:13.617Z
+      - formTitle1:
+          pluginTemplate:
+            id: formTitle1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '#### Form title'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: form1
+                rowGroup: header
+                height: 0.6
+                width: 12
+            createdAt: 2022-08-03T21:32:13.657Z
+      - formButton1:
+          pluginTemplate:
+            id: formButton1
+            type: widget
+            subtype: ButtonWidget2
+            template:
+              ordered:
+                - horizontalAlign: stretch
+                - clickable: false
+                - iconAfter: ''
+                - submitTargetId: form1
+                - hidden: false
+                - text: Submit
+                - showInEditor: false
+                - tooltipText: ''
+                - submit: true
+                - iconBefore: ''
+                - events:
+                    ordered: []
+                - loading: false
+                - loaderPosition: auto
+                - disabled: false
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: form1
+                rowGroup: footer
+                col: 8
+                height: 1
+                width: 4
+            createdAt: 2022-08-03T21:32:13.686Z
+      - select1:
+          pluginTemplate:
+            id: select1
+            type: widget
+            subtype: SelectWidget2
+            template:
+              ordered:
+                - imageByIndex:
+                    array: []
+                - _disabledByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - showSelectionIndicator: true
+                - _values:
+                    - Option 1
+                    - Option 2
+                    - Option 3
+                - iconByIndex:
+                    array: []
+                - values:
+                    array: []
+                - readOnly: false
+                - iconAfter: ''
+                - _iconByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - allowDeselect: false
+                - inputValue: ''
+                - hidden: false
+                - customValidation: ''
+                - data:
+                    array: []
+                - searchMode: fuzzy
+                - hideValidationMessage: false
+                - fallbackTextByIndex:
+                    array: []
+                - textBefore: ''
+                - _fallbackTextByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - selectedItem: null
+                - validationMessage: ''
+                - automaticItemColors: false
+                - itemAdornmentShape: circle
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: null
+                - hiddenByIndex:
+                    array: []
+                - labelCaption: ''
+                - labelWidth: '33'
+                - deprecatedLabels:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - placeholder: Select an option
+                - _captionByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - itemAdornmentSize: auto
+                - label: Label
+                - _hasMigratedNestedItems: true
+                - captionByIndex:
+                    array: []
+                - _validate: false
+                - itemMode: static
+                - labelWidthUnit: '%'
+                - allowCustomValue: false
+                - invalid: false
+                - selectedIndex: null
+                - _tooltipByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _colorByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - iconBefore: ''
+                - colorByIndex:
+                    array: []
+                - selectedLabel: ''
+                - events:
+                    ordered: []
+                - _ids:
+                    - a7eac
+                    - '45706'
+                    - 3768a
+                - emptyMessage: ''
+                - overlayMaxHeight: 375
+                - loading: false
+                - disabled: false
+                - labelPosition: left
+                - _labels:
+                    - ''
+                    - ''
+                    - ''
+                - labelWrap: false
+                - disabledValues:
+                    array: []
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - _imageByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - required: false
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: form1
+                height: 1
+                width: 9
+            createdAt: 2022-08-03T21:32:19.492Z
+      - text1:
+          pluginTemplate:
+            id: text1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: not submitted
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 2
+                col: 9
+                height: 0.6
+                width: 2
+            createdAt: 2022-08-03T21:39:19.323Z
+  rootScreen: null
+  version: 2.97.1
+  markdownLinkBehavior: auto
