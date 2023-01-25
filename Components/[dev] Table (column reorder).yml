@@ -1,0 +1,231 @@
+version: 43.0.9
+pageUuid: 2ae58a86-6076-11ed-9913-d3e1493aa110
+appTemplate:
+  plugins:
+    ordered:
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: false
+            style:
+              ordered: []
+            createdAt: 2022-11-09T21:33:53.373Z
+      - table1:
+          pluginTemplate:
+            id: table1
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - showCustomButton: false
+                - sortMappedValue:
+                    ordered: []
+                - _filteredSortedRenderedDataWithTypes: null
+                - heightType: fixed
+                - normalizedData: null
+                - rowHeight: standard
+                - saveChangesDisabled: ''
+                - columnTypeProperties:
+                    ordered: []
+                - columnWidths: []
+                - showSummaryFooter: false
+                - disableRowSelectInteraction: false
+                - columnWidthsMobile: []
+                - hasNextAfterCursor: ''
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered: []
+                - columnFrozenAlignments:
+                    ordered:
+                      - id: left
+                      - name: left
+                      - quantity: left
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered: []
+                - columnRestrictedEditing:
+                    ordered: []
+                - showFilterButton: true
+                - _columnVisibility:
+                    ordered: []
+                - _columnSummaryTypes:
+                    ordered: []
+                - _columnsWithLegacyBackgroundColor:
+                    set: []
+                - showAddRowButton: false
+                - _unfilteredSelectedIndex: null
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered: []
+                - selectedPageIndex: '0'
+                - applyDynamicSettingsToColumnOrder: true
+                - rowColor:
+                    array: []
+                - actionButtonColumnName: Actions
+                - resetAfterSave: true
+                - filterStackType: and
+                - downloadRawData: false
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: |
+                    {
+                      "id": ["3", "4", "5", "8", "9", "6", "10", "1", "2", "7", "2323"],
+                      "name": [
+                        "The Dream Machine",
+                        "Slaughterhouse Five",
+                        "The Little Schemer",
+                        "The Seasoned Schemer",
+                        "Working Effectively With Legacy Code",
+                        "The C Programming Languages",
+                        "How to win a game",
+                        "Stucture and Interpretation of Computer Programs",
+                        "Godel, Escher, Bach",
+                        "Introduction to Algorithms, 3rd edition",
+                        "Yes"
+                      ],
+                      "quantity": [0, 5000, 8395, 12563, 6252, 15822, 12, 998001, 77777, 65536, 0],
+                      "unit_price_cents": [
+                        9400, 500, 952, 1480, 5708, 1451, 1000, 0, 2000000, 3000, 0
+                      ],
+                      "created_at": [
+                        "2018-07-27T17:24:19.900Z",
+                        "2018-07-28T21:10:59.905Z",
+                        "2018-07-30T00:57:39.910Z",
+                        "2018-08-01T08:30:59.924Z",
+                        "2018-08-02T12:17:39.929Z",
+                        "2018-08-03T16:04:19.915Z",
+                        "2019-03-20T18:21:53.402Z",
+                        "2018-07-25T09:50:59.891Z",
+                        "2018-07-26T13:37:39.896Z",
+                        "2018-07-31T04:44:19.920Z",
+                        "2021-12-01T10:05:29.809Z"
+                      ],
+                      "updated_at": [
+                        "2018-07-27T17:40:59.900Z",
+                        "2018-07-28T21:35:59.905Z",
+                        "2018-07-30T01:30:59.910Z",
+                        "2018-08-01T09:20:59.924Z",
+                        "2018-08-02T13:15:59.929Z",
+                        "2018-08-03T17:10:59.915Z",
+                        "2019-03-20T18:21:53.404Z",
+                        "2019-03-26T19:20:50.215Z",
+                        "2019-03-26T19:20:50.215Z",
+                        "2018-07-31T05:25:59.920Z",
+                        "2021-12-01T10:05:31.000Z"
+                      ],
+                      "image_url": [null, null, null, null, null, null, null, null, null, null, "x"]
+                    }
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: true
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - columnAlignment:
+                    ordered: []
+                - columnSummaries:
+                    object: {}
+                - showBoxShadow: false
+                - sortedDesc: false
+                - customButtonName: ''
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - showRefreshButton: true
+                - pageSize: '20'
+                - useDynamicColumnSettings: false
+                - actionButtonPosition: left
+                - dynamicRowHeights: false
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - onCustomButtonPressQueryName: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - _columnSummaryValues:
+                    ordered: []
+                - checkboxRowSelect: true
+                - _compatibilityMode: false
+                - showColumnBorders: false
+                - clearSelectionLabel: Clear selection
+                - _renderedDataWithTypes: null
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: null
+                - defaultSortDescending: false
+                - _sortedDisplayedDataIndices: null
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    array: []
+                - newRow: null
+                - emptyMessage: No rows found
+                - columnEditable:
+                    ordered: []
+                - _viewerColumnSummaryTypes:
+                    object: {}
+                - filters:
+                    array: []
+                - displayedDataIndices: null
+                - disableSorting:
+                    ordered: []
+                - columnMappers:
+                    ordered: []
+                - showClearSelection: false
+                - doubleClickToEdit: true
+                - overflowType: pagination
+                - _reverseSortedDisplayedDataIndices: null
+                - showTableBorder: true
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns: []
+                - defaultSelectedRow: first
+                - freezeActionButtonColumns: false
+                - sort: null
+                - _columns:
+                    - quantity
+                    - name
+                    - id
+                    - created_at
+                    - unit_price_cents
+                    - updated_at
+                    - image_url
+                - sortByRawValue:
+                    ordered: []
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - _reverseDisplayedDataIndices: null
+                - nextAfterCursor: ''
+                - useCompactMode: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                height: 8.8
+                width: 12
+            createdAt: 2022-11-09T21:34:13.909Z
+  rootScreen: null
+  version: 2.103.2
+  markdownLinkBehavior: auto
