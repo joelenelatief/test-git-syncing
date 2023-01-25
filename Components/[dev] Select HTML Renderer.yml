@@ -1,0 +1,52 @@
+version: 43.0.9
+pageUuid: be0dc2ba-baf6-11ea-8ade-138df39434a4
+appTemplate:
+  plugins:
+    ordered:
+      - select1:
+          pluginTemplate:
+            id: select1
+            type: widget
+            subtype: SelectWidget
+            template:
+              ordered:
+                - values: '{{dropdownData.value}}'
+                - allowOutOfRangeValues: false
+                - enableFuzzyMatching: true
+                - searchValue: ''
+                - validationMessage: ''
+                - rendererHtml: <h1>test {{i}} {{dropdownData.value[i]}}</h1>
+                - displayValue: ''
+                - tooltipText: ''
+                - value: ''
+                - enableHtmlRenderer: true
+                - maxResults: 50
+                - placeholder: ''
+                - label: Numbers
+                - labelMaxWidth: ''
+                - labelPlacedOnLeft: false
+                - validationState: ''
+                - onSelect: ''
+                - disabled: ''
+                - hideClearButton: false
+                - required: false
+                - labels: ''
+            position2:
+              position2:
+                row: 4
+                col: 2
+                height: 2
+                width: 4
+            createdAt: 2020-06-30T17:29:18.611Z
+      - dropdownData:
+          pluginTemplate:
+            id: dropdownData
+            type: function
+            subtype: Function
+            template:
+              ordered:
+                - funcBody: return ['Bob', 'Joe', 'Bill']
+                - value: ''
+            createdAt: 2020-06-30T17:32:51.713Z
+  rootScreen: null
+  version: 2.60.2
