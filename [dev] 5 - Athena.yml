@@ -1,0 +1,234 @@
+version: 43.0.9
+pageUuid: c696a9be-125f-11ea-90ba-af055aec884f
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: AthenaQuery
+            resourceName: '[dev] athena'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - query: select * from sampledb.elb_logs limit 10
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - triggersOnFailure: []
+                - queryExecution: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - enableCaching: false
+                - queryThrottleTime: '750'
+            createdAt: 2019-11-29T04:21:55.760Z
+      - table1:
+          pluginTemplate:
+            id: table1
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - sortMappedValue:
+                    ordered: []
+                - normalizedData: null
+                - columnWidths: []
+                - columnWidthsMobile: []
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - backend_response_code: ''
+                      - sent_bytes: ''
+                      - request_timestamp: ''
+                      - elb_response_code: ''
+                      - request_processing_time: ''
+                      - name: ''
+                      - ssl_protocol: ''
+                      - sales: ''
+                      - backend_port: ''
+                      - received_bytes: ''
+                      - backend_processing_time: ''
+                      - request_verb: ''
+                      - url: ''
+                      - elb_name: ''
+                      - request_port: ''
+                      - user_agent: ''
+                      - backend_ip: ''
+                      - request_ip: ''
+                      - client_response_time: ''
+                      - protocol: ''
+                      - id: ''
+                      - email: ''
+                      - ssl_cipher: ''
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered: []
+                - showFilterButton: true
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered:
+                      - backend_response_code: true
+                      - sent_bytes: true
+                      - request_timestamp: true
+                      - elb_response_code: true
+                      - request_processing_time: true
+                      - name: true
+                      - ssl_protocol: true
+                      - Sales: true
+                      - sales: true
+                      - backend_port: true
+                      - received_bytes: true
+                      - backend_processing_time: true
+                      - request_verb: true
+                      - url: true
+                      - elb_name: true
+                      - request_port: true
+                      - user_agent: true
+                      - backend_ip: true
+                      - request_ip: true
+                      - client_response_time: true
+                      - Title: true
+                      - protocol: true
+                      - id: true
+                      - email: true
+                      - Description: true
+                      - ssl_cipher: true
+                - selectedPageIndex: '0'
+                - actionButtonColumnName: Actions
+                - filterStackType: and
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{ query1.data}}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: true
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - sortedDesc: false
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - pageSize: 6
+                - useDynamicColumnSettings: false
+                - actionButtonPosition: left
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: ''
+                - defaultSortDescending: false
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    ordered:
+                      - array: []
+                - columnEditable:
+                    ordered: []
+                - filters:
+                    ordered:
+                      - array: []
+                - displayedDataIndices: null
+                - columnMappers:
+                    ordered: []
+                - showClearSelection: false
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns:
+                    - Title
+                    - Description
+                    - Sales
+                    - id
+                    - name
+                    - email
+                    - sales
+                    - request_timestamp
+                    - elb_name
+                    - request_ip
+                    - request_port
+                    - backend_ip
+                    - backend_port
+                    - request_processing_time
+                    - backend_processing_time
+                    - client_response_time
+                    - elb_response_code
+                    - backend_response_code
+                    - received_bytes
+                    - sent_bytes
+                    - request_verb
+                    - url
+                    - protocol
+                    - user_agent
+                    - ssl_cipher
+                    - ssl_protocol
+                - sort: null
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - nextAfterCursor: ''
+                - useCompactMode: false
+            position2:
+              position2:
+                row: 1
+                col: 2
+                height: 8
+                width: 8
+            mobilePosition2:
+              position2:
+                row: 1
+                col: 2
+                height: 8
+                width: 8
+            createdAt: 2019-11-29T04:22:15.439Z
+  rootScreen: null
+  version: 2.53.7
