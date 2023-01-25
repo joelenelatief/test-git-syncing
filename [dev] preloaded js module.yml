@@ -1,0 +1,76 @@
+version: 43.0.9
+pageUuid: 8c2199fc-946f-11ed-8452-8bc7ccb73e71
+appTemplate:
+  plugins:
+    ordered:
+      - moduleContainer:
+          pluginTemplate:
+            id: moduleContainer
+            type: widget
+            subtype: ModuleContainerWidget
+            template:
+              ordered:
+                - heightType: fixed
+                - spinWhenChildrenAreFetching: true
+                - showBorder: true
+                - showDropShadow: true
+                - isGlobalWidgetContainer: true
+                - backgroundColor: white
+                - title: ''
+                - overflowType: hidden
+                - disabled: ''
+            position2:
+              position2:
+                height: 12
+                width: 12
+            mobilePosition2:
+              position2:
+                height: 12
+                width: 12
+            createdAt: 2023-01-15T00:57:13.155Z
+      - text1:
+          pluginTemplate:
+            id: text1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '{{myPreloadedVariable}}'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: moduleContainer
+                height: 0.6
+                width: 3
+            createdAt: 2023-01-15T00:57:30.591Z
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: false
+            style:
+              ordered: []
+            createdAt: 2023-01-15T00:57:30.696Z
+  preloadedAppJavaScript: window.myPreloadedVariable = "foobar"
+  queryStatusVisibility: false
+  rootScreen: null
+  isGlobalWidget: true
+  version: 2.108.0
+  markdownLinkBehavior: auto
