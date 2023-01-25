@@ -1,0 +1,102 @@
+version: 43.0.9
+pageUuid: 8cc8c44c-9c45-11ed-aa40-cbdc0f72da52
+appTemplate:
+  plugins:
+    ordered:
+      - welcomeText:
+          pluginTemplate:
+            id: welcomeText
+            type: widget
+            subtype: TextWidget2
+            template:
+              heightType: auto
+              horizontalAlign: right
+              hidden: false
+              imageWidth: fit
+              verticalAlign: center
+              tooltipText: ''
+              value: '#### 👋 Welcome, {{current_user.firstName || ''friend''}}'
+              disableMarkdown: false
+              overflowType: scroll
+            position2:
+              position2:
+                subcontainer: header
+                col: 9
+                height: 0.6
+                width: 3
+            createdAt: 2023-01-25T00:16:44.604Z
+      - navigation:
+          pluginTemplate:
+            id: navigation
+            type: widget
+            subtype: NavigationWidget
+            template:
+              horizontalAlign: left
+              menuItems:
+                - title: Learn more
+                  hidden: ''
+                  buttonType: action
+                  clickable:
+                    map:
+                      buttonType: url
+                  menuItems:
+                    - title: Working with components
+                      clickable:
+                        buttonType: url
+                        url: https://docs.retool.com/docs/understanding-components
+                        newWindow: true
+                    - title: Reading and writing data
+                      clickable:
+                        buttonType: url
+                        url: https://docs.retool.com/docs/queries
+                        newWindow: true
+                    - title: Retool docs
+                      clickable:
+                        buttonType: url
+                        url: https://docs.retool.com/
+                        newWindow: true
+                - title: Community
+                  hidden: ''
+                  clickable:
+                    buttonType: url
+                    url: https://community.retool.com/
+                    newWindow: true
+                - title: What's new
+                  hidden: ''
+                  clickable:
+                    buttonType: url
+                    url: https://updates.retool.com/en
+                    newWindow: true
+            position2:
+              position2:
+                subcontainer: header
+                height: 1
+                width: 9
+            createdAt: 2023-01-25T00:16:44.604Z
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: SqlQueryUnified
+            resourceName: onboarding_db
+            template:
+              queryRefreshTime: ''
+              queryDisabledMessage: ''
+              successMessage: ''
+              queryDisabled: ''
+              resourceNameOverride: ''
+              runWhenModelUpdates: true
+              query: select * from users limit 100
+              privateParams: []
+              data: null
+              showSuccessToaster: true
+              confirmationMessage: null
+              watchedParams: []
+              timestamp: 0
+              runWhenPageLoads: false
+              queryTimeout: '10001'
+              requireConfirmation: false
+              queryThrottleTime: '750'
+            createdAt: 2023-01-25T00:16:44.605Z
+  rootScreen: null
+  version: 2.109.0
