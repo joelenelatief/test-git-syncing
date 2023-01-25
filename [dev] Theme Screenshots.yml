@@ -1,0 +1,1531 @@
+version: 43.0.9
+pageUuid: 6c1532bc-10e5-11ed-a608-b7dac1c8d717
+appTemplate:
+  plugins:
+    ordered:
+      - container1:
+          pluginTemplate:
+            id: container1
+            type: widget
+            subtype: ContainerWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                - heightType: auto
+                - currentViewKey: null
+                - iconByIndex:
+                    array: []
+                - clickable: false
+                - _iconByIndex:
+                    - ''
+                - hidden: false
+                - showHeader: true
+                - hoistFetching: true
+                - views:
+                    array: []
+                - showInEditor: false
+                - tooltipText: ''
+                - hiddenByIndex:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                - currentViewIndex: null
+                - _hasMigratedNestedItems: true
+                - transition: none
+                - itemMode: static
+                - _tooltipByIndex:
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - showFooter: false
+                - _viewKeys:
+                    - View 1
+                - events:
+                    ordered: []
+                - _ids:
+                    - 08fee
+                - viewKeys:
+                    array: []
+                - iconPositionByIndex:
+                    array: []
+                - _iconPositionByIndex:
+                    - ''
+                - loading: false
+                - overflowType: scroll
+                - disabled: false
+                - _labels:
+                    - ''
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - showBody: true
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                height: 0.2
+                width: 6
+            createdAt: 2022-07-31T15:33:30.342Z
+      - containerTitle1:
+          pluginTemplate:
+            id: containerTitle1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '#### Container title'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container1
+                rowGroup: header
+                height: 0.6
+                width: 9
+            createdAt: 2022-07-31T15:33:30.451Z
+      - textInput1:
+          pluginTemplate:
+            id: textInput1
+            type: widget
+            subtype: TextInputWidget2
+            template:
+              ordered:
+                - spellCheck: false
+                - readOnly: false
+                - iconAfter: ''
+                - showCharacterCount: false
+                - autoComplete: false
+                - maxLength: null
+                - hidden: false
+                - customValidation: ''
+                - patternType: ''
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: false
+                - pattern: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: ''
+                - labelCaption: ''
+                - labelWidth: '33'
+                - autoFill: ''
+                - placeholder: Enter value
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - iconBefore: ''
+                - minLength: null
+                - inputTooltip: ''
+                - events:
+                    ordered: []
+                - autoCapitalize: none
+                - loading: false
+                - disabled: false
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                col: 6
+                height: 1
+                width: 6
+            createdAt: 2022-07-31T15:33:34.245Z
+      - editableText1:
+          pluginTemplate:
+            id: editableText1
+            type: widget
+            subtype: EditableTextWidget2
+            template:
+              ordered:
+                - spellCheck: false
+                - readOnly: false
+                - iconAfter: ''
+                - editIcon: bold/interface-edit-write-1
+                - inputValue: ''
+                - autoComplete: false
+                - maxLength: null
+                - hidden: false
+                - customValidation: ''
+                - patternType: ''
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textSize: default
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: false
+                - pattern: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: ''
+                - labelCaption: ''
+                - labelWidth: '33'
+                - autoFill: ''
+                - placeholder: Enter value
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - iconBefore: ''
+                - minLength: null
+                - inputTooltip: '`Enter` to save, `Esc` to cancel'
+                - events:
+                    ordered: []
+                - autoCapitalize: none
+                - loading: false
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 2
+                col: 6
+                height: 0.6
+                width: 6
+            createdAt: 2022-07-31T15:33:42.079Z
+      - text1:
+          pluginTemplate:
+            id: text1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '### Heading text'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                subcontainer: header
+                height: 0.6
+                width: 9
+            createdAt: 2022-07-31T15:33:46.497Z
+      - button1:
+          pluginTemplate:
+            id: button1
+            type: widget
+            subtype: ButtonWidget2
+            template:
+              ordered:
+                - horizontalAlign: right
+                - clickable: false
+                - iconAfter: ''
+                - submitTargetId: null
+                - hidden: false
+                - text: Button
+                - showInEditor: false
+                - tooltipText: ''
+                - styleVariant: solid
+                - submit: false
+                - iconBefore: ''
+                - events:
+                    ordered: []
+                - loading: false
+                - loaderPosition: auto
+                - disabled: false
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                subcontainer: header
+                col: 9
+                height: 1
+                width: 3
+            createdAt: 2022-07-31T15:34:07.633Z
+      - checkboxGroup1:
+          pluginTemplate:
+            id: checkboxGroup1
+            type: widget
+            subtype: CheckboxGroupWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _values:
+                    - Option 1
+                    - Option 2
+                    - Option 3
+                - values:
+                    array: []
+                - selectedIndexes:
+                    array: []
+                - selectedItems:
+                    array: []
+                - groupLayout: multiColumn
+                - hidden: false
+                - customValidation: ''
+                - data:
+                    array: []
+                - maxCount: null
+                - hideValidationMessage: false
+                - validationMessage: ''
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: '{{ [self.values[0]] }}'
+                - hiddenByIndex:
+                    array: []
+                - labelCaption: ''
+                - labelWidth: '33'
+                - deprecatedLabels:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _captionByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - label: Label
+                - _hasMigratedNestedItems: true
+                - captionByIndex:
+                    array: []
+                - _validate: false
+                - itemMode: static
+                - labelWidthUnit: '%'
+                - invalid: false
+                - _tooltipByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - events:
+                    ordered: []
+                - _ids:
+                    - dd51b
+                    - 29b7a
+                    - 9bf92
+                - selectedLabels:
+                    array: []
+                - disabled: false
+                - labelPosition: top
+                - minCount: null
+                - _labels:
+                    - ''
+                    - ''
+                    - ''
+                - labelWrap: false
+                - disabledValues:
+                    array: []
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - required: false
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 3.2
+                col: 6
+                height: 0.6
+                width: 3
+            createdAt: 2022-07-31T15:34:25.799Z
+      - radioGroup1:
+          pluginTemplate:
+            id: radioGroup1
+            type: widget
+            subtype: RadioGroupWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _values:
+                    - Option 1
+                    - Option 2
+                    - Option 3
+                - values:
+                    array: []
+                - groupLayout: multiColumn
+                - hidden: false
+                - customValidation: ''
+                - data:
+                    array: []
+                - hideValidationMessage: false
+                - selectedItem: null
+                - validationMessage: ''
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: '{{ self.values[0] }}'
+                - hiddenByIndex:
+                    array: []
+                - labelCaption: ''
+                - labelWidth: '33'
+                - deprecatedLabels:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _captionByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - label: Label
+                - _hasMigratedNestedItems: true
+                - captionByIndex:
+                    array: []
+                - _validate: false
+                - itemMode: static
+                - labelWidthUnit: '%'
+                - invalid: false
+                - selectedIndex: null
+                - _tooltipByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - selectedLabel: ''
+                - events:
+                    ordered: []
+                - _ids:
+                    - '97324'
+                    - e557e
+                    - e9622
+                - disabled: false
+                - labelPosition: top
+                - _labels:
+                    - ''
+                    - ''
+                    - ''
+                - labelWrap: false
+                - disabledValues:
+                    array: []
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - required: false
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 3.2
+                col: 9
+                height: 0.6
+                width: 3
+            createdAt: 2022-07-31T15:34:31.632Z
+      - listbox1:
+          pluginTemplate:
+            id: listbox1
+            type: widget
+            subtype: ListboxWidget
+            template:
+              ordered:
+                - imageByIndex:
+                    array: []
+                - _disabledByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - showSelectionIndicator: true
+                - _values:
+                    - Option 1
+                    - Option 2
+                    - Option 3
+                - iconByIndex:
+                    array: []
+                - values:
+                    array: []
+                - _iconByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - allowDeselect: false
+                - hidden: false
+                - customValidation: ''
+                - data:
+                    array: []
+                - searchMode: fuzzy
+                - hideValidationMessage: false
+                - fallbackTextByIndex:
+                    array: []
+                - _fallbackTextByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - selectedItem: null
+                - validationMessage: ''
+                - automaticItemColors: false
+                - itemAdornmentShape: circle
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: '{{ self.values[0] }}'
+                - hiddenByIndex:
+                    array: []
+                - labelCaption: ''
+                - labelWidth: '33'
+                - deprecatedLabels:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _captionByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - itemAdornmentSize: auto
+                - searchTerm: ''
+                - label: Label
+                - _hasMigratedNestedItems: true
+                - captionByIndex:
+                    array: []
+                - _validate: false
+                - itemMode: static
+                - labelWidthUnit: '%'
+                - invalid: false
+                - selectedIndex: null
+                - _tooltipByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _colorByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - colorByIndex:
+                    array: []
+                - selectedLabel: ''
+                - events:
+                    ordered: []
+                - _ids:
+                    - f1281
+                    - 4d22b
+                    - beb9d
+                - emptyMessage: ''
+                - disabled: false
+                - labelPosition: top
+                - _labels:
+                    - ''
+                    - ''
+                    - ''
+                - labelWrap: false
+                - disabledValues:
+                    array: []
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - _imageByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - required: false
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 3.8
+                col: 6
+                height: 3.2
+                width: 3
+            createdAt: 2022-07-31T15:34:37.654Z
+      - linkList1:
+          pluginTemplate:
+            id: linkList1
+            type: widget
+            subtype: LinkListWidget
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - iconByIndex:
+                    array: []
+                - clickable: false
+                - _iconByIndex:
+                    - bold/interface-user-single
+                    - bold/interface-align-layers-1
+                    - bold/travel-map-earth-1
+                - groupLayout: multiColumn
+                - hidden: false
+                - data:
+                    array: []
+                - showUnderline: never
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - hiddenByIndex:
+                    array: []
+                - labelCaption: ''
+                - labelWidth: '33'
+                - _hiddenByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _captionByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - label: ''
+                - _hasMigratedNestedItems: true
+                - captionByIndex:
+                    array: []
+                - itemMode: static
+                - labelWidthUnit: '%'
+                - _tooltipByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - events:
+                    ordered: []
+                - _ids:
+                    - 9cf4c
+                    - b8d32
+                    - e901a
+                - disabled: false
+                - labelPosition: top
+                - _labels:
+                    - Action 1
+                    - Action 2
+                    - Action 3
+                - labelWrap: false
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 3.8
+                col: 9
+                height: 0.6
+                width: 3
+            createdAt: 2022-07-31T15:35:03.047Z
+      - editableText2:
+          pluginTemplate:
+            id: editableText2
+            type: widget
+            subtype: EditableTextWidget2
+            template:
+              ordered:
+                - spellCheck: false
+                - readOnly: false
+                - iconAfter: ''
+                - editIcon: bold/interface-edit-write-1
+                - inputValue: ''
+                - autoComplete: false
+                - maxLength: null
+                - hidden: false
+                - customValidation: ''
+                - patternType: ''
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textSize: default
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: false
+                - pattern: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: Hello world
+                - labelCaption: ''
+                - labelWidth: '33'
+                - autoFill: ''
+                - placeholder: Enter value
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - iconBefore: ''
+                - minLength: null
+                - inputTooltip: '`Enter` to save, `Esc` to cancel'
+                - events:
+                    ordered: []
+                - autoCapitalize: none
+                - loading: false
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 2.6
+                col: 6
+                height: 0.6
+                width: 6
+            createdAt: 2022-07-31T15:35:06.465Z
+      - textInput2:
+          pluginTemplate:
+            id: textInput2
+            type: widget
+            subtype: TextInputWidget2
+            template:
+              ordered:
+                - spellCheck: false
+                - readOnly: false
+                - iconAfter: ''
+                - showCharacterCount: false
+                - autoComplete: false
+                - maxLength: null
+                - hidden: false
+                - customValidation: ''
+                - patternType: ''
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: false
+                - pattern: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: Hello world
+                - labelCaption: ''
+                - labelWidth: '33'
+                - autoFill: ''
+                - placeholder: Enter value
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - iconBefore: ''
+                - minLength: null
+                - inputTooltip: ''
+                - events:
+                    ordered: []
+                - autoCapitalize: none
+                - loading: false
+                - disabled: false
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1
+                col: 6
+                height: 1
+                width: 6
+            createdAt: 2022-07-31T15:35:13.809Z
+      - linkList2:
+          pluginTemplate:
+            id: linkList2
+            type: widget
+            subtype: LinkListWidget
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - iconByIndex:
+                    array: []
+                - clickable: false
+                - _iconByIndex:
+                    - bold/interface-user-single
+                    - bold/interface-align-layers-1
+                    - bold/travel-map-earth-1
+                - groupLayout: multiColumn
+                - hidden: false
+                - data:
+                    array: []
+                - showUnderline: never
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - hiddenByIndex:
+                    array: []
+                - labelCaption: ''
+                - labelWidth: '33'
+                - _hiddenByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _captionByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - label: ''
+                - _hasMigratedNestedItems: true
+                - captionByIndex:
+                    array: []
+                - itemMode: static
+                - labelWidthUnit: '%'
+                - _tooltipByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - events:
+                    ordered: []
+                - _ids:
+                    - 9cf4c
+                    - b8d32
+                    - e901a
+                - disabled: false
+                - labelPosition: top
+                - _labels:
+                    - Action 1
+                    - Action 2
+                    - Action 3
+                - labelWrap: false
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container1
+                subcontainer: 08fee
+                row: 3.8
+                col: 6
+                height: 0.6
+                width: 6
+            createdAt: 2022-07-31T15:35:37.723Z
+      - checkboxGroup2:
+          pluginTemplate:
+            id: checkboxGroup2
+            type: widget
+            subtype: CheckboxGroupWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _values:
+                    - Option 1
+                    - Option 2
+                    - Option 3
+                - values:
+                    array: []
+                - selectedIndexes:
+                    array: []
+                - selectedItems:
+                    array: []
+                - groupLayout: multiColumn
+                - hidden: false
+                - customValidation: ''
+                - data:
+                    array: []
+                - maxCount: null
+                - hideValidationMessage: false
+                - validationMessage: ''
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: '{{ [self.values[0]] }}'
+                - hiddenByIndex:
+                    array: []
+                - labelCaption: ''
+                - labelWidth: '33'
+                - deprecatedLabels:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _captionByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - label: Label
+                - _hasMigratedNestedItems: true
+                - captionByIndex:
+                    array: []
+                - _validate: false
+                - itemMode: static
+                - labelWidthUnit: '%'
+                - invalid: false
+                - _tooltipByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - events:
+                    ordered: []
+                - _ids:
+                    - dd51b
+                    - 29b7a
+                    - 9bf92
+                - selectedLabels:
+                    array: []
+                - disabled: false
+                - labelPosition: top
+                - minCount: null
+                - _labels:
+                    - ''
+                    - ''
+                    - ''
+                - labelWrap: false
+                - disabledValues:
+                    array: []
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - required: false
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container1
+                subcontainer: 08fee
+                row: 3.2
+                height: 0.6
+                width: 6
+            createdAt: 2022-07-31T15:35:38.003Z
+      - radioGroup2:
+          pluginTemplate:
+            id: radioGroup2
+            type: widget
+            subtype: RadioGroupWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _values:
+                    - Option 1
+                    - Option 2
+                    - Option 3
+                - values:
+                    array: []
+                - groupLayout: multiColumn
+                - hidden: false
+                - customValidation: ''
+                - data:
+                    array: []
+                - hideValidationMessage: false
+                - selectedItem: null
+                - validationMessage: ''
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: '{{ self.values[0] }}'
+                - hiddenByIndex:
+                    array: []
+                - labelCaption: ''
+                - labelWidth: '33'
+                - deprecatedLabels:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _captionByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - label: Label
+                - _hasMigratedNestedItems: true
+                - captionByIndex:
+                    array: []
+                - _validate: false
+                - itemMode: static
+                - labelWidthUnit: '%'
+                - invalid: false
+                - selectedIndex: null
+                - _tooltipByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - selectedLabel: ''
+                - events:
+                    ordered: []
+                - _ids:
+                    - '97324'
+                    - e557e
+                    - e9622
+                - disabled: false
+                - labelPosition: top
+                - _labels:
+                    - ''
+                    - ''
+                    - ''
+                - labelWrap: false
+                - disabledValues:
+                    array: []
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - required: false
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container1
+                subcontainer: 08fee
+                row: 3.2
+                col: 6
+                height: 0.6
+                width: 6
+            createdAt: 2022-07-31T15:35:38.543Z
+      - listbox2:
+          pluginTemplate:
+            id: listbox2
+            type: widget
+            subtype: ListboxWidget
+            template:
+              ordered:
+                - imageByIndex:
+                    array: []
+                - _disabledByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - showSelectionIndicator: true
+                - _values:
+                    - Option 1
+                    - Option 2
+                    - Option 3
+                - iconByIndex:
+                    array: []
+                - values:
+                    array: []
+                - _iconByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - allowDeselect: false
+                - hidden: false
+                - customValidation: ''
+                - data:
+                    array: []
+                - searchMode: fuzzy
+                - hideValidationMessage: false
+                - fallbackTextByIndex:
+                    array: []
+                - _fallbackTextByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - selectedItem: null
+                - validationMessage: ''
+                - automaticItemColors: false
+                - itemAdornmentShape: circle
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: '{{ self.values[0] }}'
+                - hiddenByIndex:
+                    array: []
+                - labelCaption: ''
+                - labelWidth: '33'
+                - deprecatedLabels:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _captionByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - itemAdornmentSize: auto
+                - searchTerm: ''
+                - label: Label
+                - _hasMigratedNestedItems: true
+                - captionByIndex:
+                    array: []
+                - _validate: false
+                - itemMode: static
+                - labelWidthUnit: '%'
+                - invalid: false
+                - selectedIndex: null
+                - _tooltipByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _colorByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - colorByIndex:
+                    array: []
+                - selectedLabel: ''
+                - events:
+                    ordered: []
+                - _ids:
+                    - f1281
+                    - 4d22b
+                    - beb9d
+                - emptyMessage: ''
+                - disabled: false
+                - labelPosition: top
+                - _labels:
+                    - ''
+                    - ''
+                    - ''
+                - labelWrap: false
+                - disabledValues:
+                    array: []
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - _imageByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - required: false
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container1
+                subcontainer: 08fee
+                row: 3.8
+                height: 3.2
+                width: 6
+            createdAt: 2022-07-31T15:35:38.963Z
+      - textInput3:
+          pluginTemplate:
+            id: textInput3
+            type: widget
+            subtype: TextInputWidget2
+            template:
+              ordered:
+                - spellCheck: false
+                - readOnly: false
+                - iconAfter: ''
+                - showCharacterCount: false
+                - autoComplete: false
+                - maxLength: null
+                - hidden: false
+                - customValidation: ''
+                - patternType: ''
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: false
+                - pattern: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: Hello world
+                - labelCaption: ''
+                - labelWidth: '33'
+                - autoFill: ''
+                - placeholder: Enter value
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - iconBefore: ''
+                - minLength: null
+                - inputTooltip: ''
+                - events:
+                    ordered: []
+                - autoCapitalize: none
+                - loading: false
+                - disabled: false
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container1
+                subcontainer: 08fee
+                row: 1
+                height: 1
+                width: 12
+            createdAt: 2022-07-31T15:35:39.552Z
+      - editableText3:
+          pluginTemplate:
+            id: editableText3
+            type: widget
+            subtype: EditableTextWidget2
+            template:
+              ordered:
+                - spellCheck: false
+                - readOnly: false
+                - iconAfter: ''
+                - editIcon: bold/interface-edit-write-1
+                - inputValue: ''
+                - autoComplete: false
+                - maxLength: null
+                - hidden: false
+                - customValidation: ''
+                - patternType: ''
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textSize: default
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: false
+                - pattern: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: ''
+                - labelCaption: ''
+                - labelWidth: '33'
+                - autoFill: ''
+                - placeholder: Enter value
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - iconBefore: ''
+                - minLength: null
+                - inputTooltip: '`Enter` to save, `Esc` to cancel'
+                - events:
+                    ordered: []
+                - autoCapitalize: none
+                - loading: false
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container1
+                subcontainer: 08fee
+                row: 2
+                height: 0.6
+                width: 12
+            createdAt: 2022-07-31T15:35:40.051Z
+      - editableText4:
+          pluginTemplate:
+            id: editableText4
+            type: widget
+            subtype: EditableTextWidget2
+            template:
+              ordered:
+                - spellCheck: false
+                - readOnly: false
+                - iconAfter: ''
+                - editIcon: bold/interface-edit-write-1
+                - inputValue: ''
+                - autoComplete: false
+                - maxLength: null
+                - hidden: false
+                - customValidation: ''
+                - patternType: ''
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textSize: default
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: false
+                - pattern: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: Hello world
+                - labelCaption: ''
+                - labelWidth: '33'
+                - autoFill: ''
+                - placeholder: Enter value
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - iconBefore: ''
+                - minLength: null
+                - inputTooltip: '`Enter` to save, `Esc` to cancel'
+                - events:
+                    ordered: []
+                - autoCapitalize: none
+                - loading: false
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container1
+                subcontainer: 08fee
+                row: 2.6
+                height: 0.6
+                width: 12
+            createdAt: 2022-07-31T15:35:40.528Z
+      - textInput4:
+          pluginTemplate:
+            id: textInput4
+            type: widget
+            subtype: TextInputWidget2
+            template:
+              ordered:
+                - spellCheck: false
+                - readOnly: false
+                - iconAfter: ''
+                - showCharacterCount: false
+                - autoComplete: false
+                - maxLength: null
+                - hidden: false
+                - customValidation: ''
+                - patternType: ''
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: false
+                - pattern: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: ''
+                - labelCaption: ''
+                - labelWidth: '33'
+                - autoFill: ''
+                - placeholder: Enter value
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - iconBefore: ''
+                - minLength: null
+                - inputTooltip: ''
+                - events:
+                    ordered: []
+                - autoCapitalize: none
+                - loading: false
+                - disabled: false
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container1
+                subcontainer: 08fee
+                height: 1
+                width: 12
+            createdAt: 2022-07-31T15:35:41.026Z
+      - slider1:
+          pluginTemplate:
+            id: slider1
+            type: widget
+            subtype: SliderWidget2
+            template:
+              ordered:
+                - hideOutput: false
+                - max: 5
+                - hidden: false
+                - customValidation: ''
+                - hideValidationMessage: false
+                - step: 1
+                - validationMessage: ''
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: 2
+                - labelCaption: ''
+                - min: 0
+                - labelWidth: '33'
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - events:
+                    ordered: []
+                - disabled: false
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 4.4
+                col: 9
+                height: 0.6
+                width: 3
+            createdAt: 2022-07-31T15:36:18.309Z
+      - slider2:
+          pluginTemplate:
+            id: slider2
+            type: widget
+            subtype: SliderWidget2
+            template:
+              ordered:
+                - hideOutput: false
+                - max: 5
+                - hidden: false
+                - customValidation: ''
+                - hideValidationMessage: false
+                - step: 1
+                - validationMessage: ''
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: 2
+                - labelCaption: ''
+                - min: 0
+                - labelWidth: '33'
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - events:
+                    ordered: []
+                - disabled: false
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container1
+                subcontainer: 08fee
+                row: 4.4
+                col: 6
+                height: 0.6
+                width: 6
+            createdAt: 2022-07-31T15:36:21.105Z
+      - toggleButton1:
+          pluginTemplate:
+            id: toggleButton1
+            type: widget
+            subtype: ToggleButtonWidget
+            template:
+              ordered:
+                - horizontalAlign: stretch
+                - iconPosition: right
+                - hidden: false
+                - text: '{{ self.value ? ''Hide'' : ''Show'' }}'
+                - showInEditor: false
+                - tooltipText: ''
+                - value: false
+                - iconForFalse: bold/interface-arrows-button-down
+                - styleVariant: outline
+                - events:
+                    ordered: []
+                - loading: false
+                - loaderPosition: auto
+                - disabled: false
+                - iconForTrue: bold/interface-arrows-button-up
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container1
+                rowGroup: header
+                col: 9
+                height: 0.8
+                width: 3
+            createdAt: 2022-07-31T15:36:41.727Z
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+                - style:
+                    ordered:
+                      - canvas: ''
+            style:
+              ordered: []
+            createdAt: 2022-07-31T15:49:06.558Z
+      - $header:
+          pluginTemplate:
+            id: $header
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: header
+                - sticky: true
+            style:
+              ordered: []
+            createdAt: 2022-07-31T16:04:40.003Z
+  appThemeId: -1
+  rootScreen: null
+  version: 2.97.1
+  markdownLinkBehavior: auto
