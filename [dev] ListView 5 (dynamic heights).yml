@@ -1,0 +1,162 @@
+version: 43.0.9
+pageUuid: 47ee956e-cd61-11ea-b0a0-47e9ac5cc53d
+appTemplate:
+  plugins:
+    ordered:
+      - listview1:
+          pluginTemplate:
+            id: listview1
+            type: widget
+            subtype: ListViewWidget
+            template:
+              ordered:
+                - data: ''
+                - instances: '4'
+                - itemHeight: '3'
+                - scroll: true
+                - dynamicHeightsEnabled: true
+                - heightType: fixed
+            position2:
+              position2:
+                height: 17
+                width: 12
+            createdAt: 2020-07-24T03:54:01.173Z
+      - container1:
+          pluginTemplate:
+            id: container1
+            type: widget
+            subtype: ContainerWidget
+            template:
+              ordered:
+                - title: ''
+                - disabled: ''
+                - spinWhenChildrenAreFetching: true
+                - showBorder: true
+                - showDropShadow: true
+                - backgroundColor: white
+                - scroll: false
+                - hidden: '{{toggle1[i].value}}'
+            position2:
+              position2:
+                container: listview1
+                col: 6
+                height: 5
+                width: 6
+            createdAt: 2020-07-24T03:54:18.662Z
+      - toggle1:
+          pluginTemplate:
+            id: toggle1
+            type: widget
+            subtype: ToggleWidget
+            template:
+              ordered:
+                - toggleOffQuery: ''
+                - toggleType: default
+                - tooltipText: ''
+                - value: false
+                - label: close container
+                - toggleOnQuery: ''
+                - labelMaxWidth: ''
+                - labelPlacedOnLeft: false
+                - disabled: ''
+            position2:
+              position2:
+                container: listview1
+                height: 1
+                width: 2
+            createdAt: 2020-07-24T03:54:50.862Z
+      - toggle2:
+          pluginTemplate:
+            id: toggle2
+            type: widget
+            subtype: ToggleWidget
+            template:
+              ordered:
+                - toggleOffQuery: ''
+                - toggleType: default
+                - tooltipText: ''
+                - value: false
+                - label: Hide input
+                - toggleOnQuery: ''
+                - labelMaxWidth: ''
+                - labelPlacedOnLeft: false
+                - disabled: ''
+            position2:
+              position2:
+                container: container1
+                height: 1
+                width: 4
+            createdAt: 2020-07-24T03:58:36.078Z
+      - text3:
+          pluginTemplate:
+            id: text3
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - horizontalAlign: left
+                - truncateOverflow: false
+                - verticalAlign: center
+                - scrollOverflow: false
+                - tooltipText: ''
+                - value: I should cascade up if textinput1 is hidden
+                - renderAsHtml: false
+                - backgroundColor: '#0000'
+                - textColor: '#312929'
+                - renderAsMarkdown: true
+            position2:
+              position2:
+                container: container1
+                row: 1
+                col: 5
+                height: 1
+                width: 6
+            createdAt: 2020-07-24T03:59:54.274Z
+      - textinput1:
+          pluginTemplate:
+            id: textinput1
+            type: widget
+            subtype: TextInputWidget
+            template:
+              ordered:
+                - validationMaxlengthValue: ''
+                - readonly: ''
+                - disabledKeyCodes: ''
+                - validationMaxValue: ''
+                - onBlur: ''
+                - hidden: '{{toggle2[i].value}}'
+                - currencyType: USD
+                - leftIconName: ''
+                - initialValue: ''
+                - validationMessage: ''
+                - tooltipText: ''
+                - value: ''
+                - suffix: ''
+                - validationMinlengthValue: ''
+                - validationLengthValue: ''
+                - placeholder: Search here...
+                - validationType: ''
+                - label: Name
+                - currencyMajorOnly: false
+                - formattedValue: ''
+                - labelMaxWidth: ''
+                - enableValidationType: false
+                - labelPlacedOnLeft: false
+                - onSubmit: ''
+                - validationMinValue: ''
+                - validationState:
+                    object:
+                      required: ''
+                      validationType: ''
+                - type: text
+                - allowedRegex: ''
+                - required: false
+            position2:
+              position2:
+                container: container1
+                col: 4
+                height: 1
+                width: 8
+            createdAt: 2020-07-24T13:53:14.486Z
+  rootScreen: null
+  version: 2.60.21
