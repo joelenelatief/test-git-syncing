@@ -1,0 +1,113 @@
+version: 43.0.9
+pageUuid: 53d8566e-13e1-11eb-98c7-73c8914f60ef
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: SqlQuery
+            resourceName: '[dev] bigquery'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - query: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - shouldUseLegacySql: false
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10001'
+                - requireConfirmation: false
+                - enableCaching: false
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+                - notificationDuration: ''
+            createdAt: 2020-10-21T21:06:48.638Z
+      - multiselect1:
+          pluginTemplate:
+            id: multiselect1
+            type: widget
+            subtype: MultiSelectWidget
+            template:
+              ordered:
+                - enableClientSideMatching: true
+                - values: '[1,2,3]'
+                - allowOutOfRangeValues: false
+                - enableFuzzyMatching: true
+                - searchValue: ''
+                - showFetchingIndicator: true
+                - enableCaseSensitivity: false
+                - validationMessage: ''
+                - displayValue: ''
+                - tooltipText: ''
+                - value: ''
+                - maxResults: 50
+                - placeholder: ''
+                - label: Numbers
+                - clearValueOnFocus: true
+                - labelMaxWidth: ''
+                - labelPlacedOnLeft: false
+                - validationState: ''
+                - id: multiselect1
+                - onSelect: ''
+                - allowCustomValues: false
+                - disabled: ''
+                - hideClearButton: false
+                - required: false
+                - labels: ''
+            position2:
+              position2:
+                row: 2
+                col: 3
+                height: 9
+                width: 4
+            createdAt: 2020-10-21T21:07:05.121Z
+  rootScreen: null
+  version: 2.64.28
