@@ -1,0 +1,277 @@
+version: 43.0.9
+pageUuid: 1db80fe4-f98f-11ec-9170-870b738c9352
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: JavascriptQuery
+            resourceName: JavascriptQuery
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - servedFromCache: false
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - showFailureToaster: true
+                - query: |
+                    await new Promise(resolve => setTimeout(resolve, 1000));
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - error: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - requestSentTimestamp: null
+                - metadata: null
+                - queryRunTime: null
+                - changesetObject: ''
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - finished: null
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - offlineQueryType: None
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-07-01T22:42:41.573Z
+      - button1:
+          pluginTemplate:
+            id: button1
+            type: widget
+            subtype: ButtonWidget2
+            template:
+              ordered:
+                - horizontalAlign: stretch
+                - clickable: false
+                - iconAfter: ''
+                - submitTargetId: null
+                - hidden: false
+                - text: DO NOT RESIZE
+                - showInEditor: false
+                - tooltipText: ''
+                - styleVariant: solid
+                - submit: false
+                - iconBefore: ''
+                - events:
+                    - ordered:
+                        - event: click
+                        - type: datasource
+                        - method: trigger
+                        - pluginId: query1
+                        - targetId: null
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '0'
+                - loading: false
+                - loaderPosition: auto
+                - disabled: false
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 4
+                col: 4
+                height: 1
+                width: 3
+            createdAt: 2022-07-01T22:42:49.467Z
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+            style:
+              ordered: []
+            createdAt: 2022-12-16T17:24:36.712Z
+      - select1:
+          pluginTemplate:
+            id: select1
+            type: widget
+            subtype: SelectWidget2
+            template:
+              ordered:
+                - imageByIndex:
+                    array: []
+                - _disabledByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - showSelectionIndicator: true
+                - _values:
+                    - Option 1
+                    - Option 2
+                    - Option 3
+                - iconByIndex:
+                    array: []
+                - values:
+                    array: []
+                - readOnly: false
+                - iconAfter: ''
+                - _iconByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - overlayMinWidth: null
+                - allowDeselect: false
+                - inputValue: ''
+                - hidden: false
+                - customValidation: ''
+                - data:
+                    array: []
+                - searchMode: fuzzy
+                - hideValidationMessage: false
+                - fallbackTextByIndex:
+                    array: []
+                - textBefore: ''
+                - _fallbackTextByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - selectedItem: null
+                - validationMessage: ''
+                - automaticItemColors: false
+                - itemAdornmentShape: circle
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: null
+                - hiddenByIndex:
+                    array: []
+                - labelCaption: ''
+                - labelWidth: '33'
+                - deprecatedLabels:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - placeholder: Select an option
+                - _captionByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - itemAdornmentSize: auto
+                - label: DO NOT DELETE
+                - _hasMigratedNestedItems: true
+                - captionByIndex:
+                    array: []
+                - _validate: false
+                - itemMode: static
+                - labelWidthUnit: '%'
+                - allowCustomValue: false
+                - invalid: false
+                - selectedIndex: null
+                - _tooltipByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _colorByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - iconBefore: ''
+                - colorByIndex:
+                    array: []
+                - selectedLabel: ''
+                - events:
+                    ordered: []
+                - _ids:
+                    - efc28
+                    - 610f6
+                    - b956d
+                - emptyMessage: No options
+                - overlayMaxHeight: 375
+                - loading: false
+                - disabled: false
+                - labelPosition: left
+                - _labels:
+                    - ''
+                    - ''
+                    - ''
+                - labelWrap: false
+                - disabledValues:
+                    array: []
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - _imageByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - required: false
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 6.3999999999999995
+                col: 4
+                height: 1
+                width: 4
+            createdAt: 2022-12-16T20:20:29.636Z
+  experimentalPerfFeatures:
+    object:
+      batchCommitModelEnabled: false
+      skipDepCycleCheckingEnabled: false
+      serverDepGraphEnabled: false
+      useRuntimeV2: false
+  rootScreen: null
+  version: 2.106.2
+  markdownLinkBehavior: auto
