@@ -1,0 +1,312 @@
+version: 43.0.9
+pageUuid: 7444eec2-fb67-11ea-9c27-9b98d8d9eeb5
+appTemplate:
+  plugins:
+    ordered:
+      - scrollToBottomContainer:
+          pluginTemplate:
+            id: scrollToBottomContainer
+            type: datasource
+            subtype: JavascriptQuery
+            resourceName: JavascriptQuery
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - query: 'container3.scrollIntoView({behavior: ''smooth''})'
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - enableCaching: false
+                - queryThrottleTime: '750'
+                - notificationDuration: ''
+            createdAt: 2020-09-20T17:33:54.986Z
+      - container1:
+          pluginTemplate:
+            id: container1
+            type: widget
+            subtype: ContainerWidget
+            template:
+              ordered:
+                - title: ''
+                - disabled: ''
+                - spinWhenChildrenAreFetching: true
+                - showBorder: true
+                - showDropShadow: true
+                - backgroundColor: white
+                - scroll: true
+            position2:
+              position2:
+                row: 3
+                col: 4
+                height: 9
+                width: 6
+            createdAt: 2020-09-20T17:33:58.885Z
+      - scrollToBottomContainerButton:
+          pluginTemplate:
+            id: scrollToBottomContainerButton
+            type: widget
+            subtype: ButtonWidget
+            template:
+              ordered:
+                - valueToCopy: ''
+                - color: '#3c92dc'
+                - internalUrlHashParams: ''
+                - exportFileType: csv
+                - buttonType: action
+                - exportTemplate: null
+                - url: ''
+                - newWindow: false
+                - value: Scroll to bottom container
+                - exportQuery: ''
+                - action: scrollToBottomContainer
+                - internalUrlQuery: ''
+                - internalUrlPath: ''
+                - exportFileName: ''
+                - loading: ''
+                - disabled: ''
+            position2:
+              position2:
+                row: 5
+                col: 1
+                height: 1
+                width: 2
+            createdAt: 2020-09-20T17:34:12.729Z
+      - container2:
+          pluginTemplate:
+            id: container2
+            type: widget
+            subtype: ContainerWidget
+            template:
+              ordered:
+                - title: container 2
+                - disabled: ''
+                - spinWhenChildrenAreFetching: true
+                - showBorder: true
+                - showDropShadow: true
+                - backgroundColor: white
+                - scroll: false
+            position2:
+              position2:
+                container: container1
+                row: 14
+                height: 3
+                width: 12
+            createdAt: 2020-09-20T17:35:01.770Z
+      - container3:
+          pluginTemplate:
+            id: container3
+            type: widget
+            subtype: ContainerWidget
+            template:
+              ordered:
+                - title: Container 3
+                - disabled: ''
+                - spinWhenChildrenAreFetching: true
+                - showBorder: true
+                - showDropShadow: true
+                - backgroundColor: white
+                - scroll: false
+            position2:
+              position2:
+                container: container1
+                row: 17
+                height: 3
+                width: 12
+            createdAt: 2020-09-20T17:35:22.574Z
+      - container4:
+          pluginTemplate:
+            id: container4
+            type: widget
+            subtype: ContainerWidget
+            template:
+              ordered:
+                - title: Container 4
+                - disabled: ''
+                - spinWhenChildrenAreFetching: true
+                - showBorder: true
+                - showDropShadow: true
+                - backgroundColor: white
+                - scroll: false
+            position2:
+              position2:
+                container: container1
+                height: 4
+                width: 12
+            createdAt: 2020-09-20T17:36:11.945Z
+      - visibleContainersOutput:
+          pluginTemplate:
+            id: visibleContainersOutput
+            type: widget
+            subtype: TextInputWidget
+            template:
+              ordered:
+                - validationMaxlengthValue: ''
+                - readonly: ''
+                - disabledKeyCodes: ''
+                - validationMaxValue: ''
+                - onBlur: ''
+                - currencyType: USD
+                - leftIconName: ''
+                - initialValue: '{{container1.visibleContainers || ''''}}'
+                - validationMessage: ''
+                - tooltipText: ''
+                - value: ''
+                - suffix: ''
+                - validationMinlengthValue: ''
+                - validationLengthValue: ''
+                - placeholder: Search here...
+                - validationType: ''
+                - label: Name
+                - currencyMajorOnly: false
+                - formattedValue: ''
+                - allowedInputsRegex: ''
+                - labelMaxWidth: ''
+                - enableValidationType: false
+                - labelPlacedOnLeft: false
+                - onSubmit: ''
+                - validationMinValue: ''
+                - validationState:
+                    object:
+                      required: ''
+                      validationType: ''
+                - type: text
+                - allowedRegex: ''
+                - required: false
+            position2:
+              position2:
+                row: 1
+                col: 5
+                height: 1
+                width: 4
+            createdAt: 2020-09-20T17:42:10.332Z
+      - scrollToTopContainerButton:
+          pluginTemplate:
+            id: scrollToTopContainerButton
+            type: widget
+            subtype: ButtonWidget
+            template:
+              ordered:
+                - valueToCopy: ''
+                - color: '#3c92dc'
+                - internalUrlHashParams: ''
+                - exportFileType: csv
+                - buttonType: action
+                - exportTemplate: null
+                - url: ''
+                - newWindow: false
+                - value: Scroll to top container
+                - exportQuery: ''
+                - action: scrollToTopContainer
+                - internalUrlQuery: ''
+                - internalUrlPath: ''
+                - exportFileName: ''
+                - loading: ''
+                - disabled: ''
+            position2:
+              position2:
+                row: 7
+                col: 1
+                height: 1
+                width: 2
+            createdAt: 2020-09-20T17:47:05.899Z
+      - scrollToTopContainer:
+          pluginTemplate:
+            id: scrollToTopContainer
+            type: datasource
+            subtype: JavascriptQuery
+            resourceName: JavascriptQuery
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - query: 'container4.scrollIntoView({behavior: ''smooth''})'
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - enableCaching: false
+                - queryThrottleTime: '750'
+                - notificationDuration: ''
+            createdAt: 2020-09-20T17:47:21.552Z
+  rootScreen: null
+  version: 2.64.0
