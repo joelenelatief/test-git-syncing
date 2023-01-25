@@ -1,0 +1,232 @@
+version: 43.0.9
+pageUuid: bc48053a-9a1c-11ea-9c9f-77eb8eb9ec6e
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: SqlQuery
+            resourceName: '[dev] bigquery'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - query: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - triggersOnFailure: []
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10001'
+                - requireConfirmation: false
+                - enableCaching: false
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+            createdAt: 2020-05-19T22:04:42.478Z
+      - text1:
+          pluginTemplate:
+            id: text1
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - horizontalAlign: left
+                - truncateOverflow: false
+                - verticalAlign: center
+                - scrollOverflow: false
+                - tooltipText: ''
+                - value: Step 1
+                - renderAsHtml: false
+                - backgroundColor: '#0000'
+                - textColor: '#312929'
+                - renderAsMarkdown: true
+            position2:
+              position2:
+                container: wizard2
+                row: 1
+                col: 4
+                height: 1
+                width: 3
+                tabNum: hMen5SwKM
+            createdAt: 2020-05-19T22:05:45.149Z
+      - text2:
+          pluginTemplate:
+            id: text2
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - horizontalAlign: left
+                - truncateOverflow: false
+                - verticalAlign: center
+                - scrollOverflow: false
+                - tooltipText: ''
+                - value: Step 2
+                - renderAsHtml: false
+                - backgroundColor: '#0000'
+                - textColor: '#312929'
+                - renderAsMarkdown: true
+            position2:
+              position2:
+                container: wizard2
+                row: 2
+                col: 4
+                height: 1
+                width: 3
+                tabNum: Wzu7K3_Eys
+            createdAt: 2020-05-19T22:07:05.406Z
+      - text3:
+          pluginTemplate:
+            id: text3
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - horizontalAlign: left
+                - truncateOverflow: false
+                - verticalAlign: center
+                - scrollOverflow: false
+                - tooltipText: ''
+                - value: Step 3
+                - renderAsHtml: false
+                - backgroundColor: '#0000'
+                - textColor: '#312929'
+                - renderAsMarkdown: true
+            position2:
+              position2:
+                container: wizard2
+                row: 2
+                col: 4
+                height: 1
+                width: 3
+                tabNum: a9a3QoRi5
+            createdAt: 2020-05-19T22:07:58.744Z
+      - textinput1:
+          pluginTemplate:
+            id: textinput1
+            type: widget
+            subtype: TextInputWidget
+            template:
+              ordered:
+                - validationMaxlengthValue: ''
+                - readonly: ''
+                - disabledKeyCodes: ''
+                - validationMaxValue: ''
+                - onBlur: ''
+                - currencyType: USD
+                - leftIconName: ''
+                - initialValue: ''
+                - validationMessage: ''
+                - tooltipText: ''
+                - value: ''
+                - suffix: ''
+                - validationMinlengthValue: ''
+                - validationLengthValue: ''
+                - placeholder: Search here...
+                - validationType: ''
+                - label: Name
+                - currencyMajorOnly: false
+                - formattedValue: ''
+                - labelMaxWidth: ''
+                - enableValidationType: false
+                - labelPlacedOnLeft: false
+                - onSubmit: ''
+                - validationMinValue: ''
+                - validationState:
+                    object:
+                      required: ''
+                      validationType: ''
+                - type: text
+                - allowedRegex: ''
+                - required: false
+            position2:
+              position2:
+                container: wizard2
+                row: 2
+                col: 4
+                height: 1
+                width: 4
+                tabNum: hMen5SwKM
+            createdAt: 2020-05-19T22:08:39.874Z
+      - wizard2:
+          pluginTemplate:
+            id: wizard2
+            type: widget
+            subtype: WizardWidget
+            template:
+              ordered:
+                - spinWhenChildrenAreFetching: true
+                - stepHistory: []
+                - steps:
+                    ordered:
+                      - hMen5SwKM:
+                          ordered:
+                            - name: Step 1
+                            - navButtons:
+                                - ordered:
+                                    - buttonText: Next
+                                    - buttonType: goToStep
+                                    - buttonGoToStep: Wzu7K3_Eys
+                                    - buttonEnabled: '{{textinput1.value === ''password''}}'
+                      - Wzu7K3_Eys:
+                          ordered:
+                            - name: Step 2
+                            - navButtons:
+                                - ordered:
+                                    - buttonText: To step 3
+                                    - buttonType: goToStep
+                                    - buttonGoToStep: a9a3QoRi5
+                                    - buttonEnabled: '{{true}}'
+                      - a9a3QoRi5:
+                          ordered:
+                            - name: Step 3
+                            - navButtons: []
+                - currentStep: hMen5SwKM
+                - initialStep: hMen5SwKM
+                - hidden: false
+                - scroll: false
+            position2:
+              position2:
+                row: 1
+                col: 3
+                height: 8
+                width: 6
+            createdAt: 2020-05-20T05:35:46.044Z
+  rootScreen: null
+  version: 2.58.34
