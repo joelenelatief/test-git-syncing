@@ -1,0 +1,209 @@
+version: 43.0.9
+pageUuid: d822bb2e-5b17-11ed-99ae-ab90366cb90f
+appTemplate:
+  plugins:
+    ordered:
+      - text1:
+          pluginTemplate:
+            id: text1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: text1 value textarea
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                height: 0.6
+                width: 3
+            createdAt: 2022-11-03T01:35:53.165Z
+      - button1:
+          pluginTemplate:
+            id: button1
+            type: widget
+            subtype: ButtonWidget2
+            template:
+              ordered:
+                - horizontalAlign: stretch
+                - clickable: false
+                - iconAfter: ''
+                - submitTargetId: form1
+                - hidden: false
+                - text: Button
+                - showInEditor: false
+                - tooltipText: ''
+                - styleVariant: solid
+                - submit: true
+                - iconBefore: ''
+                - events: []
+                - loading: false
+                - loaderPosition: auto
+                - disabled: false
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 8.2
+                col: 7
+                height: 1
+                width: 3
+            createdAt: 2022-11-05T03:22:29.712Z
+      - form1:
+          pluginTemplate:
+            id: form1
+            type: widget
+            subtype: FormWidget2
+            template:
+              ordered:
+                - disableSubmit: false
+                - heightType: auto
+                - resetAfterSubmit: true
+                - submitting: false
+                - hidden: false
+                - data:
+                    object: {}
+                - showHeader: true
+                - hoistFetching: true
+                - initialData: null
+                - showInEditor: false
+                - tooltipText: ''
+                - invalid: false
+                - showFooter: true
+                - events:
+                    ordered: []
+                - loading: false
+                - overflowType: scroll
+                - disabled: false
+                - requireValidation: true
+                - maintainSpaceWhenHidden: false
+                - showBody: true
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 2.2
+                col: 4
+                height: 0.2
+                width: 6
+            createdAt: 2022-11-05T03:31:08.446Z
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: false
+            style:
+              ordered: []
+            createdAt: 2022-11-05T03:31:08.475Z
+      - formTitle1:
+          pluginTemplate:
+            id: formTitle1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '#### Form title'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: form1
+                rowGroup: header
+                height: 0.6
+                width: 12
+            createdAt: 2022-11-05T03:31:08.540Z
+      - formButton1:
+          pluginTemplate:
+            id: formButton1
+            type: widget
+            subtype: ButtonWidget2
+            template:
+              ordered:
+                - horizontalAlign: stretch
+                - clickable: false
+                - iconAfter: ''
+                - submitTargetId: form1
+                - hidden: false
+                - text: Submit
+                - showInEditor: false
+                - tooltipText: ''
+                - submit: true
+                - iconBefore: ''
+                - events:
+                    ordered: []
+                - loading: false
+                - loaderPosition: auto
+                - disabled: false
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: form1
+                rowGroup: footer
+                col: 8
+                height: 1
+                width: 4
+            createdAt: 2022-11-05T03:31:08.580Z
+      - button2:
+          pluginTemplate:
+            id: button2
+            type: widget
+            subtype: ButtonWidget2
+            template:
+              ordered:
+                - horizontalAlign: stretch
+                - clickable: false
+                - iconAfter: ''
+                - submitTargetId: null
+                - hidden: false
+                - text: Button
+                - showInEditor: false
+                - tooltipText: ''
+                - styleVariant: solid
+                - submit: false
+                - iconBefore: ''
+                - events:
+                    ordered: []
+                - loading: false
+                - loaderPosition: auto
+                - disabled: false
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 10
+                height: 1
+                width: 3
+            createdAt: 2022-11-10T23:08:22.348Z
+  rootScreen: null
+  version: 2.103.2
+  markdownLinkBehavior: auto
