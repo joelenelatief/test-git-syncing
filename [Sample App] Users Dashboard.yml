@@ -1,0 +1,2704 @@
+version: 43.0.9
+pageUuid: 8cbd2cea-9c45-11ed-a20b-e7dd7eb99402
+appTemplate:
+  plugins:
+    ordered:
+      - users:
+          pluginTemplate:
+            id: users
+            type: datasource
+            subtype: RESTQuery
+            resourceName: REST-WithoutResource
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - paginationLimit: ''
+                - body: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - servedFromCache: false
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - paginationPaginationField: ''
+                - headers: '[{"key":"Accept","value":"json"}]'
+                - showFailureToaster: true
+                - paginationEnabled: false
+                - query: https://jsonplaceholder.typicode.com/users
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - requestSentTimestamp: null
+                - cookies: ''
+                - metadata: null
+                - queryRunTime: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - finished: null
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - paginationDataField: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - hideRequireConfirmation: false
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - type: GET
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - bodyType: raw
+                - offlineQueryType: None
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2020-11-10T02:28:24.496Z
+      - text1:
+          pluginTemplate:
+            id: text1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: fixed
+                - horizontalAlign: left
+                - hidden: null
+                - imageWidth: fit
+                - showInEditor: null
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: <h3> User dashboard</h3>
+                - style:
+                    ordered: []
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: null
+            style:
+              ordered: []
+            position2:
+              position2:
+                subcontainer: header
+                height: 1.2
+                width: 3
+            tabIndex: 3
+            createdAt: 2020-11-10T02:28:24.496Z
+      - name_search_input:
+          pluginTemplate:
+            id: name_search_input
+            type: widget
+            subtype: TextInputWidget2
+            template:
+              ordered:
+                - spellCheck: false
+                - readOnly: false
+                - iconAfter: ''
+                - showCharacterCount: false
+                - autoComplete: false
+                - maxLength: null
+                - hidden: null
+                - customValidation: ''
+                - patternType: ''
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - showInEditor: null
+                - showClear: true
+                - pattern: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: ''
+                - style:
+                    ordered: []
+                - labelCaption: Logic in the filter_users transformer
+                - labelWidth: '33'
+                - autoFill: ''
+                - placeholder: Search here...
+                - label: Search by name
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - iconBefore: search
+                - minLength: null
+                - inputTooltip: ''
+                - events:
+                    ordered: []
+                - autoCapitalize: none
+                - loading: false
+                - disabled: ''
+                - labelPosition: top
+                - labelWrap: true
+                - maintainSpaceWhenHidden: null
+                - required: ''
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: collapsibleContainer1
+                subcontainer: 3bda6
+                height: 2
+                width: 6
+            tabIndex: 5
+            createdAt: 2020-11-10T02:28:24.496Z
+      - select1:
+          pluginTemplate:
+            id: select1
+            type: widget
+            subtype: MultiselectWidget2
+            template:
+              ordered:
+                - imageByIndex:
+                    array: []
+                - _disabledByIndex: []
+                - showSelectionIndicator: true
+                - _values: []
+                - iconByIndex:
+                    array: []
+                - values: '{{ item }}'
+                - readOnly: false
+                - iconAfter: ''
+                - _iconByIndex: []
+                - wrapTags: true
+                - overlayMinWidth: null
+                - selectedIndexes:
+                    array: []
+                - selectedItems:
+                    array: []
+                - inputValue: ''
+                - hidden: false
+                - customValidation: ''
+                - data: '["Unknown", "Active", "Inactive", "Any"]'
+                - maxCount: null
+                - searchMode: fuzzy
+                - hideValidationMessage: false
+                - fallbackTextByIndex:
+                    array: []
+                - textBefore: ''
+                - _fallbackTextByIndex: []
+                - minLines: null
+                - validationMessage: ''
+                - automaticItemColors: false
+                - itemAdornmentShape: circle
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: true
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: '{{ self.values }}'
+                - style:
+                    ordered: []
+                - hiddenByIndex:
+                    array: []
+                - labelCaption: Just an example! This doesn't work.
+                - labelWidth: '33'
+                - deprecatedLabels:
+                    array: []
+                - _hiddenByIndex: []
+                - placeholder: Select options
+                - _captionByIndex: []
+                - itemAdornmentSize: auto
+                - label: Filter by status
+                - _hasMigratedNestedItems: true
+                - captionByIndex:
+                    array: []
+                - _validate: false
+                - itemMode: dynamic
+                - labelWidthUnit: '%'
+                - allowCustomValue: false
+                - invalid: false
+                - _tooltipByIndex: []
+                - _colorByIndex: []
+                - tooltipByIndex:
+                    array: []
+                - iconBefore: ''
+                - colorByIndex:
+                    array: []
+                - events:
+                    ordered: []
+                - _ids: []
+                - emptyMessage: No options
+                - selectedLabels:
+                    array: []
+                - overlayMaxHeight: 250
+                - maxLines: null
+                - loading: false
+                - disabled: false
+                - labelPosition: top
+                - minCount: null
+                - _labels: []
+                - labelWrap: true
+                - disabledValues:
+                    array: []
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - _imageByIndex: []
+                - required: false
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: collapsibleContainer1
+                subcontainer: 3bda6
+                row: -1.1102230246251565e-16
+                col: 6
+                height: 2
+                width: 6
+            tabIndex: 7
+            createdAt: 2020-11-10T02:28:24.496Z
+      - table1:
+          pluginTemplate:
+            id: table1
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - showCustomButton: false
+                - sortMappedValue:
+                    ordered: []
+                - _filteredSortedRenderedDataWithTypes: null
+                - heightType: auto
+                - normalizedData: null
+                - rowHeight: standard
+                - actionButtonType: runQuery
+                - saveChangesDisabled: ''
+                - columnTypeProperties:
+                    ordered:
+                      - email:
+                          ordered: []
+                      - website:
+                          ordered: []
+                - columnWidths:
+                    - object:
+                        id: Title
+                        value: 250
+                    - object:
+                        id: Sales
+                        value: 150
+                    - object:
+                        id: id
+                        value: 70
+                - showSummaryFooter: false
+                - actionButtonDisabled: ''
+                - disableRowSelectInteraction: false
+                - columnWidthsMobile: []
+                - hasNextAfterCursor: ''
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - a: ''
+                      - name: ''
+                      - Sales: orange
+                      - phone: ''
+                      - address: ''
+                      - username: ''
+                      - Title: blue
+                      - website: ''
+                      - id: ''
+                      - email: ''
+                      - Description: green
+                      - company: ''
+                - columnFrozenAlignments:
+                    ordered: []
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered:
+                      - email: MarkdownDataCell
+                      - website: MarkdownDataCell
+                - columnRestrictedEditing:
+                    ordered: []
+                - showFilterButton: true
+                - _columnVisibility:
+                    ordered:
+                      - a: true
+                      - name: true
+                      - Sales: true
+                      - phone: true
+                      - address: false
+                      - username: true
+                      - Title: true
+                      - website: true
+                      - id: true
+                      - email: true
+                      - Description: true
+                      - company: false
+                - actionButtonUrl: ''
+                - _columnSummaryTypes:
+                    ordered:
+                      - email: ''
+                      - website: ''
+                - actionButtonNewWindow: false
+                - _columnsWithLegacyBackgroundColor:
+                    set:
+                      - Description
+                      - Sales
+                      - Title
+                - showAddRowButton: false
+                - _unfilteredSelectedIndex: ''
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered:
+                      - a: true
+                      - name: true
+                      - Sales: true
+                      - phone: true
+                      - address: false
+                      - username: true
+                      - Title: true
+                      - website: true
+                      - id: true
+                      - email: true
+                      - Description: true
+                      - company: false
+                - selectedPageIndex: '0'
+                - applyDynamicSettingsToColumnOrder: false
+                - rowColor:
+                    array: []
+                - actionButtonColumnName: Actions
+                - resetAfterSave: true
+                - filterStackType: and
+                - downloadRawData: true
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{ filter_users.value }}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: true
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - columnAlignment:
+                    ordered:
+                      - email: left
+                      - website: left
+                - columnSummaries:
+                    object: {}
+                - showBoxShadow: true
+                - sortedDesc: false
+                - customButtonName: ''
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - actionButtonInternalUrlPath: ''
+                - showRefreshButton: true
+                - pageSize: '10'
+                - useDynamicColumnSettings: false
+                - style:
+                    ordered:
+                      - headerBackground: rgba(255, 255, 255, 1)
+                      - border: rgb(229, 229, 229)
+                - selectedColumn: null
+                - actionButtonPosition: left
+                - dynamicRowHeights: false
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - onCustomButtonPressQueryName: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - _columnSummaryValues:
+                    ordered:
+                      - email: ''
+                      - website: ''
+                - checkboxRowSelect: true
+                - _compatibilityMode: false
+                - showColumnBorders: false
+                - clearSelectionLabel: Clear selection
+                - _renderedDataWithTypes: null
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: null
+                - defaultSortDescending: false
+                - _sortedDisplayedDataIndices: null
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    array: []
+                - newRow: null
+                - emptyMessage: No rows found
+                - columnEditable:
+                    ordered:
+                      - address: false
+                - _viewerColumnSummaryTypes:
+                    object: {}
+                - filters:
+                    array: []
+                - displayedDataIndices: null
+                - disableSorting:
+                    ordered: []
+                - columnMappers:
+                    ordered:
+                      - website: '[{{ self }}]({{ self }})'
+                - showClearSelection: false
+                - doubleClickToEdit: false
+                - overflowType: scroll
+                - _reverseSortedDisplayedDataIndices: null
+                - showTableBorder: true
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns:
+                    - Title
+                    - Sales
+                    - Description
+                    - a
+                    - id
+                    - name
+                    - username
+                    - email
+                    - address
+                    - phone
+                    - website
+                    - company
+                - defaultSelectedRow: first
+                - freezeActionButtonColumns: false
+                - sort: null
+                - _columns:
+                    - Title
+                    - Sales
+                    - Description
+                    - a
+                    - id
+                    - name
+                    - username
+                    - email
+                    - address
+                    - phone
+                    - website
+                    - company
+                - actionButtonInternalUrlHashParams: ''
+                - actionButtonInternalUrlQuery: ''
+                - sortByRawValue:
+                    ordered: []
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - _reverseDisplayedDataIndices: null
+                - nextAfterCursor: ''
+                - useCompactMode: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1.8
+                height: 2.0000000000000018
+                width: 7
+            tabIndex: 13
+            createdAt: 2020-11-10T02:28:24.497Z
+      - button2:
+          pluginTemplate:
+            id: button2
+            type: widget
+            subtype: LinkWidget
+            template:
+              ordered:
+                - horizontalAlign: left
+                - clickable: false
+                - iconAfter: ''
+                - hidden: false
+                - text: Refresh data
+                - showUnderline: never
+                - showInEditor: false
+                - tooltipText: ''
+                - style:
+                    ordered: []
+                - allowWrap: false
+                - iconBefore: bold/interface-arrows-turn-backward-alternate
+                - events:
+                    ordered: []
+                - loading: false
+                - loaderPosition: auto
+                - disabled: false
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 10.200000000000001
+                height: 1
+                width: 12
+            tabIndex: 18
+            createdAt: 2020-11-10T02:28:24.498Z
+      - text8:
+          pluginTemplate:
+            id: text8
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: right
+                - hidden: null
+                - imageWidth: fit
+                - showInEditor: null
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: >-
+                    Note this page uses fake data from
+                    https://jsonplaceholder.typicode.com/
+                - style:
+                    ordered:
+                      - color: rgba(255, 255, 255, 0.61)
+                      - background: ''
+                      - links: '#CEE6FA'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: null
+            style:
+              ordered: []
+            position2:
+              position2:
+                subcontainer: header
+                col: 7
+                height: 0.6
+                width: 5
+            tabIndex: 20
+            createdAt: 2020-11-10T02:28:24.498Z
+      - user_albums:
+          pluginTemplate:
+            id: user_albums
+            type: datasource
+            subtype: RESTQuery
+            resourceName: REST-WithoutResource
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - paginationLimit: ''
+                - body: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - servedFromCache: false
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - paginationPaginationField: ''
+                - headers: ''
+                - showFailureToaster: true
+                - paginationEnabled: false
+                - query: >-
+                    https://jsonplaceholder.typicode.com/albums?userId={{
+                    table1.selectedRow.data.id }}
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - requestSentTimestamp: null
+                - cookies: ''
+                - metadata: null
+                - queryRunTime: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - finished: null
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - paginationDataField: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - hideRequireConfirmation: false
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - type: GET
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - bodyType: json
+                - offlineQueryType: None
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2020-11-10T02:28:24.499Z
+      - album_pictures:
+          pluginTemplate:
+            id: album_pictures
+            type: datasource
+            subtype: RESTQuery
+            resourceName: REST-WithoutResource
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - paginationLimit: ''
+                - body: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - servedFromCache: false
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - paginationPaginationField: ''
+                - headers: ''
+                - showFailureToaster: true
+                - paginationEnabled: false
+                - query: >-
+                    https://jsonplaceholder.typicode.com/photos?albumId={{albums_listbox.selectedItem.id}}
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - requestSentTimestamp: null
+                - cookies: ''
+                - metadata: null
+                - queryRunTime: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - finished: null
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - paginationDataField: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - hideRequireConfirmation: false
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - type: GET
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - bodyType: json
+                - offlineQueryType: None
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2020-11-10T02:28:24.500Z
+      - user_posts:
+          pluginTemplate:
+            id: user_posts
+            type: datasource
+            subtype: RESTQuery
+            resourceName: REST-WithoutResource
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - paginationLimit: ''
+                - body: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - servedFromCache: false
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - paginationPaginationField: ''
+                - headers: ''
+                - showFailureToaster: true
+                - paginationEnabled: false
+                - query: >-
+                    https://jsonplaceholder.typicode.com/posts?userId={{
+                    table1.selectedRow.data.id }}
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - requestSentTimestamp: null
+                - cookies: ''
+                - metadata: null
+                - queryRunTime: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - finished: null
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - paginationDataField: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - hideRequireConfirmation: false
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - type: GET
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - bodyType: json
+                - offlineQueryType: None
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2020-11-10T02:28:24.500Z
+      - users_cached:
+          pluginTemplate:
+            id: users_cached
+            type: datasource
+            subtype: RESTQuery
+            resourceName: REST-WithoutResource
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - paginationLimit: ''
+                - body: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - servedFromCache: false
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - paginationPaginationField: ''
+                - headers: '[{"key":"Accept","value":"json"}]'
+                - showFailureToaster: true
+                - paginationEnabled: false
+                - query: https://jsonplaceholder.typicode.com/users
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: '10'
+                - requestSentTimestamp: null
+                - cookies: ''
+                - metadata: null
+                - queryRunTime: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - finished: null
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - paginationDataField: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - hideRequireConfirmation: false
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - type: GET
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: true
+                - allowedGroups: []
+                - bodyType: raw
+                - offlineQueryType: None
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2020-11-10T02:28:50.882Z
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+                - style:
+                    ordered:
+                      - canvas: ''
+            style:
+              ordered: []
+            createdAt: 2022-12-14T20:35:25.384Z
+      - collapsibleContainer1:
+          pluginTemplate:
+            id: collapsibleContainer1
+            type: widget
+            subtype: ContainerWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                - heightType: auto
+                - currentViewKey: null
+                - iconByIndex:
+                    array: []
+                - clickable: false
+                - _iconByIndex:
+                    - ''
+                - hidden: false
+                - showHeader: true
+                - hoistFetching: true
+                - views:
+                    array: []
+                - showInEditor: false
+                - tooltipText: ''
+                - style:
+                    ordered:
+                      - border: rgb(229, 229, 229)
+                - hiddenByIndex:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                - currentViewIndex: null
+                - _hasMigratedNestedItems: true
+                - transition: none
+                - itemMode: static
+                - _tooltipByIndex:
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - showFooter: false
+                - _viewKeys:
+                    - View 1
+                - events:
+                    ordered: []
+                - _ids:
+                    - 3bda6
+                - viewKeys:
+                    array: []
+                - iconPositionByIndex:
+                    array: []
+                - _iconPositionByIndex:
+                    - ''
+                - hovered: false
+                - loading: false
+                - overflowType: scroll
+                - disabled: false
+                - _labels:
+                    - ''
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - showBody: true
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: -1.6653345369377348e-16
+                height: 1.8
+                width: 7
+            createdAt: 2022-12-14T20:41:20.359Z
+      - collapsibleTitle1:
+          pluginTemplate:
+            id: collapsibleTitle1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: fixed
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '**Apply filters**'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: collapsibleContainer1
+                rowGroup: header
+                height: 0.8
+                width: 9
+            createdAt: 2022-12-14T20:41:20.552Z
+      - collapsibleToggle1:
+          pluginTemplate:
+            id: collapsibleToggle1
+            type: widget
+            subtype: ToggleButtonWidget
+            template:
+              ordered:
+                - horizontalAlign: right
+                - iconPosition: replace
+                - hidden: false
+                - text: '{{ self.value ? ''Hide'' : ''Show'' }}'
+                - showInEditor: false
+                - tooltipText: ''
+                - value: 'true'
+                - style:
+                    ordered:
+                      - border: rgba(0, 0, 0, 0.11)
+                - iconForFalse: bold/interface-arrows-button-down
+                - styleVariant: outline
+                - events:
+                    - ordered:
+                        - params:
+                            ordered:
+                              - showBody: '{{ self.value }}'
+                        - event: change
+                        - method: setShowBody
+                        - pluginId: collapsibleContainer1
+                        - type: widget
+                        - waitMs: '0'
+                        - waitType: debounce
+                - loading: false
+                - loaderPosition: auto
+                - disabled: false
+                - iconForTrue: bold/interface-arrows-button-up
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: collapsibleContainer1
+                rowGroup: header
+                col: 9
+                height: 0.8
+                width: 3
+            createdAt: 2022-12-14T20:41:20.635Z
+      - detail_tab_container:
+          pluginTemplate:
+            id: detail_tab_container
+            type: widget
+            subtype: ContainerWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - heightType: fixed
+                - currentViewKey: '{{ self.viewKeys[0] }}'
+                - iconByIndex:
+                    array: []
+                - clickable: false
+                - _iconByIndex:
+                    - bold/interface-user-square-alternate
+                    - bold/interface-edit-write-2
+                    - bold/entertainment-music-note-2
+                - hidden: false
+                - showHeader: true
+                - hoistFetching: false
+                - views:
+                    array: []
+                - showInEditor: false
+                - tooltipText: ''
+                - style:
+                    ordered:
+                      - border: rgba(229, 229, 229, 1)
+                - hiddenByIndex:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - currentViewIndex: null
+                - _hasMigratedNestedItems: true
+                - transition: none
+                - itemMode: static
+                - _tooltipByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - showFooter: true
+                - _viewKeys:
+                    - About
+                    - Posts
+                    - Albums
+                - events:
+                    ordered: []
+                - _ids:
+                    - bb8b4
+                    - af6c8
+                    - c23b1
+                - viewKeys:
+                    array: []
+                - iconPositionByIndex:
+                    array: []
+                - _iconPositionByIndex:
+                    - left
+                    - left
+                    - left
+                - hovered: false
+                - loading: false
+                - overflowType: scroll
+                - disabled: false
+                - _labels:
+                    - ''
+                    - ''
+                    - ''
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - showBody: true
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 2.7755575615628914e-16
+                col: 7
+                height: 16.999999999999996
+                width: 5
+            createdAt: 2022-12-14T20:45:25.879Z
+      - detail_tabs:
+          pluginTemplate:
+            id: detail_tabs
+            type: widget
+            subtype: TabsWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _values:
+                    - Tab 1
+                    - Tab 2
+                    - Tab 3
+                - iconByIndex:
+                    array: []
+                - values:
+                    array: []
+                - alignment: center
+                - _iconByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - hidden: false
+                - data:
+                    array: []
+                - targetContainerId: detail_tab_container
+                - selectedItem: null
+                - showInEditor: false
+                - navigateContainer: true
+                - value: '{{ self.values[0] }}'
+                - hiddenByIndex:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _hasMigratedNestedItems: true
+                - itemMode: static
+                - selectedIndex: null
+                - _tooltipByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - selectedLabel: ''
+                - events:
+                    ordered: []
+                - _ids:
+                    - fc43d
+                    - b96e6
+                    - 261f5
+                - iconPositionByIndex:
+                    array: []
+                - _iconPositionByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - disabled: false
+                - linePosition: bottom
+                - _labels:
+                    - ''
+                    - ''
+                    - ''
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                rowGroup: header
+                row: 0.3999999999999999
+                height: 0.8
+                width: 12
+            createdAt: 2022-12-14T20:45:26.150Z
+      - user_posts_table:
+          pluginTemplate:
+            id: user_posts_table
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - showCustomButton: false
+                - sortMappedValue:
+                    ordered: []
+                - _filteredSortedRenderedDataWithTypes: null
+                - heightType: fixed
+                - normalizedData: null
+                - rowHeight: standard
+                - actionButtonType: runQuery
+                - saveChangesDisabled: ''
+                - columnTypeProperties:
+                    ordered: []
+                - columnWidths:
+                    - object:
+                        id: id
+                        value: 53
+                - showSummaryFooter: false
+                - actionButtonDisabled: ''
+                - disableRowSelectInteraction: false
+                - columnWidthsMobile: []
+                - hasNextAfterCursor: ''
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - userId: ''
+                      - id: ''
+                      - title: ''
+                      - body: ''
+                      - Title: blue
+                      - Description: green
+                      - Sales: orange
+                - columnFrozenAlignments:
+                    ordered: []
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered: []
+                - columnRestrictedEditing:
+                    ordered: []
+                - showFilterButton: true
+                - _columnVisibility:
+                    ordered:
+                      - userId: false
+                      - id: true
+                      - title: true
+                      - body: true
+                      - Title: true
+                      - Description: true
+                      - Sales: true
+                - actionButtonUrl: ''
+                - _columnSummaryTypes:
+                    ordered: []
+                - actionButtonNewWindow: false
+                - _columnsWithLegacyBackgroundColor:
+                    set:
+                      - Description
+                      - Sales
+                      - Title
+                - showAddRowButton: false
+                - _unfilteredSelectedIndex: ''
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered:
+                      - userId: false
+                      - id: true
+                      - title: true
+                      - body: true
+                      - Title: true
+                      - Description: true
+                      - Sales: true
+                - selectedPageIndex: '0'
+                - applyDynamicSettingsToColumnOrder: false
+                - rowColor:
+                    array: []
+                - actionButtonColumnName: Actions
+                - resetAfterSave: true
+                - filterStackType: and
+                - downloadRawData: true
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{ user_posts.data}}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: true
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - columnAlignment:
+                    ordered: []
+                - columnSummaries:
+                    object: {}
+                - showBoxShadow: true
+                - sortedDesc: false
+                - customButtonName: ''
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - actionButtonInternalUrlPath: ''
+                - showRefreshButton: true
+                - pageSize: 9
+                - useDynamicColumnSettings: false
+                - style:
+                    ordered:
+                      - border: rgb(229, 229, 229)
+                      - headerBackground: rgba(255, 255, 255, 1)
+                - selectedColumn: null
+                - actionButtonPosition: left
+                - dynamicRowHeights: false
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - onCustomButtonPressQueryName: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - _columnSummaryValues:
+                    ordered: []
+                - checkboxRowSelect: true
+                - _compatibilityMode: false
+                - showColumnBorders: false
+                - clearSelectionLabel: Clear selection
+                - _renderedDataWithTypes: null
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: null
+                - defaultSortDescending: false
+                - _sortedDisplayedDataIndices: null
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    array: []
+                - newRow: null
+                - emptyMessage: No rows found
+                - columnEditable:
+                    ordered: []
+                - _viewerColumnSummaryTypes:
+                    object: {}
+                - filters:
+                    array: []
+                - displayedDataIndices: null
+                - disableSorting:
+                    ordered: []
+                - columnMappers:
+                    ordered: []
+                - showClearSelection: false
+                - doubleClickToEdit: false
+                - overflowType: scroll
+                - _reverseSortedDisplayedDataIndices: null
+                - showTableBorder: false
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns:
+                    - Title
+                    - Sales
+                    - Description
+                    - userId
+                    - id
+                    - title
+                    - body
+                - defaultSelectedRow: first
+                - freezeActionButtonColumns: false
+                - sort: null
+                - _columns:
+                    - Title
+                    - Sales
+                    - Description
+                    - userId
+                    - id
+                    - title
+                    - body
+                - actionButtonInternalUrlHashParams: ''
+                - actionButtonInternalUrlQuery: ''
+                - sortByRawValue:
+                    ordered: []
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - _reverseDisplayedDataIndices: null
+                - nextAfterCursor: ''
+                - useCompactMode: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: af6c8
+                height: 15.200000000000001
+                width: 12
+            createdAt: 2022-12-14T20:48:50.726Z
+      - albums_listview:
+          pluginTemplate:
+            id: albums_listview
+            type: widget
+            subtype: ListViewWidget
+            template:
+              ordered:
+                - heightType: fixed
+                - showBorder: false
+                - data: ''
+                - showDropShadow: false
+                - scroll: true
+                - formDataKey: '{{ self.id }}'
+                - style:
+                    ordered: []
+                - dynamicHeightsEnabled: true
+                - itemHeight: '2'
+                - overflowType: scroll
+                - instances: '{{ album_pictures.data.length}}'
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: c23b1
+                row: -8.881784197001252e-16
+                col: 5
+                height: 13
+                width: 7
+            createdAt: 2022-12-14T20:49:17.007Z
+      - text10:
+          pluginTemplate:
+            id: text10
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: fixed
+                - horizontalAlign: left
+                - hidden: null
+                - imageWidth: fit
+                - showInEditor: null
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: <img src="{{album_pictures.data[i].url}}" width="100"/>
+                - style:
+                    ordered: []
+                - disableMarkdown: false
+                - overflowType: hidden
+                - maintainSpaceWhenHidden: null
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: albums_listview
+                height: 1.7999999999999998
+                width: 4
+            createdAt: 2022-12-14T20:49:17.268Z
+      - text11:
+          pluginTemplate:
+            id: text11
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: fixed
+                - horizontalAlign: left
+                - hidden: null
+                - imageWidth: fit
+                - showInEditor: null
+                - verticalAlign: bottom
+                - tooltipText: ''
+                - value: '{{ album_pictures.data[i].title}}'
+                - style:
+                    ordered:
+                      - color: ''
+                      - background: ''
+                      - links: ''
+                - disableMarkdown: false
+                - overflowType: hidden
+                - maintainSpaceWhenHidden: null
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: albums_listview
+                row: 0.40000000000000013
+                col: 4
+                height: 0.6
+                width: 8
+            createdAt: 2022-12-14T20:49:17.485Z
+      - text14:
+          pluginTemplate:
+            id: text14
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '{{ table1.selectedRow.data.address.street}}'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 4.199999999999999
+                col: 4
+                height: 0.6
+                width: 8
+            createdAt: 2022-12-14T21:15:12.460Z
+      - text15:
+          pluginTemplate:
+            id: text15
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: Street
+                - style:
+                    ordered:
+                      - color: rgba(38, 38, 38, 0.5)
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 4.199999999999999
+                height: 0.6
+                width: 4
+            createdAt: 2022-12-14T21:15:29.552Z
+      - text16:
+          pluginTemplate:
+            id: text16
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: City
+                - style:
+                    ordered:
+                      - color: rgba(38, 38, 38, 0.5)
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 5.3999999999999995
+                height: 0.6
+                width: 4
+            createdAt: 2022-12-14T21:15:52.578Z
+      - text17:
+          pluginTemplate:
+            id: text17
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '{{ table1.selectedRow.data.address.city}}'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 5.3999999999999995
+                col: 4
+                height: 0.6
+                width: 8
+            createdAt: 2022-12-14T21:15:52.679Z
+      - text18:
+          pluginTemplate:
+            id: text18
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: Suite
+                - style:
+                    ordered:
+                      - color: rgba(38, 38, 38, 0.5)
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 4.8
+                height: 0.6
+                width: 4
+            createdAt: 2022-12-14T21:16:21.221Z
+      - text19:
+          pluginTemplate:
+            id: text19
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '{{ table1.selectedRow.data.address.suite}}'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 4.8
+                col: 4
+                height: 0.6
+                width: 8
+            createdAt: 2022-12-14T21:16:21.306Z
+      - text20:
+          pluginTemplate:
+            id: text20
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: Zip code
+                - style:
+                    ordered:
+                      - color: rgba(38, 38, 38, 0.5)
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 6
+                height: 0.6
+                width: 4
+            createdAt: 2022-12-14T21:16:37.392Z
+      - text21:
+          pluginTemplate:
+            id: text21
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '{{ table1.selectedRow.data.address.zipcode}}'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 6
+                col: 4
+                height: 0.6
+                width: 8
+            createdAt: 2022-12-14T21:16:37.482Z
+      - text22:
+          pluginTemplate:
+            id: text22
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '**Info**'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                height: 0.6
+                width: 12
+            createdAt: 2022-12-14T21:17:08.379Z
+      - text23:
+          pluginTemplate:
+            id: text23
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '**Company**'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 7.199999999999999
+                height: 0.6
+                width: 12
+            createdAt: 2022-12-14T21:17:32.662Z
+      - spacer1:
+          pluginTemplate:
+            id: spacer1
+            type: widget
+            subtype: SpacerWidget
+            template:
+              ordered:
+                - hidden: false
+                - maintainSpaceWhenHidden: false
+                - showInEditor: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 6.6
+                height: 0.6000000000000001
+                width: 12
+            createdAt: 2022-12-14T21:17:39.146Z
+      - text24:
+          pluginTemplate:
+            id: text24
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: Catchphrase
+                - style:
+                    ordered:
+                      - color: rgba(38, 38, 38, 0.5)
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 8.399999999999999
+                height: 0.6
+                width: 4
+            createdAt: 2022-12-14T21:18:24.948Z
+      - text25:
+          pluginTemplate:
+            id: text25
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: Name
+                - style:
+                    ordered:
+                      - color: rgba(38, 38, 38, 0.5)
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 7.799999999999999
+                height: 0.6
+                width: 4
+            createdAt: 2022-12-14T21:18:25.050Z
+      - text26:
+          pluginTemplate:
+            id: text26
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '{{ table1.selectedRow.data.company.name}}'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 7.799999999999999
+                col: 4
+                height: 0.6
+                width: 8
+            createdAt: 2022-12-14T21:18:25.138Z
+      - text27:
+          pluginTemplate:
+            id: text27
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '{{ table1.selectedRow.data.company.catchPhrase}}'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 8.399999999999999
+                col: 4
+                height: 0.6
+                width: 8
+            createdAt: 2022-12-14T21:18:25.290Z
+      - text28:
+          pluginTemplate:
+            id: text28
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '{{ table1.selectedRow.data.company.bs}}'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 9
+                col: 4
+                height: 0.6
+                width: 8
+            createdAt: 2022-12-14T21:18:25.433Z
+      - text29:
+          pluginTemplate:
+            id: text29
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: Passcode
+                - style:
+                    ordered:
+                      - color: rgba(38, 38, 38, 0.5)
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 9
+                height: 0.6
+                width: 4
+            createdAt: 2022-12-14T21:18:25.541Z
+      - spacer2:
+          pluginTemplate:
+            id: spacer2
+            type: widget
+            subtype: SpacerWidget
+            template:
+              ordered:
+                - hidden: false
+                - maintainSpaceWhenHidden: false
+                - showInEditor: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 9.6
+                height: 0.6
+                width: 12
+            createdAt: 2022-12-14T21:19:58.121Z
+      - avatar1:
+          pluginTemplate:
+            id: avatar1
+            type: widget
+            subtype: AvatarWidget
+            template:
+              ordered:
+                - fallback: '{{ table1.selectedRow.data.name}}'
+                - src: ''
+                - hidden: false
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - style:
+                    ordered:
+                      - background: automatic
+                - labelCaption: '{{table1.selectedRow.data.email}}'
+                - label: ' {{ table1.selectedRow.data.name}}'
+                - icon: ''
+                - imageSize: 40
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                rowGroup: header
+                row: 2.220446049250313e-16
+                height: 0.2
+                width: 12
+            createdAt: 2022-12-14T21:22:49.780Z
+      - text30:
+          pluginTemplate:
+            id: text30
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '**Address**'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 3.6
+                height: 0.6
+                width: 12
+            createdAt: 2022-12-14T21:23:49.320Z
+      - text31:
+          pluginTemplate:
+            id: text31
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '{{ table1.selectedRow.data.email}}'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 0.6
+                col: 4
+                height: 0.6
+                width: 8
+            createdAt: 2022-12-14T21:24:00.536Z
+      - text32:
+          pluginTemplate:
+            id: text32
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: Email
+                - style:
+                    ordered:
+                      - color: rgba(38, 38, 38, 0.5)
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 0.6
+                height: 0.6
+                width: 4
+            createdAt: 2022-12-14T21:24:00.663Z
+      - text33:
+          pluginTemplate:
+            id: text33
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: Website
+                - style:
+                    ordered:
+                      - color: rgba(38, 38, 38, 0.5)
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 1.2000000000000002
+                height: 0.6
+                width: 4
+            createdAt: 2022-12-14T21:24:00.756Z
+      - text34:
+          pluginTemplate:
+            id: text34
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: <a>{{ table1.selectedRow.data.website}}</a>
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 1.2000000000000002
+                col: 4
+                height: 0.6
+                width: 8
+            createdAt: 2022-12-14T21:24:00.852Z
+      - text35:
+          pluginTemplate:
+            id: text35
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '{{ table1.selectedRow.data.phone}}'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 1.7999999999999998
+                col: 4
+                height: 0.6
+                width: 8
+            createdAt: 2022-12-14T21:24:01.003Z
+      - text36:
+          pluginTemplate:
+            id: text36
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: Phone
+                - style:
+                    ordered:
+                      - color: rgba(38, 38, 38, 0.5)
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 1.7999999999999998
+                height: 0.6
+                width: 4
+            createdAt: 2022-12-14T21:24:01.131Z
+      - spacer3:
+          pluginTemplate:
+            id: spacer3
+            type: widget
+            subtype: SpacerWidget
+            template:
+              ordered:
+                - hidden: false
+                - maintainSpaceWhenHidden: false
+                - showInEditor: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 3
+                height: 0.6
+                width: 12
+            createdAt: 2022-12-14T21:24:15.258Z
+      - text37:
+          pluginTemplate:
+            id: text37
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: Username
+                - style:
+                    ordered:
+                      - color: rgba(38, 38, 38, 0.5)
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 2.4
+                height: 0.6
+                width: 4
+            createdAt: 2022-12-14T21:25:11.324Z
+      - text38:
+          pluginTemplate:
+            id: text38
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '{{ table1.selectedRow.data.username}}'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: bb8b4
+                row: 2.4
+                col: 4
+                height: 0.6
+                width: 8
+            createdAt: 2022-12-14T21:25:11.440Z
+      - divider1:
+          pluginTemplate:
+            id: divider1
+            type: widget
+            subtype: DividerWidget
+            template:
+              ordered:
+                - hidden: false
+                - maintainSpaceWhenHidden: false
+                - showInEditor: false
+                - tooltipText: ''
+                - horizontalAlign: center
+                - text: ''
+                - textSize: default
+                - style:
+                    ordered:
+                      - color: rgba(209, 209, 209, 0.52)
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                rowGroup: header
+                row: 0.19999999999999996
+                height: 0.2
+                width: 12
+            createdAt: 2022-12-14T21:26:56.148Z
+      - albums_listbox:
+          pluginTemplate:
+            id: albums_listbox
+            type: widget
+            subtype: ListboxWidget
+            template:
+              ordered:
+                - imageByIndex:
+                    array: []
+                - _disabledByIndex: []
+                - showSelectionIndicator: true
+                - _values: []
+                - iconByIndex: bold/entertainment-music-note-1
+                - values: '{{ item.id }}'
+                - _iconByIndex: []
+                - allowDeselect: false
+                - hidden: false
+                - customValidation: ''
+                - data: '{{ user_albums.data }}'
+                - searchMode: fuzzy
+                - hideValidationMessage: false
+                - fallbackTextByIndex:
+                    array: []
+                - _fallbackTextByIndex: []
+                - selectedItem: null
+                - validationMessage: ''
+                - automaticItemColors: false
+                - itemAdornmentShape: circle
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: '{{ self.values[0] }}'
+                - style:
+                    ordered:
+                      - border: rgba(209, 209, 209, 0)
+                - hiddenByIndex:
+                    array: []
+                - labelCaption: Select an album to view details
+                - labelWidth: '33'
+                - deprecatedLabels:
+                    array: []
+                - _hiddenByIndex: []
+                - _captionByIndex: []
+                - itemAdornmentSize: auto
+                - searchTerm: ''
+                - label: Albums owned
+                - _hasMigratedNestedItems: true
+                - captionByIndex: ''
+                - _validate: false
+                - itemMode: dynamic
+                - labelWidthUnit: '%'
+                - invalid: false
+                - selectedIndex: null
+                - _tooltipByIndex: []
+                - _colorByIndex: []
+                - tooltipByIndex:
+                    array: []
+                - colorByIndex:
+                    array: []
+                - selectedLabel: ''
+                - events:
+                    ordered: []
+                - _ids: []
+                - emptyMessage: No options
+                - disabled: false
+                - labelPosition: top
+                - _labels: []
+                - labelWrap: false
+                - disabledValues:
+                    array: []
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - _imageByIndex: []
+                - required: false
+                - labels: '{{ item.title }}'
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: c23b1
+                height: 13
+                width: 5
+            createdAt: 2022-12-14T21:35:49.353Z
+      - text40:
+          pluginTemplate:
+            id: text40
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: ''
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                subcontainer: c23b1
+                row: 13
+                col: 5
+                height: 0.6
+                width: 7
+            createdAt: 2022-12-14T21:42:33.337Z
+      - text41:
+          pluginTemplate:
+            id: text41
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: fixed
+                - horizontalAlign: left
+                - hidden: null
+                - imageWidth: fit
+                - showInEditor: null
+                - verticalAlign: top
+                - tooltipText: ''
+                - value: '{{ album_pictures.data[i].url}}'
+                - style:
+                    ordered:
+                      - color: rgba(38, 38, 38, 0.48)
+                      - links: rgba(179, 179, 179, 1)
+                - disableMarkdown: false
+                - overflowType: hidden
+                - maintainSpaceWhenHidden: null
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: albums_listview
+                row: 1
+                col: 4
+                height: 0.6
+                width: 8
+            createdAt: 2022-12-14T22:24:11.386Z
+      - filter_users:
+          pluginTemplate:
+            id: filter_users
+            type: function
+            subtype: Function
+            template:
+              ordered:
+                - funcBody: >
+                    // This transformer modifies data! It's a great place to add
+                    client-side filtering logic (e.g., based on an input).
+
+
+                    // Tip: assign your external references to variables instead
+                    of chaining off the curly brackets.
+
+                    const user_list = {{ users.data }};
+
+                    const name_search = {{ name_search_input.value
+                    }}.toLowerCase()
+
+
+                    // You can define helper functions to make logic easier!
+
+                    function filterByName(user) {
+                      // If there's nothing in the name_search_input, don't filter!
+                      if (!name_search) {
+                        return true
+                      }
+                      return user.name.toLowerCase().includes(name_search)
+                    }
+
+
+                    return user_list.filter(filterByName)
+                - value: ''
+            createdAt: 2022-12-14T22:44:57.546Z
+      - $header:
+          pluginTemplate:
+            id: $header
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: header
+                - sticky: true
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: true
+                - style:
+                    ordered:
+                      - primary-background: ''
+                      - primary-foreground: ''
+                      - primary-surface: '{{ theme.primary }}'
+            style:
+              ordered: []
+            createdAt: 2022-12-14T22:48:56.607Z
+      - mark_vip_button:
+          pluginTemplate:
+            id: mark_vip_button
+            type: widget
+            subtype: ButtonWidget2
+            template:
+              ordered:
+                - horizontalAlign: stretch
+                - clickable: false
+                - iconAfter: ''
+                - submitTargetId: null
+                - hidden: false
+                - text: Mark as VIP
+                - showInEditor: false
+                - tooltipText: ''
+                - styleVariant: solid
+                - submit: false
+                - iconBefore: bold/interface-award-crown
+                - events:
+                    ordered: []
+                - loading: false
+                - loaderPosition: auto
+                - disabled: false
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: detail_tab_container
+                rowGroup: footer
+                col: 7
+                height: 1
+                width: 5
+            createdAt: 2022-12-14T23:05:37.780Z
+  experimentalPerfFeatures:
+    object:
+      serverDepGraphEnabled: false
+      useRuntimeV2: false
+  rootScreen: null
+  version: 2.107.0
