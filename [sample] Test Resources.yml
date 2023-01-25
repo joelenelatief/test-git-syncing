@@ -1,0 +1,4780 @@
+version: 43.0.9
+pageUuid: 8bd21ec6-563b-11ed-8ea2-9fe48680e47b
+appTemplate:
+  plugins:
+    ordered:
+      - gcsRead:
+          pluginTemplate:
+            id: gcsRead
+            type: datasource
+            subtype: SqlTransformQuery
+            resourceName: SQL Transforms
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - error: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - metadata: null
+                - changesetObject: ''
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-10-20T21:58:17.534Z
+            folder: gcs
+      - s3Read:
+          pluginTemplate:
+            id: s3Read
+            type: datasource
+            subtype: S3Query
+            resourceName: 606abg81-0910-45f3-a9a6-16fc93e21707
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - fileKey: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - delimiter: ''
+                - query: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - error: null
+                - tagSet: ''
+                - uploadFileName: export.csv
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - uploadData: ''
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - metadata: null
+                - actionType: list
+                - copySource: ''
+                - changesetObject: ''
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - prefix: ''
+                - changeset: ''
+                - rawData: null
+                - signedOperationOptions: ''
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - bucketName: retool-public-demo
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - signedOperationName: ''
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - uploadFileType: csv
+                - maxKeys: ''
+                - useRawUploadFileType: false
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-10-20T20:38:57.744Z
+            folder: s3
+      - queryRunsPeriodically:
+          pluginTemplate:
+            id: queryRunsPeriodically
+            type: datasource
+            subtype: JavascriptQuery
+            resourceName: JavascriptQuery
+            template:
+              ordered:
+                - queryRefreshTime: '1000'
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: '{{ counter.value >= 3 }}'
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: counter.setValue(counter.value + 1)
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2019-07-22T02:25:11.944Z
+      - alwaysDisabled:
+          pluginTemplate:
+            id: alwaysDisabled
+            type: datasource
+            subtype: SqlTransformQuery
+            resourceName: SQL Transforms
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: '{{ true }}'
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: select 1
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: |-
+                    // type your code here
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2019-07-22T02:29:59.916Z
+      - runMeOnError:
+          pluginTemplate:
+            id: runMeOnError
+            type: datasource
+            subtype: JavascriptQuery
+            resourceName: JavascriptQuery
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - showFailureToaster: true
+                - query: return 1
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2019-07-22T02:30:40.282Z
+      - runMeOnSuccess:
+          pluginTemplate:
+            id: runMeOnSuccess
+            type: datasource
+            subtype: JavascriptQuery
+            resourceName: JavascriptQuery
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - showFailureToaster: true
+                - query: return 1
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2019-07-22T02:30:34.420Z
+      - failingQuery:
+          pluginTemplate:
+            id: failingQuery
+            type: datasource
+            subtype: SqlTransformQuery
+            resourceName: SQL Transforms
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: select * from foo
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - metadata: null
+                - triggersOnFailure:
+                    - runMeOnError
+                - changesetObject: ''
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events:
+                    - ordered:
+                        - event: failure
+                        - type: datasource
+                        - method: trigger
+                        - pluginId: runMeOnError
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '0'
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2019-07-22T03:58:17.330Z
+      - normalAutoQuery:
+          pluginTemplate:
+            id: normalAutoQuery
+            type: datasource
+            subtype: SqlTransformQuery
+            resourceName: SQL Transforms
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: select 1
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess:
+                    - runMeOnSuccess
+                    - asyncJsQuery
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events:
+                    - ordered:
+                        - event: success
+                        - type: datasource
+                        - method: trigger
+                        - pluginId: runMeOnSuccess
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '0'
+                    - ordered:
+                        - event: success
+                        - type: datasource
+                        - method: trigger
+                        - pluginId: asyncJsQuery
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '0'
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2019-07-22T03:55:50.182Z
+      - asyncJsQuery:
+          pluginTemplate:
+            id: asyncJsQuery
+            type: datasource
+            subtype: JavascriptQuery
+            resourceName: JavascriptQuery
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - showFailureToaster: true
+                - query: |-
+                    return new Promise(resolve => {
+                      window.setTimeout(() => resolve(1), 1000)
+                    })
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2019-07-22T04:01:12.627Z
+      - runOnParamsChange:
+          pluginTemplate:
+            id: runOnParamsChange
+            type: datasource
+            subtype: SqlTransformQuery
+            resourceName: SQL Transforms
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: select * from {{ normalAutoQuery.data }}
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2019-07-22T03:59:29.260Z
+      - withTransfomer:
+          pluginTemplate:
+            id: withTransfomer
+            type: datasource
+            subtype: SqlTransformQuery
+            resourceName: SQL Transforms
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: select 1
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: true
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: return data[0][1] + 1
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2019-07-22T04:03:15.135Z
+      - snowflakeRead:
+          pluginTemplate:
+            id: snowflakeRead
+            type: datasource
+            subtype: SqlQuery
+            resourceName: 35d6cfdf-1b91-4822-b6e2-7739beaa8a19
+            resourceDisplayName: '[shared] snowflake'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: select 1 as result;
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - error: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - warningCodes: []
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - databaseHostOverride: ''
+                - metadata: null
+                - changesetObject: ''
+                - shouldUseLegacySql: false
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2020-10-14T20:20:12.877Z
+            folder: snowflake
+      - mongodbRead:
+          pluginTemplate:
+            id: mongodbRead
+            type: datasource
+            subtype: NoSqlQuery
+            resourceName: 2405dba0-ab2a-4460-a69e-2c7cac8d92a6
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - method: findOne
+                - lastReceivedFromResourceAt: null
+                - aggregation: ''
+                - queryDisabledMessage: ''
+                - successMessage: MongoDB Read
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: '{ name:"Slacker" }'
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - update: ''
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - useRawCollectionName: false
+                - data: null
+                - operations: ''
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - projection: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - sortBy: ''
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - insert: ''
+                - queryTimeout: '10000'
+                - field: ''
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - database: ''
+                - changesetIsObject: false
+                - limit: '10'
+                - enableCaching: false
+                - allowedGroups: []
+                - options: ''
+                - collection: companies
+                - skip: ''
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2020-10-15T04:46:29.161Z
+            folder: mongodb
+      - mysqlRead:
+          pluginTemplate:
+            id: mysqlRead
+            type: datasource
+            subtype: SqlQuery
+            resourceName: fd53e2a4-e149-4200-a165-c40d4005b800
+            resourceDisplayName: '[shared] mysql'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: MySQL Read
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: select 1 as result;
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - warningCodes: []
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - databaseHostOverride: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - shouldUseLegacySql: false
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2020-10-15T04:54:07.216Z
+            folder: mysql
+      - samplePostgresRead:
+          pluginTemplate:
+            id: samplePostgresRead
+            type: datasource
+            subtype: SqlQuery
+            resourceName: bae176ec-7f67-4940-b206-a24d60fbe2ce
+            resourceDisplayName: '[sample] postgres'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: PostgreSQL Read
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: select 1 as result;
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - warningCodes: []
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - databaseHostOverride: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - shouldUseLegacySql: false
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2020-10-15T04:56:54.199Z
+            folder: postgres
+      - sharedPostgresRead:
+          pluginTemplate:
+            id: sharedPostgresRead
+            type: datasource
+            subtype: SqlQuery
+            resourceName: a2038341-6de5-4c82-aae9-381ea419e86e
+            resourceDisplayName: '[shared] postgres'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: PostgreSQL Read
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: select 1 as result;
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - warningCodes: []
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - databaseHostOverride: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - shouldUseLegacySql: false
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-10-20T20:33:20.825Z
+            folder: postgres
+      - firestoreRead:
+          pluginTemplate:
+            id: firestoreRead
+            type: datasource
+            subtype: FirebaseQuery
+            resourceName: ff1137a2-fd75-4c62-a47f-da360ead6e24
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: Firestore Read
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - firestoreCollection: OrderAnalysis
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - endAt: ''
+                - firebaseService: firestore
+                - showSuccessToaster: true
+                - equalTo: ''
+                - cacheKeyTtl: ''
+                - metadata: null
+                - uid: ''
+                - editorMode: gui
+                - actionType: getCollectionsFirestore
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - setDbValue: ''
+                - value: ''
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - filterType: ''
+                - rawData: null
+                - userOptions: ''
+                - docId: ''
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - ordering: ''
+                - startAt: ''
+                - limitType: ''
+                - showLatestVersionUpdatedWarning: false
+                - dbRef: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - phoneNumber: ''
+                - nextPageToken: ''
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - useRawCollectionId: false
+                - firestoreOrderBy: ''
+                - requireConfirmation: false
+                - orderByChildValue: ''
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - limit: '5'
+                - enableCaching: false
+                - firestoreOrderDirection: ''
+                - allowedGroups: []
+                - firestoreWhere: '[{"value":"1","key":"","operation":"=="}]'
+                - email: ''
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2020-10-15T05:01:27.011Z
+            folder: firestore
+      - bigqueryRead:
+          pluginTemplate:
+            id: bigqueryRead
+            type: datasource
+            subtype: SqlQueryUnified
+            resourceName: 320629cc-7ee2-49f2-9486-7b791e52d8dd
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - records: ''
+                - lastReceivedFromResourceAt: null
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: select 1 as result;
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - error: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - warningCodes: []
+                - data: null
+                - recordId: ''
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - filterBy: ''
+                - databaseHostOverride: ''
+                - metadata: null
+                - editorMode: sql
+                - actionType: ''
+                - changesetObject: ''
+                - shouldUseLegacySql: false
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - enableBulkUpdates: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - bulkUpdatePrimaryKey: ''
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - tableName: test.users
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - doNotThrowOnNoOp: false
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2020-10-15T21:16:24.068Z
+            folder: bigquery
+      - graphqlRead:
+          pluginTemplate:
+            id: graphqlRead
+            type: datasource
+            subtype: GraphQLQuery
+            resourceName: eae05eb2-7387-41df-9c2b-4dd0ca20af32
+            resourceDisplayName: '[shared] graphql'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - paginationLimit: ''
+                - body: |-
+                    {
+                      launchesPast(limit: 1) {
+                        mission_name
+                      }
+                    }
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: GraphQL Read
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - paginationPaginationField: ''
+                - headers: ''
+                - showFailureToaster: true
+                - paginationEnabled: false
+                - query: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - graphQLVariables: '[]'
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - cookies: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - graphQLErrors: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - paginationDataField: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - type: POST
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - bodyType: raw
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2020-10-15T21:28:52.094Z
+            folder: graphql
+      - sharedRestRead:
+          pluginTemplate:
+            id: sharedRestRead
+            type: datasource
+            subtype: RESTQuery
+            resourceName: 11603003-5658-477c-bcbf-2b94d0ae5158
+            resourceDisplayName: '[shared] restapi'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - paginationLimit: ''
+                - body: >-
+                    [{"key":"id","value":"1"},{"key":"title","value":"\"foo\""},{"key":"body","value":"\"bar\""},{"key":"userId","value":"1"}]
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - paginationPaginationField: ''
+                - headers: ''
+                - showFailureToaster: true
+                - paginationEnabled: false
+                - query: name/united
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - cookies: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - paginationDataField: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - type: GET
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - bodyType: json
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2020-11-09T18:30:34.658Z
+            folder: rest
+      - runResources:
+          pluginTemplate:
+            id: runResources
+            type: datasource
+            subtype: JavascriptQuery
+            resourceName: JavascriptQuery
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - showFailureToaster: true
+                - query: return 1
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess:
+                    - dynamoWrite
+                    - dynamoRead
+                    - mysqlRead
+                    - postgresRead
+                    - postgresWrite
+                    - mongodbRead
+                    - mongodbWrite
+                    - redisRead
+                    - redisWrite
+                    - snowflakeRead
+                    - snowflakeWrite
+                    - athenaRead
+                    - athenaInsertConfirm
+                    - firestoreRead
+                    - firestoreWrite
+                    - normalRestQuery
+                    - elasticsearchRead
+                    - elasticsearchWrite
+                    - s3Read
+                    - googleSheetsRead
+                    - googleSheetsWrite
+                    - githubRead
+                    - githubWrite
+                    - openapiRead
+                    - openapiWrite
+                    - bigqueryRead
+                    - bigqueryWrite
+                    - graphqlRead
+                    - googleCloudStorageRead
+                    - lambdaRun
+                    - cosmosWrite
+                    - closeIORead
+                    - closeWrite
+                    - cosmosRead
+                    - cloudDatatoreRead
+                    - cloudDatastoreWrite
+                    - graphQLWrite
+                    - slackSendMessage
+                    - salesforceRead
+                    - salesforceWrite
+                    - restWrite
+                    - s3Write
+                    - asanaRead
+                    - asanaWrite
+                    - twilioRead
+                    - twilioWrite
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: false
+                - cacheKeyTtl: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events:
+                    - ordered:
+                        - event: success
+                        - type: datasource
+                        - method: trigger
+                        - pluginId: mysqlRead
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '0'
+                    - ordered:
+                        - event: success
+                        - type: datasource
+                        - method: trigger
+                        - pluginId: mssqlRead
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '0'
+                    - ordered:
+                        - event: success
+                        - type: datasource
+                        - method: trigger
+                        - pluginId: samplePostgresRead
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '0'
+                    - ordered:
+                        - event: success
+                        - type: datasource
+                        - method: trigger
+                        - pluginId: sharedPostgresRead
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '0'
+                    - ordered:
+                        - event: success
+                        - type: datasource
+                        - method: trigger
+                        - pluginId: mongodbRead
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '0'
+                    - ordered:
+                        - event: success
+                        - type: datasource
+                        - method: trigger
+                        - pluginId: snowflakeRead
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '0'
+                    - ordered:
+                        - event: success
+                        - type: datasource
+                        - method: trigger
+                        - pluginId: firestoreRead
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '0'
+                    - ordered:
+                        - event: success
+                        - type: datasource
+                        - method: trigger
+                        - pluginId: sampleRestRead
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '0'
+                    - ordered:
+                        - event: success
+                        - type: datasource
+                        - method: trigger
+                        - pluginId: s3Read
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '0'
+                    - ordered:
+                        - event: success
+                        - type: datasource
+                        - method: trigger
+                        - pluginId: sharedRestRead
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '0'
+                    - ordered:
+                        - event: success
+                        - type: datasource
+                        - method: trigger
+                        - pluginId: bigqueryRead
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '0'
+                    - ordered:
+                        - event: success
+                        - type: datasource
+                        - method: trigger
+                        - pluginId: graphqlRead
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '0'
+                    - ordered:
+                        - event: success
+                        - type: datasource
+                        - method: trigger
+                        - pluginId: googleCloudStorageRead
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '0'
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2020-10-15T18:43:06.708Z
+      - allTestCases:
+          pluginTemplate:
+            id: allTestCases
+            type: function
+            subtype: Function
+            template:
+              ordered:
+                - funcBody: "return [\n  {\n    name: 'Run when params change',\n    passed: true,\n\t},\n\t{\n    name: 'Manual query normally doesnt run on page load',\n    passed: {{ !manualQuery.data }},\n\t},\n\t{\n    name: 'Manual query runs on page load when flag on',\n    passed: {{ runOnPageLoad.data }},\n\t},\n  {\n    name: 'Query runs periodically',\n    passed: {{ counter.value >= 3 }},\n\t},\n  {\n    name: 'Query doesnt run when disabled',\n    passed: {{ counter.value < 5 }},\n\t},\n  {\n    name: 'Run-when-params-change query runs on page load',\n    passed: {{ normalAutoQuery.data }},\n\t},\n\t{\n    name: 'Run-when-params-change query runs when params change',\n    passed: {{ runOnParamsChange.data }},\n\t},\n  {\n    name: 'On-success query trigger',\n    passed: {{ runMeOnSuccess.data }},\n\t},\n\t{\n    name: 'On-error query trigger',\n    passed: {{ runMeOnError.data }},\n\t},\n\t{\n    name: 'Async JS query works',\n    passed: {{ asyncJsQuery.data === 1 }},\n\t},\n  {\n    name: 'Query with transformer works',\n    passed: {{ withTransfomer.data === 2 }},\n\t},\n  {\n    name: 'Disabled query isnt marks itself clean',\n    passed: {{ !alwaysDisabled.data }},\n\t},\n  {\n    name: 'Query time out works',\n    passed: {{ withTimeout.error.includes('network timeout') }},\n\t},\n  {\n    name: 'DB Connector IP matches expectation',\n    passed: {{ _.includes(['168.61.167.11'], queryDBConnectorExpectedIP.data)}},\n    debugInfo: 'observed IP ' + {{queryDBConnectorExpectedIP.data}},\n\t},\n    {\n    name: 'Imported query works',\n    passed: {{ importedQuery.data && !importedQuery.error }},\n\t},\n]"
+                - value: ''
+            createdAt: 2019-07-22T02:16:50.124Z
+      - counter:
+          pluginTemplate:
+            id: counter
+            type: state
+            subtype: State
+            template:
+              ordered:
+                - _persistedValueGetter: null
+                - _persistedValueSetter: null
+                - persistValue: false
+                - persistedValueKey: ''
+                - value: '0'
+            createdAt: 2019-07-22T02:25:22.927Z
+      - allResources:
+          pluginTemplate:
+            id: allResources
+            type: function
+            subtype: Function
+            template:
+              ordered:
+                - funcBody: |-
+                    return [
+                      {
+                        resource: 'Sample PostgreSQL',
+                        type: 'sample',
+                        action: 'Read',
+                        isFetching: {{ samplePostgresRead.isFetching }},
+                        passed: {{ samplePostgresRead.data['result'][0] == 1}},
+                        debugInfo: {{ samplePostgresRead.error}},
+                      },
+                      {
+                        resource: 'Sample RestAPI',
+                        type: 'sample',
+                        action: 'Read',
+                        isFetching: {{ sampleRestRead.isFetching }},
+                        passed: {{ sampleRestRead.data[0]["name"] }},
+                        debugInfo: {{ sampleRestRead.error }},
+                      },
+                      {
+                        resource: 'Shared PostgreSQL',
+                        type: 'shared',
+                        action: 'Read',
+                        isFetching: {{ sharedPostgresRead.isFetching }},
+                        passed: {{ sharedPostgresRead.data['result'][0] == 1 }},
+                        debugInfo: {{ sharedPostgresRead.error }},
+                      },
+                      {
+                        resource: 'Shared RESTQuery',
+                        type: 'shared',
+                        action: 'Read',
+                        isFetching: {{ sharedRestRead.isFetching }},
+                        passed: {{ sharedRestRead.data[0]["name"] }},
+                        debugInfo: {{ sharedRestRead.error }},
+                      },
+                      { 
+                        resource: 'MySQL',
+                        type: 'shared',
+                        action: 'Read',
+                        isFetching: {{ mysqlRead.isFetching }},
+                        passed: {{ mysqlRead.data['result'][0] == 1 }},
+                        debugInfo: {{ mysqlRead.error }},
+                      },
+                      { 
+                        resource: 'MSSQL',
+                        type: 'shared',
+                        action: 'Read',
+                        isFetching: {{ mssqlRead.isFetching }},
+                        passed: {{ mysqlRead.data['result'][0] == 1 }},
+                        debugInfo: {{ mssqlRead.error }},
+                      },
+                      // {
+                      //   resource: 'S3',
+                      //   type: 'shared',
+                      //   action: 'Read',
+                      //   isFetching: {{ s3Read.isFetching }},
+                      //   passed: {{ s3Read.data.KeyCount > 0}},
+                      //   debugInfo: {{ s3Read.error }},
+                      // },
+                      // {
+                      //   resource: 'MongoDB',
+                      //   type: 'shared',
+                      //   action: 'Read',
+                      //  isFetching: {{ mongodbRead.isFetching }},
+                      //   passed: {{ mongodbRead.data.name == 'Slacker' }},
+                      //   debugInfo: {{ mongodbRead.error }},
+                      // },
+                      // { 
+                      //   resource: 'Firestore',
+                      //   type: 'shared',
+                      //   action: 'Read',
+                      //   isFetching: {{ firestoreRead.isFetching }},
+                      //   passed: {{ firestoreRead.data[0] == 'OrderAnalysis' }},
+                      //   debugInfo: {{ firestoreRead.error }},
+                      // },
+                      {
+                        resource: 'Snowflake',
+                        type: 'shared',
+                        action: 'Read',
+                        isFetching: {{ snowflakeRead.isFetching }},
+                        passed: {{ snowflakeRead.data['RESULT'][0] == 1 }},
+                        debugInfo: {{ snowflakeRead.error }},
+                      },
+                      // {
+                      //   resource: 'BigQuery',
+                      //   type: 'shared',
+                      //   action: 'Read',
+                      //   isFetching: {{ bigqueryRead.isFetching }},
+                      //   passed: {{ bigqueryRead.data['result'][0] == 1 }},
+                      //   debugInfo: {{ bigqueryRead.error }},
+                      // },
+                      {
+                        resource: 'GraphQL',
+                        type: 'shared',
+                        action: 'Read', 
+                        isFetching: {{ graphqlRead.isFetching }},
+                        passed: {{ graphqlRead.data['launchesPast'] != null }},
+                        debugInfo: {{ graphqlRead.error}},
+                      },
+                    ]
+                - value: ''
+            createdAt: 2020-10-14T19:41:23.446Z
+      - uniqueValueToUpdateWith:
+          pluginTemplate:
+            id: uniqueValueToUpdateWith
+            type: state
+            subtype: State
+            template:
+              ordered:
+                - _persistedValueGetter: null
+                - _persistedValueSetter: null
+                - persistValue: false
+                - persistedValueKey: ''
+                - value: >-
+                    { uuid: {{ uuid.v4() }}, id: {{ Math.floor(Math.random() *
+                    10000000) }} }
+            createdAt: 2020-10-15T05:06:25.554Z
+      - resources:
+          pluginTemplate:
+            id: resources
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - showCustomButton: false
+                - sortMappedValue:
+                    ordered: []
+                - _filteredSortedRenderedDataWithTypes: null
+                - heightType: fixed
+                - normalizedData: null
+                - rowHeight: compact
+                - saveChangesDisabled: ''
+                - columnTypeProperties:
+                    ordered: []
+                - columnWidths:
+                    - object:
+                        id: isFetching
+                        value: 196.984375
+                    - object:
+                        id: action
+                        value: 149.203125
+                    - object:
+                        id: type
+                        value: 183.6484375
+                - showSummaryFooter: false
+                - disableRowSelectInteraction: false
+                - columnWidthsMobile: []
+                - hasNextAfterCursor: ''
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - debugInfo: ''
+                      - userId: ''
+                      - completed: ''
+                      - name: ''
+                      - resource: ''
+                      - passed: ''
+                      - isFetching: ''
+                      - Custom Column 1: ''
+                      - action: ''
+                      - Custom Column 2: ''
+                      - title: ''
+                      - type: ''
+                      - id: ''
+                - columnFrozenAlignments:
+                    ordered:
+                      - resource: null
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered: []
+                - columnRestrictedEditing:
+                    ordered: []
+                - showFilterButton: true
+                - _columnVisibility:
+                    ordered: []
+                - _columnSummaryTypes:
+                    ordered: []
+                - _columnsWithLegacyBackgroundColor:
+                    set: []
+                - showAddRowButton: false
+                - _unfilteredSelectedIndex: ''
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered:
+                      - debugInfo: true
+                      - userId: true
+                      - completed: true
+                      - name: false
+                      - Sales: true
+                      - resource: true
+                      - passed: true
+                      - isFetching: false
+                      - action: true
+                      - Title: true
+                      - title: true
+                      - id: true
+                      - Description: true
+                - selectedPageIndex: '0'
+                - applyDynamicSettingsToColumnOrder: false
+                - rowColor:
+                    array: []
+                - actionButtonColumnName: Actions
+                - resetAfterSave: true
+                - filterStackType: and
+                - downloadRawData: false
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{ allResources.value }} '
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: true
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - columnAlignment:
+                    ordered: []
+                - columnSummaries:
+                    object: {}
+                - showBoxShadow: true
+                - sortedDesc: false
+                - customButtonName: ''
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - showRefreshButton: true
+                - pageSize: 48
+                - useDynamicColumnSettings: false
+                - style:
+                    ordered: []
+                - actionButtonPosition: left
+                - dynamicRowHeights: false
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - onCustomButtonPressQueryName: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - _columnSummaryValues:
+                    ordered: []
+                - checkboxRowSelect: false
+                - _compatibilityMode: true
+                - showColumnBorders: true
+                - clearSelectionLabel: Clear selection
+                - _renderedDataWithTypes: null
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: false
+                - selectedIndex: null
+                - defaultSortDescending: false
+                - _sortedDisplayedDataIndices: null
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    array: []
+                - newRow: null
+                - emptyMessage: No rows found
+                - columnEditable:
+                    ordered:
+                      - Custom Column 1: true
+                      - Custom Column 2: false
+                - _viewerColumnSummaryTypes:
+                    object: {}
+                - id: table2
+                - filters:
+                    array: []
+                - displayedDataIndices: null
+                - disableSorting:
+                    ordered: []
+                - columnMappers:
+                    ordered:
+                      - passed: '{{ !!self }}'
+                - showClearSelection: false
+                - doubleClickToEdit: false
+                - overflowType: pagination
+                - _reverseSortedDisplayedDataIndices: null
+                - showTableBorder: true
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns:
+                    - resource
+                    - action
+                    - passed
+                    - debugInfo
+                    - name
+                    - isFetching
+                - defaultSelectedRow: first
+                - freezeActionButtonColumns: false
+                - sort: null
+                - _columns: []
+                - sortByRawValue:
+                    ordered: []
+                - calculatedColumns:
+                    - Custom Column 1
+                    - Custom Column 2
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - _reverseDisplayedDataIndices: null
+                - nextAfterCursor: ''
+                - useCompactMode: true
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 0.9999999999999993
+                height: 7.800000000000001
+                width: 12
+            createdAt: 2020-10-15T18:40:08.302Z
+      - button1:
+          pluginTemplate:
+            id: button1
+            type: widget
+            subtype: ButtonWidget
+            template:
+              ordered:
+                - valueToCopy: ''
+                - color: '#3c92dc'
+                - internalUrlHashParams: ''
+                - afterClickDisableTime: ''
+                - exportFileType: csv
+                - buttonType: action
+                - exportTemplate: null
+                - url: ''
+                - newWindow: false
+                - value: Reload Resources
+                - style:
+                    ordered: []
+                - exportQuery: ''
+                - action: runResources
+                - internalUrlQuery: ''
+                - internalUrlPath: ''
+                - events:
+                    - ordered:
+                        - event: click
+                        - method: trigger
+                        - type: datasource
+                        - pluginId: runResources
+                        - waitType: debounce
+                        - waitMs: '0'
+                - id: button1
+                - exportFileName: ''
+                - loading: ''
+                - disabled: '{{ allResources.value.some(r => r.isFetching) }}'
+            style:
+              ordered: []
+            position2:
+              position2:
+                col: 10
+                height: 1
+                width: 2
+            createdAt: 2020-10-15T18:42:49.308Z
+      - mssqlRead:
+          pluginTemplate:
+            id: mssqlRead
+            type: datasource
+            subtype: SqlQuery
+            resourceName: e8856ebc-4da8-47ee-85a6-e065a6e5524d
+            resourceDisplayName: '[shared] mssql'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: select 1 as result;
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - error: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - warningCodes: []
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - databaseHostOverride: ''
+                - metadata: null
+                - changesetObject: ''
+                - shouldUseLegacySql: false
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2021-03-17T19:22:29.201Z
+            folder: mssql
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+            style:
+              ordered: []
+            createdAt: 2022-05-17T16:52:17.049Z
+      - $header:
+          pluginTemplate:
+            id: $header
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: header
+                - sticky: true
+            style:
+              ordered: []
+            createdAt: 2022-05-17T16:52:20.396Z
+      - sampleRestRead:
+          pluginTemplate:
+            id: sampleRestRead
+            type: datasource
+            subtype: RESTQuery
+            resourceName: 509115aa-35ba-4369-b44a-c9a54deac8d6
+            resourceDisplayName: '[sample] restapi'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - paginationLimit: ''
+                - body: >-
+                    [{"key":"id","value":"1"},{"key":"title","value":"\"foo\""},{"key":"body","value":"\"bar\""},{"key":"userId","value":"1"}]
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - paginationPaginationField: ''
+                - headers: ''
+                - showFailureToaster: true
+                - paginationEnabled: false
+                - query: name/united
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - cookies: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - paginationDataField: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - type: GET
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - bodyType: json
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-10-20T20:34:10.384Z
+            folder: rest
+      - title:
+          pluginTemplate:
+            id: title
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '### Test Resources'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                subcontainer: header
+                height: 0.6
+                width: 3
+            createdAt: 2022-10-21T20:51:43.656Z
+      - tabbedContainer1:
+          pluginTemplate:
+            id: tabbedContainer1
+            type: widget
+            subtype: ContainerWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                    - ''
+                    - ''
+                    - false
+                    - false
+                    - false
+                    - false
+                    - false
+                - heightType: auto
+                - currentViewKey: '{{ self.viewKeys[0] }}'
+                - iconByIndex:
+                    array: []
+                - clickable: false
+                - _iconByIndex:
+                    - ''
+                    - ''
+                    - ''
+                    - ''
+                    - ''
+                    - ''
+                    - ''
+                    - ''
+                - hidden: false
+                - showHeader: true
+                - hoistFetching: true
+                - views:
+                    array: []
+                - showInEditor: false
+                - tooltipText: ''
+                - hiddenByIndex:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                    - ''
+                    - ''
+                    - false
+                    - false
+                    - false
+                    - false
+                    - false
+                - currentViewIndex: null
+                - _hasMigratedNestedItems: true
+                - transition: none
+                - itemMode: static
+                - _tooltipByIndex:
+                    - ''
+                    - ''
+                    - ''
+                    - ''
+                    - ''
+                    - ''
+                    - ''
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - showFooter: false
+                - _viewKeys:
+                    - |
+                      Sample Postgres
+                    - Sample RestAPI
+                    - Shared PostgreSQL
+                    - Shared RestAPI
+                    - MySQL
+                    - MSSQL
+                    - Snowflake
+                    - GraphQL
+                - events:
+                    ordered: []
+                - _ids:
+                    - dc6db
+                    - 4c76b
+                    - e40c8
+                    - 1c695
+                    - 24ece
+                    - 9a78e
+                    - ca473
+                    - '49411'
+                - viewKeys:
+                    array: []
+                - iconPositionByIndex:
+                    array: []
+                - _iconPositionByIndex:
+                    - ''
+                    - ''
+                    - ''
+                    - left
+                    - left
+                    - left
+                    - left
+                    - left
+                - loading: false
+                - overflowType: scroll
+                - disabled: false
+                - _labels:
+                    - ''
+                    - ''
+                    - ''
+                    - ''
+                    - ''
+                    - ''
+                    - ''
+                    - ''
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - showBody: true
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 10.8
+                height: 0.2
+                width: 12
+            createdAt: 2022-10-27T22:13:56.986Z
+      - tabs2:
+          pluginTemplate:
+            id: tabs2
+            type: widget
+            subtype: TabsWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _values:
+                    - Tab 1
+                    - Tab 2
+                    - Tab 3
+                - iconByIndex:
+                    array: []
+                - values:
+                    array: []
+                - alignment: left
+                - _iconByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - hidden: false
+                - data:
+                    array: []
+                - targetContainerId: tabbedContainer1
+                - selectedItem: null
+                - showInEditor: false
+                - navigateContainer: true
+                - value: '{{ self.values[0] }}'
+                - hiddenByIndex:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _hasMigratedNestedItems: true
+                - itemMode: static
+                - selectedIndex: null
+                - _tooltipByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - selectedLabel: ''
+                - events:
+                    ordered: []
+                - _ids:
+                    - f2474
+                    - '65719'
+                    - '02069'
+                - iconPositionByIndex:
+                    array: []
+                - _iconPositionByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - disabled: false
+                - linePosition: bottom
+                - _labels:
+                    - ''
+                    - ''
+                    - ''
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: tabbedContainer1
+                rowGroup: header
+                row: 0.6
+                height: 0.8
+                width: 12
+            createdAt: 2022-10-27T22:13:57.267Z
+      - table1:
+          pluginTemplate:
+            id: table1
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - showCustomButton: false
+                - sortMappedValue:
+                    ordered: []
+                - _filteredSortedRenderedDataWithTypes: null
+                - heightType: auto
+                - normalizedData: null
+                - rowHeight: compact
+                - saveChangesDisabled: ''
+                - columnTypeProperties:
+                    ordered: []
+                - columnWidths: []
+                - showSummaryFooter: false
+                - disableRowSelectInteraction: false
+                - columnWidthsMobile: []
+                - hasNextAfterCursor: ''
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - actor_id: ''
+                      - first_name: ''
+                      - last_name: ''
+                      - last_update: ''
+                      - result: ''
+                - columnFrozenAlignments:
+                    ordered: []
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered: []
+                - columnRestrictedEditing:
+                    ordered: []
+                - showFilterButton: true
+                - _columnVisibility:
+                    ordered: []
+                - _columnSummaryTypes:
+                    ordered: []
+                - _columnsWithLegacyBackgroundColor:
+                    set: []
+                - showAddRowButton: false
+                - _unfilteredSelectedIndex: null
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered: []
+                - selectedPageIndex: '0'
+                - applyDynamicSettingsToColumnOrder: true
+                - rowColor:
+                    array: []
+                - actionButtonColumnName: Actions
+                - resetAfterSave: true
+                - filterStackType: and
+                - downloadRawData: false
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{samplePostgresData.data}}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: true
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - columnAlignment:
+                    ordered: []
+                - columnSummaries:
+                    object: {}
+                - showBoxShadow: false
+                - sortedDesc: false
+                - customButtonName: ''
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - showRefreshButton: true
+                - pageSize: '20'
+                - useDynamicColumnSettings: false
+                - actionButtonPosition: left
+                - dynamicRowHeights: false
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - onCustomButtonPressQueryName: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - _columnSummaryValues:
+                    ordered: []
+                - checkboxRowSelect: true
+                - _compatibilityMode: false
+                - showColumnBorders: false
+                - clearSelectionLabel: Clear selection
+                - _renderedDataWithTypes: null
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: null
+                - defaultSortDescending: false
+                - _sortedDisplayedDataIndices: null
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    array: []
+                - newRow: null
+                - emptyMessage: No rows found
+                - columnEditable:
+                    ordered: []
+                - _viewerColumnSummaryTypes:
+                    object: {}
+                - filters:
+                    array: []
+                - displayedDataIndices: null
+                - disableSorting:
+                    ordered: []
+                - columnMappers:
+                    ordered: []
+                - showClearSelection: false
+                - doubleClickToEdit: true
+                - overflowType: pagination
+                - _reverseSortedDisplayedDataIndices: null
+                - showTableBorder: true
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns: []
+                - defaultSelectedRow: first
+                - freezeActionButtonColumns: false
+                - sort: null
+                - _columns: []
+                - sortByRawValue:
+                    ordered: []
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - _reverseDisplayedDataIndices: null
+                - nextAfterCursor: ''
+                - useCompactMode: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: tabbedContainer1
+                subcontainer: dc6db
+                height: 2.0000000000000018
+                width: 12
+            createdAt: 2022-10-27T22:15:12.080Z
+      - samplePostgresData:
+          pluginTemplate:
+            id: samplePostgresData
+            type: datasource
+            subtype: SqlQuery
+            resourceName: bae176ec-7f67-4940-b206-a24d60fbe2ce
+            resourceDisplayName: '[sample] postgres'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: PostgreSQL Read
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: select * from actor;
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - warningCodes: []
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - databaseHostOverride: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - shouldUseLegacySql: false
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-10-27T22:15:40.468Z
+            folder: postgres
+      - table2:
+          pluginTemplate:
+            id: table2
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - showCustomButton: false
+                - sortMappedValue:
+                    ordered: []
+                - _filteredSortedRenderedDataWithTypes: null
+                - heightType: auto
+                - normalizedData: null
+                - rowHeight: compact
+                - saveChangesDisabled: ''
+                - columnTypeProperties:
+                    ordered: []
+                - columnWidths: []
+                - showSummaryFooter: false
+                - disableRowSelectInteraction: false
+                - columnWidthsMobile: []
+                - hasNextAfterCursor: ''
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - translations: ''
+                      - ccn3: ''
+                      - latlng: ''
+                      - borders: ''
+                      - flags: ''
+                      - capital: ''
+                      - idd: ''
+                      - name: ''
+                      - tld: ''
+                      - flag: ''
+                      - area: ''
+                      - startOfWeek: ''
+                      - coatOfArms: ''
+                      - population: ''
+                      - currencies: ''
+                      - altSpellings: ''
+                      - cca2: ''
+                      - cca3: ''
+                      - status: ''
+                      - unMember: ''
+                      - demonyms: ''
+                      - subregion: ''
+                      - region: ''
+                      - car: ''
+                      - landlocked: ''
+                      - capitalInfo: ''
+                      - maps: ''
+                      - postalCode: ''
+                      - cioc: ''
+                      - independent: ''
+                      - timezones: ''
+                      - languages: ''
+                      - gini: ''
+                      - fifa: ''
+                      - continents: ''
+                - columnFrozenAlignments:
+                    ordered: []
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered: []
+                - columnRestrictedEditing:
+                    ordered: []
+                - showFilterButton: true
+                - _columnVisibility:
+                    ordered: []
+                - _columnSummaryTypes:
+                    ordered: []
+                - _columnsWithLegacyBackgroundColor:
+                    set: []
+                - showAddRowButton: false
+                - _unfilteredSelectedIndex: null
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered: []
+                - selectedPageIndex: '0'
+                - applyDynamicSettingsToColumnOrder: true
+                - rowColor:
+                    array: []
+                - actionButtonColumnName: Actions
+                - resetAfterSave: true
+                - filterStackType: and
+                - downloadRawData: false
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{ sampleRestData.data }}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: true
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - columnAlignment:
+                    ordered: []
+                - columnSummaries:
+                    object: {}
+                - showBoxShadow: false
+                - sortedDesc: false
+                - customButtonName: ''
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - showRefreshButton: true
+                - pageSize: '20'
+                - useDynamicColumnSettings: false
+                - actionButtonPosition: left
+                - dynamicRowHeights: false
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - onCustomButtonPressQueryName: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - _columnSummaryValues:
+                    ordered: []
+                - checkboxRowSelect: true
+                - _compatibilityMode: false
+                - showColumnBorders: false
+                - clearSelectionLabel: Clear selection
+                - _renderedDataWithTypes: null
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: null
+                - defaultSortDescending: false
+                - _sortedDisplayedDataIndices: null
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    array: []
+                - newRow: null
+                - emptyMessage: No rows found
+                - columnEditable:
+                    ordered: []
+                - _viewerColumnSummaryTypes:
+                    object: {}
+                - filters:
+                    array: []
+                - displayedDataIndices: null
+                - disableSorting:
+                    ordered: []
+                - columnMappers:
+                    ordered: []
+                - showClearSelection: false
+                - doubleClickToEdit: true
+                - overflowType: pagination
+                - _reverseSortedDisplayedDataIndices: null
+                - showTableBorder: true
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns: []
+                - defaultSelectedRow: first
+                - freezeActionButtonColumns: false
+                - sort: null
+                - _columns: []
+                - sortByRawValue:
+                    ordered: []
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - _reverseDisplayedDataIndices: null
+                - nextAfterCursor: ''
+                - useCompactMode: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: tabbedContainer1
+                subcontainer: 4c76b
+                height: 2
+                width: 12
+            createdAt: 2022-10-27T22:16:44.852Z
+      - sampleRestData:
+          pluginTemplate:
+            id: sampleRestData
+            type: datasource
+            subtype: RESTQuery
+            resourceName: 509115aa-35ba-4369-b44a-c9a54deac8d6
+            resourceDisplayName: '[sample] restapi'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - paginationLimit: ''
+                - body: >-
+                    [{"key":"id","value":"1"},{"key":"title","value":"\"foo\""},{"key":"body","value":"\"bar\""},{"key":"userId","value":"1"}]
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - paginationPaginationField: ''
+                - headers: ''
+                - showFailureToaster: true
+                - paginationEnabled: false
+                - query: all
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - cookies: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - paginationDataField: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - type: GET
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - bodyType: json
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-10-27T22:20:03.543Z
+            folder: rest
+      - sharedPostgresData:
+          pluginTemplate:
+            id: sharedPostgresData
+            type: datasource
+            subtype: SqlQuery
+            resourceName: a2038341-6de5-4c82-aae9-381ea419e86e
+            resourceDisplayName: '[shared] postgres'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: PostgreSQL Read
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: select * from actor;
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - warningCodes: []
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - databaseHostOverride: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - shouldUseLegacySql: false
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-10-27T22:36:52.655Z
+            folder: postgres
+      - table3:
+          pluginTemplate:
+            id: table3
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - showCustomButton: false
+                - sortMappedValue:
+                    ordered: []
+                - _filteredSortedRenderedDataWithTypes: null
+                - heightType: auto
+                - normalizedData: null
+                - rowHeight: compact
+                - saveChangesDisabled: ''
+                - columnTypeProperties:
+                    ordered: []
+                - columnWidths: []
+                - showSummaryFooter: false
+                - disableRowSelectInteraction: false
+                - columnWidthsMobile: []
+                - hasNextAfterCursor: ''
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - actor_id: ''
+                      - first_name: ''
+                      - last_name: ''
+                      - last_update: ''
+                - columnFrozenAlignments:
+                    ordered: []
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered: []
+                - columnRestrictedEditing:
+                    ordered: []
+                - showFilterButton: true
+                - _columnVisibility:
+                    ordered: []
+                - _columnSummaryTypes:
+                    ordered: []
+                - _columnsWithLegacyBackgroundColor:
+                    set: []
+                - showAddRowButton: false
+                - _unfilteredSelectedIndex: null
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered: []
+                - selectedPageIndex: '0'
+                - applyDynamicSettingsToColumnOrder: true
+                - rowColor:
+                    array: []
+                - actionButtonColumnName: Actions
+                - resetAfterSave: true
+                - filterStackType: and
+                - downloadRawData: false
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{sharedPostgresData.data}}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: true
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - columnAlignment:
+                    ordered: []
+                - columnSummaries:
+                    object: {}
+                - showBoxShadow: false
+                - sortedDesc: false
+                - customButtonName: ''
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - showRefreshButton: true
+                - pageSize: '20'
+                - useDynamicColumnSettings: false
+                - actionButtonPosition: left
+                - dynamicRowHeights: false
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - onCustomButtonPressQueryName: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - _columnSummaryValues:
+                    ordered: []
+                - checkboxRowSelect: true
+                - _compatibilityMode: false
+                - showColumnBorders: false
+                - clearSelectionLabel: Clear selection
+                - _renderedDataWithTypes: null
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: null
+                - defaultSortDescending: false
+                - _sortedDisplayedDataIndices: null
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    array: []
+                - newRow: null
+                - emptyMessage: No rows found
+                - columnEditable:
+                    ordered: []
+                - _viewerColumnSummaryTypes:
+                    object: {}
+                - filters:
+                    array: []
+                - displayedDataIndices: null
+                - disableSorting:
+                    ordered: []
+                - columnMappers:
+                    ordered: []
+                - showClearSelection: false
+                - doubleClickToEdit: true
+                - overflowType: pagination
+                - _reverseSortedDisplayedDataIndices: null
+                - showTableBorder: true
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns: []
+                - defaultSelectedRow: first
+                - freezeActionButtonColumns: false
+                - sort: null
+                - _columns:
+                    - actor_id
+                    - first_name
+                    - last_name
+                    - last_update
+                - sortByRawValue:
+                    ordered: []
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - _reverseDisplayedDataIndices: null
+                - nextAfterCursor: ''
+                - useCompactMode: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: tabbedContainer1
+                subcontainer: e40c8
+                height: 2
+                width: 12
+            createdAt: 2022-10-27T22:37:10.200Z
+      - sharedRestData:
+          pluginTemplate:
+            id: sharedRestData
+            type: datasource
+            subtype: RESTQuery
+            resourceName: 11603003-5658-477c-bcbf-2b94d0ae5158
+            resourceDisplayName: '[shared] restapi'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - paginationLimit: ''
+                - body: >-
+                    [{"key":"id","value":"1"},{"key":"title","value":"\"foo\""},{"key":"body","value":"\"bar\""},{"key":"userId","value":"1"}]
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - paginationPaginationField: ''
+                - headers: ''
+                - showFailureToaster: true
+                - paginationEnabled: false
+                - query: all
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - cookies: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - paginationDataField: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - type: GET
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - bodyType: json
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-10-27T22:39:19.999Z
+            folder: rest
+      - mysqlData:
+          pluginTemplate:
+            id: mysqlData
+            type: datasource
+            subtype: SqlQuery
+            resourceName: fd53e2a4-e149-4200-a165-c40d4005b800
+            resourceDisplayName: '[shared] mysql'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: MySQL Read
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: select * from actor;
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - warningCodes: []
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - databaseHostOverride: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - shouldUseLegacySql: false
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-10-27T22:39:33.442Z
+            folder: mysql
+      - mssqlData:
+          pluginTemplate:
+            id: mssqlData
+            type: datasource
+            subtype: SqlQuery
+            resourceName: e8856ebc-4da8-47ee-85a6-e065a6e5524d
+            resourceDisplayName: '[shared] mssql'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: select * from dbo.dept;
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - error: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - warningCodes: []
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - databaseHostOverride: ''
+                - metadata: null
+                - changesetObject: ''
+                - shouldUseLegacySql: false
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-10-27T22:39:58.491Z
+            folder: mssql
+      - graphqlData:
+          pluginTemplate:
+            id: graphqlData
+            type: datasource
+            subtype: GraphQLQuery
+            resourceName: eae05eb2-7387-41df-9c2b-4dd0ca20af32
+            resourceDisplayName: '[shared] graphql'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - paginationLimit: ''
+                - body: |-
+                    {
+                      launchesPast {
+                        mission_name
+                      }
+                    }
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: GraphQL Read
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - paginationPaginationField: ''
+                - headers: ''
+                - showFailureToaster: true
+                - paginationEnabled: false
+                - query: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - error: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - graphQLVariables: '[]'
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - cookies: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - changesetObject: ''
+                - errorTransformer: |-
+                    // type your code here
+                    // example: return data.find(element => element.isError)
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - graphQLErrors: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - paginationDataField: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - type: POST
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - bodyType: raw
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-10-27T22:40:14.506Z
+            folder: graphql
+      - snowflakeData:
+          pluginTemplate:
+            id: snowflakeData
+            type: datasource
+            subtype: SqlQuery
+            resourceName: 35d6cfdf-1b91-4822-b6e2-7739beaa8a19
+            resourceDisplayName: '[shared] snowflake'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: |
+                    select V from WEATHER.DAILY_14_TOTAL limit 50
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - error: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - warningCodes: []
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - databaseHostOverride: ''
+                - metadata: null
+                - changesetObject: ''
+                - shouldUseLegacySql: false
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-10-27T22:41:05.714Z
+            folder: snowflake
+      - gcsData:
+          pluginTemplate:
+            id: gcsData
+            type: datasource
+            subtype: SqlTransformQuery
+            resourceName: SQL Transforms
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - error: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - metadata: null
+                - changesetObject: ''
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-10-27T22:41:42.731Z
+            folder: gcs
+      - table4:
+          pluginTemplate:
+            id: table4
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - showCustomButton: false
+                - sortMappedValue:
+                    ordered: []
+                - _filteredSortedRenderedDataWithTypes: null
+                - heightType: auto
+                - normalizedData: null
+                - rowHeight: compact
+                - saveChangesDisabled: ''
+                - columnTypeProperties:
+                    ordered: []
+                - columnWidths: []
+                - showSummaryFooter: false
+                - disableRowSelectInteraction: false
+                - columnWidthsMobile: []
+                - hasNextAfterCursor: ''
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - translations: ''
+                      - ccn3: ''
+                      - latlng: ''
+                      - borders: ''
+                      - flags: ''
+                      - capital: ''
+                      - idd: ''
+                      - name: ''
+                      - tld: ''
+                      - flag: ''
+                      - area: ''
+                      - startOfWeek: ''
+                      - coatOfArms: ''
+                      - population: ''
+                      - currencies: ''
+                      - altSpellings: ''
+                      - cca2: ''
+                      - cca3: ''
+                      - status: ''
+                      - unMember: ''
+                      - demonyms: ''
+                      - subregion: ''
+                      - region: ''
+                      - car: ''
+                      - landlocked: ''
+                      - capitalInfo: ''
+                      - maps: ''
+                      - postalCode: ''
+                      - cioc: ''
+                      - independent: ''
+                      - timezones: ''
+                      - languages: ''
+                      - gini: ''
+                      - fifa: ''
+                      - continents: ''
+                - columnFrozenAlignments:
+                    ordered: []
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered: []
+                - columnRestrictedEditing:
+                    ordered: []
+                - showFilterButton: true
+                - _columnVisibility:
+                    ordered: []
+                - _columnSummaryTypes:
+                    ordered: []
+                - _columnsWithLegacyBackgroundColor:
+                    set: []
+                - showAddRowButton: false
+                - _unfilteredSelectedIndex: null
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered: []
+                - selectedPageIndex: '0'
+                - applyDynamicSettingsToColumnOrder: true
+                - rowColor:
+                    array: []
+                - actionButtonColumnName: Actions
+                - resetAfterSave: true
+                - filterStackType: and
+                - downloadRawData: false
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{sharedRestData.data}}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: true
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - columnAlignment:
+                    ordered: []
+                - columnSummaries:
+                    object: {}
+                - showBoxShadow: false
+                - sortedDesc: false
+                - customButtonName: ''
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - showRefreshButton: true
+                - pageSize: '20'
+                - useDynamicColumnSettings: false
+                - actionButtonPosition: left
+                - dynamicRowHeights: false
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - onCustomButtonPressQueryName: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - _columnSummaryValues:
+                    ordered: []
+                - checkboxRowSelect: true
+                - _compatibilityMode: false
+                - showColumnBorders: false
+                - clearSelectionLabel: Clear selection
+                - _renderedDataWithTypes: null
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: null
+                - defaultSortDescending: false
+                - _sortedDisplayedDataIndices: null
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    array: []
+                - newRow: null
+                - emptyMessage: No rows found
+                - columnEditable:
+                    ordered: []
+                - _viewerColumnSummaryTypes:
+                    object: {}
+                - filters:
+                    array: []
+                - displayedDataIndices: null
+                - disableSorting:
+                    ordered: []
+                - columnMappers:
+                    ordered: []
+                - showClearSelection: false
+                - doubleClickToEdit: true
+                - overflowType: pagination
+                - _reverseSortedDisplayedDataIndices: null
+                - showTableBorder: true
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns: []
+                - defaultSelectedRow: first
+                - freezeActionButtonColumns: false
+                - sort: null
+                - _columns: []
+                - sortByRawValue:
+                    ordered: []
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - _reverseDisplayedDataIndices: null
+                - nextAfterCursor: ''
+                - useCompactMode: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: tabbedContainer1
+                subcontainer: 1c695
+                height: 2
+                width: 12
+            createdAt: 2022-10-27T22:44:12.766Z
+      - table5:
+          pluginTemplate:
+            id: table5
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - showCustomButton: false
+                - sortMappedValue:
+                    ordered: []
+                - _filteredSortedRenderedDataWithTypes: null
+                - heightType: auto
+                - normalizedData: null
+                - rowHeight: compact
+                - saveChangesDisabled: ''
+                - columnTypeProperties:
+                    ordered: []
+                - columnWidths: []
+                - showSummaryFooter: false
+                - disableRowSelectInteraction: false
+                - columnWidthsMobile: []
+                - hasNextAfterCursor: ''
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - actor_id: ''
+                      - first_name: ''
+                      - last_name: ''
+                      - last_update: ''
+                - columnFrozenAlignments:
+                    ordered: []
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered: []
+                - columnRestrictedEditing:
+                    ordered: []
+                - showFilterButton: true
+                - _columnVisibility:
+                    ordered: []
+                - _columnSummaryTypes:
+                    ordered: []
+                - _columnsWithLegacyBackgroundColor:
+                    set: []
+                - showAddRowButton: false
+                - _unfilteredSelectedIndex: null
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered: []
+                - selectedPageIndex: '0'
+                - applyDynamicSettingsToColumnOrder: true
+                - rowColor:
+                    array: []
+                - actionButtonColumnName: Actions
+                - resetAfterSave: true
+                - filterStackType: and
+                - downloadRawData: false
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{mysqlData.data}}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: true
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - columnAlignment:
+                    ordered: []
+                - columnSummaries:
+                    object: {}
+                - showBoxShadow: false
+                - sortedDesc: false
+                - customButtonName: ''
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - showRefreshButton: true
+                - pageSize: '20'
+                - useDynamicColumnSettings: false
+                - actionButtonPosition: left
+                - dynamicRowHeights: false
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - onCustomButtonPressQueryName: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - _columnSummaryValues:
+                    ordered: []
+                - checkboxRowSelect: true
+                - _compatibilityMode: false
+                - showColumnBorders: false
+                - clearSelectionLabel: Clear selection
+                - _renderedDataWithTypes: null
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: null
+                - defaultSortDescending: false
+                - _sortedDisplayedDataIndices: null
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    array: []
+                - newRow: null
+                - emptyMessage: No rows found
+                - columnEditable:
+                    ordered: []
+                - _viewerColumnSummaryTypes:
+                    object: {}
+                - filters:
+                    array: []
+                - displayedDataIndices: null
+                - disableSorting:
+                    ordered: []
+                - columnMappers:
+                    ordered: []
+                - showClearSelection: false
+                - doubleClickToEdit: true
+                - overflowType: pagination
+                - _reverseSortedDisplayedDataIndices: null
+                - showTableBorder: true
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns: []
+                - defaultSelectedRow: first
+                - freezeActionButtonColumns: false
+                - sort: null
+                - _columns: []
+                - sortByRawValue:
+                    ordered: []
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - _reverseDisplayedDataIndices: null
+                - nextAfterCursor: ''
+                - useCompactMode: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: tabbedContainer1
+                subcontainer: 24ece
+                height: 2
+                width: 12
+            createdAt: 2022-10-27T22:44:46.534Z
+      - table6:
+          pluginTemplate:
+            id: table6
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - showCustomButton: false
+                - sortMappedValue:
+                    ordered: []
+                - _filteredSortedRenderedDataWithTypes: null
+                - heightType: auto
+                - normalizedData: null
+                - rowHeight: compact
+                - saveChangesDisabled: ''
+                - columnTypeProperties:
+                    ordered: []
+                - columnWidths: []
+                - showSummaryFooter: false
+                - disableRowSelectInteraction: false
+                - columnWidthsMobile: []
+                - hasNextAfterCursor: ''
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - deptno: ''
+                      - dname: ''
+                      - loc: ''
+                - columnFrozenAlignments:
+                    ordered: []
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered: []
+                - columnRestrictedEditing:
+                    ordered: []
+                - showFilterButton: true
+                - _columnVisibility:
+                    ordered: []
+                - _columnSummaryTypes:
+                    ordered: []
+                - _columnsWithLegacyBackgroundColor:
+                    set: []
+                - showAddRowButton: false
+                - _unfilteredSelectedIndex: null
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered: []
+                - selectedPageIndex: '0'
+                - applyDynamicSettingsToColumnOrder: true
+                - rowColor:
+                    array: []
+                - actionButtonColumnName: Actions
+                - resetAfterSave: true
+                - filterStackType: and
+                - downloadRawData: false
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{mssqlData.data}}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: true
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - columnAlignment:
+                    ordered: []
+                - columnSummaries:
+                    object: {}
+                - showBoxShadow: false
+                - sortedDesc: false
+                - customButtonName: ''
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - showRefreshButton: true
+                - pageSize: '20'
+                - useDynamicColumnSettings: false
+                - actionButtonPosition: left
+                - dynamicRowHeights: false
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - onCustomButtonPressQueryName: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - _columnSummaryValues:
+                    ordered: []
+                - checkboxRowSelect: true
+                - _compatibilityMode: false
+                - showColumnBorders: false
+                - clearSelectionLabel: Clear selection
+                - _renderedDataWithTypes: null
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: null
+                - defaultSortDescending: false
+                - _sortedDisplayedDataIndices: null
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    array: []
+                - newRow: null
+                - emptyMessage: No rows found
+                - columnEditable:
+                    ordered: []
+                - _viewerColumnSummaryTypes:
+                    object: {}
+                - filters:
+                    array: []
+                - displayedDataIndices: null
+                - disableSorting:
+                    ordered: []
+                - columnMappers:
+                    ordered: []
+                - showClearSelection: false
+                - doubleClickToEdit: true
+                - overflowType: pagination
+                - _reverseSortedDisplayedDataIndices: null
+                - showTableBorder: true
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns: []
+                - defaultSelectedRow: first
+                - freezeActionButtonColumns: false
+                - sort: null
+                - _columns: []
+                - sortByRawValue:
+                    ordered: []
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - _reverseDisplayedDataIndices: null
+                - nextAfterCursor: ''
+                - useCompactMode: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: tabbedContainer1
+                subcontainer: 9a78e
+                height: 2
+                width: 12
+            createdAt: 2022-10-27T22:45:11.122Z
+      - table7:
+          pluginTemplate:
+            id: table7
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - showCustomButton: false
+                - sortMappedValue:
+                    ordered: []
+                - _filteredSortedRenderedDataWithTypes: null
+                - heightType: auto
+                - normalizedData: null
+                - rowHeight: compact
+                - saveChangesDisabled: ''
+                - columnTypeProperties:
+                    ordered: []
+                - columnWidths: []
+                - showSummaryFooter: false
+                - disableRowSelectInteraction: false
+                - columnWidthsMobile: []
+                - hasNextAfterCursor: ''
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - V: ''
+                      - T: ''
+                - columnFrozenAlignments:
+                    ordered: []
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered: []
+                - columnRestrictedEditing:
+                    ordered: []
+                - showFilterButton: true
+                - _columnVisibility:
+                    ordered: []
+                - _columnSummaryTypes:
+                    ordered: []
+                - _columnsWithLegacyBackgroundColor:
+                    set: []
+                - showAddRowButton: false
+                - _unfilteredSelectedIndex: null
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered: []
+                - selectedPageIndex: '0'
+                - applyDynamicSettingsToColumnOrder: true
+                - rowColor:
+                    array: []
+                - actionButtonColumnName: Actions
+                - resetAfterSave: true
+                - filterStackType: and
+                - downloadRawData: false
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{snowflakeData.data}}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: true
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - columnAlignment:
+                    ordered: []
+                - columnSummaries:
+                    object: {}
+                - showBoxShadow: false
+                - sortedDesc: false
+                - customButtonName: ''
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - showRefreshButton: true
+                - pageSize: '20'
+                - useDynamicColumnSettings: false
+                - actionButtonPosition: left
+                - dynamicRowHeights: false
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - onCustomButtonPressQueryName: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - _columnSummaryValues:
+                    ordered: []
+                - checkboxRowSelect: true
+                - _compatibilityMode: false
+                - showColumnBorders: false
+                - clearSelectionLabel: Clear selection
+                - _renderedDataWithTypes: null
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: null
+                - defaultSortDescending: false
+                - _sortedDisplayedDataIndices: null
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    array: []
+                - newRow: null
+                - emptyMessage: No rows found
+                - columnEditable:
+                    ordered: []
+                - _viewerColumnSummaryTypes:
+                    object: {}
+                - filters:
+                    array: []
+                - displayedDataIndices: null
+                - disableSorting:
+                    ordered: []
+                - columnMappers:
+                    ordered: []
+                - showClearSelection: false
+                - doubleClickToEdit: true
+                - overflowType: pagination
+                - _reverseSortedDisplayedDataIndices: null
+                - showTableBorder: true
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns: []
+                - defaultSelectedRow: first
+                - freezeActionButtonColumns: false
+                - sort: null
+                - _columns: []
+                - sortByRawValue:
+                    ordered: []
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - _reverseDisplayedDataIndices: null
+                - nextAfterCursor: ''
+                - useCompactMode: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: tabbedContainer1
+                subcontainer: ca473
+                height: 2
+                width: 12
+            createdAt: 2022-10-27T22:46:06.989Z
+      - table8:
+          pluginTemplate:
+            id: table8
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - showCustomButton: false
+                - sortMappedValue:
+                    ordered: []
+                - _filteredSortedRenderedDataWithTypes: null
+                - heightType: auto
+                - normalizedData: null
+                - rowHeight: compact
+                - saveChangesDisabled: ''
+                - columnTypeProperties:
+                    ordered: []
+                - columnWidths: []
+                - showSummaryFooter: false
+                - disableRowSelectInteraction: false
+                - columnWidthsMobile: []
+                - hasNextAfterCursor: ''
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - launchesPast: ''
+                - columnFrozenAlignments:
+                    ordered: []
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered: []
+                - columnRestrictedEditing:
+                    ordered: []
+                - showFilterButton: true
+                - _columnVisibility:
+                    ordered: []
+                - _columnSummaryTypes:
+                    ordered: []
+                - _columnsWithLegacyBackgroundColor:
+                    set: []
+                - showAddRowButton: false
+                - _unfilteredSelectedIndex: null
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered: []
+                - selectedPageIndex: '0'
+                - applyDynamicSettingsToColumnOrder: true
+                - rowColor:
+                    array: []
+                - actionButtonColumnName: Actions
+                - resetAfterSave: true
+                - filterStackType: and
+                - downloadRawData: false
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{ graphqlData.data }}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: true
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - columnAlignment:
+                    ordered: []
+                - columnSummaries:
+                    object: {}
+                - showBoxShadow: false
+                - sortedDesc: false
+                - customButtonName: ''
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - showRefreshButton: true
+                - pageSize: '20'
+                - useDynamicColumnSettings: false
+                - actionButtonPosition: left
+                - dynamicRowHeights: false
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - onCustomButtonPressQueryName: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - _columnSummaryValues:
+                    ordered: []
+                - checkboxRowSelect: true
+                - _compatibilityMode: false
+                - showColumnBorders: false
+                - clearSelectionLabel: Clear selection
+                - _renderedDataWithTypes: null
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: null
+                - defaultSortDescending: false
+                - _sortedDisplayedDataIndices: null
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    array: []
+                - newRow: null
+                - emptyMessage: No rows found
+                - columnEditable:
+                    ordered: []
+                - _viewerColumnSummaryTypes:
+                    object: {}
+                - filters:
+                    array: []
+                - displayedDataIndices: null
+                - disableSorting:
+                    ordered: []
+                - columnMappers:
+                    ordered: []
+                - showClearSelection: false
+                - doubleClickToEdit: true
+                - overflowType: pagination
+                - _reverseSortedDisplayedDataIndices: null
+                - showTableBorder: true
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns: []
+                - defaultSelectedRow: first
+                - freezeActionButtonColumns: false
+                - sort: null
+                - _columns: []
+                - sortByRawValue:
+                    ordered: []
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - _reverseDisplayedDataIndices: null
+                - nextAfterCursor: ''
+                - useCompactMode: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: tabbedContainer1
+                subcontainer: '49411'
+                height: 2
+                width: 12
+            createdAt: 2022-10-27T22:46:45.135Z
+      - divider1:
+          pluginTemplate:
+            id: divider1
+            type: widget
+            subtype: DividerWidget
+            template:
+              ordered:
+                - hidden: false
+                - maintainSpaceWhenHidden: false
+                - showInEditor: false
+                - tooltipText: ''
+                - horizontalAlign: center
+                - text: ''
+                - textSize: default
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 9.6
+                height: 0.2
+                width: 12
+            createdAt: 2022-10-27T22:56:31.207Z
+      - text1:
+          pluginTemplate:
+            id: text1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '#### Sample Data'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: tabbedContainer1
+                rowGroup: header
+                height: 0.6
+                width: 3
+            createdAt: 2022-10-27T22:59:36.179Z
+  folders:
+    - mysql
+    - mssql
+    - bigquery
+    - graphql
+    - firestore
+    - mongodb
+    - snowflake
+    - rest
+    - postgres
+    - postgres
+    - s3
+    - gcs
+  experimentalPerfFeatures:
+    object:
+      batchCommitModelEnabled: false
+      skipDepCycleCheckingEnabled: false
+  rootScreen: null
+  isFetching: true
+  preloadedAppJSLinks:
+    array:
+      - https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js
+  version: 2.103.0
