@@ -1,0 +1,286 @@
+version: 43.0.9
+pageUuid: aa7a793e-18f8-11ed-a472-3711fc38329a
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: SqlQuery
+            resourceName: d57b73b3-57b1-4c6c-93d9-715f0ca2cd35
+            resourceDisplayName: '[dev] bigquery'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - error: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - databaseHostOverride: ''
+                - metadata: null
+                - changesetObject: ''
+                - shouldUseLegacySql: false
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10001'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-08-10T22:06:20.930Z
+      - calendarInput1:
+          pluginTemplate:
+            id: calendarInput1
+            type: widget
+            subtype: CalendarInputWidget
+            template:
+              ordered:
+                - minDate: ''
+                - readOnly: false
+                - hidden: false
+                - customValidation: ''
+                - hideValidationMessage: false
+                - validationMessage: ''
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: '2022-08-08'
+                - labelCaption: ''
+                - maxDate: ''
+                - labelWidth: '33'
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - events:
+                    ordered: []
+                - disabled: false
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1.2
+                col: 1
+                height: 0.2
+                width: 6
+            createdAt: 2022-08-10T22:06:27.660Z
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+            style:
+              ordered: []
+            createdAt: 2022-08-10T22:06:27.692Z
+      - dateRange1:
+          pluginTemplate:
+            id: dateRange1
+            type: widget
+            subtype: DateRangeWidget
+            template:
+              ordered:
+                - minDate: ''
+                - readOnly: false
+                - iconAfter: ''
+                - dateFormat: MMM d, yyyy
+                - hidden: false
+                - customValidation: ''
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value:
+                    ordered:
+                      - start: ''
+                      - end: ''
+                - startPlaceholder: Start date
+                - labelCaption: ''
+                - maxDate: ''
+                - labelWidth: '33'
+                - label: Label
+                - formattedValue: ''
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - iconBefore: bold/interface-calendar-remove
+                - endPlaceholder: End date
+                - events:
+                    ordered: []
+                - textBetween: '-'
+                - loading: false
+                - disabled: false
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 9.600000000000021
+                col: 1
+                height: 1
+                width: 4
+            createdAt: 2022-08-10T22:06:34.480Z
+      - date1:
+          pluginTemplate:
+            id: date1
+            type: widget
+            subtype: DateWidget
+            template:
+              ordered:
+                - minDate: ''
+                - readOnly: false
+                - iconAfter: ''
+                - datePlaceholder: '{{ self.dateFormat.toUpperCase() }}'
+                - dateFormat: MMM d, yyyy
+                - hidden: false
+                - customValidation: ''
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: '{{ new Date("2022-08-08") }}'
+                - labelCaption: ''
+                - maxDate: ''
+                - labelWidth: '33'
+                - label: Label
+                - formattedValue: ''
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - iconBefore: bold/interface-calendar
+                - events:
+                    ordered: []
+                - loading: false
+                - disabled: false
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 8.60000000000002
+                col: 1
+                height: 1
+                width: 4
+            createdAt: 2022-08-10T22:06:38.446Z
+      - calendarInput2Narrow:
+          pluginTemplate:
+            id: calendarInput2Narrow
+            type: widget
+            subtype: CalendarInputWidget
+            template:
+              ordered:
+                - minDate: ''
+                - readOnly: false
+                - hidden: false
+                - customValidation: ''
+                - hideValidationMessage: false
+                - validationMessage: ''
+                - showInEditor: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: '{{ new Date() }}'
+                - labelCaption: ''
+                - maxDate: ''
+                - labelWidth: '33'
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - events:
+                    ordered: []
+                - disabled: false
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1.1999999999999993
+                col: 8
+                height: 0.2
+                width: 3
+            createdAt: 2022-08-11T21:55:41.027Z
+  rootScreen: null
+  version: 2.98.0
+  markdownLinkBehavior: auto
