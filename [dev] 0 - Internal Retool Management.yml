@@ -1,0 +1,2977 @@
+version: 43.0.9
+pageUuid: c37676ba-116f-11ea-b17d-d7734e1526f2
+appTemplate:
+  plugins:
+    ordered:
+      - searchForUsers:
+          pluginTemplate:
+            id: searchForUsers
+            type: datasource
+            subtype: SqlQuery
+            resourceName: '[dev] internal_retool (readonly)'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - query: |-
+                    select
+                      users.id,
+                      users.sid,
+                      users.email,
+                      users."googleId",
+                      users."firstName" || ' ' || users."lastName" as name,
+                      users."profilePhotoUrl",
+                      users."organizationId",
+                      organizations.subdomain,
+                      organizations."planId",
+                      organizations."stripeCustomerId",
+                      users.enabled,
+                      users."createdAt"
+                    from
+                      users
+                      left join organizations on users."organizationId" = organizations.id
+                    where
+                      email ilike {{ '%' + textinput1.value + '%' }}
+                      or "firstName" || ' ' || "lastName" ilike {{ '%' + textinput1.value + '%' }}
+                      or users.sid ilike {{ '%' + textinput1.value + '%' }}
+                      or organizations.subdomain ilike {{ '%' + textinput1.value + '%' }}
+                      or organizations."stripeCustomerId" ilike {{ '%' + textinput1.value + '%'}}
+                    order by
+                      id desc
+                    limit
+                      200
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - warningCodes: []
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - triggersOnFailure: []
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - importedQueryInputDefaults:
+                    ordered: []
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - enableCaching: false
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '1000'
+            createdAt: '2019-02-08T11:51:25.951Z'
+      - table1:
+          pluginTemplate:
+            id: table1
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - actionButtonQuery: ''
+                - sortMappedValue:
+                    ordered: []
+                - normalizedData: null
+                - actionButtonType: runQuery
+                - columnWidths:
+                    - object:
+                        id: sid
+                        value: 102.671875
+                    - object:
+                        id: id
+                        value: 79.015625
+                    - object:
+                        id: email
+                        value: 242.4375
+                - actionButtonDisabled: ''
+                - columnWidthsMobile: []
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - googleToken: ''
+                      - lastName: ''
+                      - enabled: ''
+                      - planId: ''
+                      - subdomain: ''
+                      - stripeCustomerId: ''
+                      - profilePhotoUrl: ''
+                      - hashedPassword: ''
+                      - resetPasswordExpires: ''
+                      - name: ''
+                      - sid: ''
+                      - organizationId: ''
+                      - updatedAt: ''
+                      - resetPasswordToken: ''
+                      - twoFactorAuthSecret: ''
+                      - googleId: ''
+                      - userName: ''
+                      - id: ''
+                      - createdAt: ''
+                      - firstName: ''
+                      - email: ''
+                      - lastLoggedIn: ''
+                      - twoFactorAuthEnabled: ''
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered:
+                      - createdAt: datetime
+                - showFilterButton: true
+                - actionButtonUrl: ''
+                - actionButton: false
+                - actionButtonNewWindow: false
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered:
+                      - googleToken: false
+                      - lastName: false
+                      - enabled: true
+                      - planId: true
+                      - subdomain: true
+                      - stripeCustomerId: true
+                      - profilePhotoUrl: false
+                      - hashedPassword: true
+                      - resetPasswordExpires: true
+                      - name: true
+                      - sales: true
+                      - sid: true
+                      - organizationId: true
+                      - updatedAt: true
+                      - resetPasswordToken: true
+                      - twoFactorAuthSecret: true
+                      - googleId: false
+                      - userName: true
+                      - id: true
+                      - createdAt: true
+                      - firstName: false
+                      - email: true
+                      - lastLoggedIn: true
+                      - twoFactorAuthEnabled: true
+                - selectedPageIndex: '0'
+                - actionButtonColumnName: Actions
+                - filterStackType: and
+                - downloadRawData: true
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{  searchForUsers.data  }}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: false
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - sortedDesc: false
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - actionButtonInternalUrlPath: ''
+                - pageSize: 11
+                - useDynamicColumnSettings: false
+                - selectedColumn: null
+                - actionButtonPosition: right
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - actionButtonText: ''
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: ''
+                - defaultSortDescending: false
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    ordered:
+                      - array: []
+                - newRow: null
+                - columnEditable:
+                    ordered: []
+                - filters:
+                    ordered:
+                      - array: []
+                - displayedDataIndices: null
+                - columnMappers:
+                    ordered:
+                      - Calculated Column 1: '{{currentRow.enabled}}'
+                - showClearSelection: false
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns:
+                    - id
+                    - sid
+                    - email
+                    - firstName
+                    - lastName
+                    - profilePhotoUrl
+                    - organizationId
+                    - name
+                    - googleId
+                    - googleToken
+                    - hashedPassword
+                    - createdAt
+                    - updatedAt
+                    - lastLoggedIn
+                    - enabled
+                    - resetPasswordToken
+                    - resetPasswordExpires
+                    - userName
+                    - twoFactorAuthSecret
+                    - twoFactorAuthEnabled
+                    - subdomain
+                    - planId
+                    - stripeCustomerId
+                - sort: null
+                - actionButtonInternalUrlQuery: ''
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - nextAfterCursor: ''
+                - useCompactMode: true
+            position2:
+              position2:
+                row: 2
+                height: 8
+                width: 12
+            createdAt: '2019-02-08T11:51:47.942Z'
+      - textinput1:
+          pluginTemplate:
+            id: textinput1
+            type: widget
+            subtype: TextInputWidget
+            template:
+              ordered:
+                - validationMaxlengthValue: ''
+                - readonly: ''
+                - disabledKeyCodes: ''
+                - validationMaxValue: ''
+                - onBlur: ''
+                - docsSlug: textinput
+                - validatonType: ''
+                - currencyType: USD
+                - leftIconName: search
+                - initialValue: ''
+                - validationMessage: ''
+                - tooltipText: ''
+                - value: ''
+                - suffix: ''
+                - validationMinlengthValue: ''
+                - validationLengthValue: ''
+                - placeholder: Search here...
+                - validationType: regexp
+                - label: Search for a user
+                - currencyMajorOnly: false
+                - formattedValue: ''
+                - labelMaxWidth: ''
+                - enableValidationType: false
+                - labelPlacedOnLeft: ''
+                - onSubmit: ''
+                - validationMinValue: ''
+                - validationState:
+                    object:
+                      required: ''
+                      validationType: ''
+                - type: text
+                - allowedRegex: ''
+                - required: false
+            position2:
+              position2:
+                col: 7
+                height: 2
+                width: 5
+            createdAt: '2019-02-08T11:52:26.156Z'
+      - getOrganization:
+          pluginTemplate:
+            id: getOrganization
+            type: datasource
+            subtype: SqlQuery
+            resourceName: '[dev] internal_retool (readonly)'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - query: |-
+                    select
+                      organizations.*,
+                      plans.name as "planName"
+                    from
+                      organizations
+                      left join plans on organizations."planId" = plans.id
+                    where
+                      organizations.id = {{ table1.selectedRow.data.organizationId }}
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - triggersOnFailure: []
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - importedQueryInputDefaults:
+                    ordered: []
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - enableCaching: false
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+            createdAt: '2019-02-08T11:54:03.280Z'
+      - container1:
+          pluginTemplate:
+            id: container1
+            type: widget
+            subtype: ContainerWidget
+            template:
+              ordered:
+                - title: ''
+                - disabled: ''
+                - spinWhenChildrenAreFetching: true
+                - showBorder: true
+                - showDropShadow: true
+                - backgroundColor: white
+                - scroll: false
+            position2:
+              position2:
+                row: 25
+                height: 9
+                width: 4
+            createdAt: '2019-02-08T11:57:12.700Z'
+      - button1:
+          pluginTemplate:
+            id: button1
+            type: widget
+            subtype: ButtonWidget
+            template:
+              ordered:
+                - valueToCopy: ''
+                - color: '#3c92dc'
+                - internalUrlHashParams: ''
+                - exportFileType: csv
+                - buttonType: action
+                - exportTemplate: null
+                - url: ''
+                - newWindow: false
+                - value: Set Trial End Date
+                - exportQuery: ''
+                - action: setTrialEnd
+                - internalUrlQuery: ''
+                - internalUrlPath: ''
+                - exportFileName: ''
+                - loading: ''
+                - disabled: >-
+                    {{  _.get(getOrganization, 'data.trialExpiryDate[0]') ==
+                    null  }}
+            position2:
+              position2:
+                container: container1
+                row: 6
+                height: 1
+                width: 12
+            createdAt: '2019-02-08T11:57:46.323Z'
+      - text2:
+          pluginTemplate:
+            id: text2
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: >-
+                    ##### {{  getOrganization.data.trialExpiryDate[0] != null ?
+                    'Trial Expiring ' +
+                    moment(getOrganization.data.trialExpiryDate[0]).fromNow() :
+                    'On a Plan (' + (getOrganization.data.planName[0]   ||
+                    'Legacy / Enterprise') + ')' }}
+                - renderAsMarkdown: true
+                - renderAsHtml: true
+                - scrollOverflow: false
+                - truncateOverflow: false
+                - tooltipText: ''
+            position2:
+              position2:
+                container: container1
+                height: 1
+                width: 12
+            createdAt: '2019-02-08T11:58:25.185Z'
+      - setTrialEnd:
+          pluginTemplate:
+            id: setTrialEnd
+            type: datasource
+            subtype: RetoolTableQuery
+            resourceName: '[dev] internal_retool (write)'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - records: ''
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess:
+                    - getOrganization
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - recordId: ''
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - filterBy: >-
+                    [{"key":"id","value":"{{
+                    table1.selectedRow.data.organizationId}}","operation":"="},{"key":"","value":""}]
+                - actionType: UPDATE_BY
+                - triggersOnFailure: []
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: >-
+                    [{"key":"trialExpiryDate","value":"{{
+                    moment().add(radiogroup1.value, 'days')}}"}]
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - enableBulkUpdates: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - importedQueryInputDefaults:
+                    ordered: []
+                - bulkUpdatePrimaryKey: ''
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - tableName: organizations
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - enableCaching: false
+                - databaseUsernameOverride: ''
+                - doNotThrowOnNoOp: false
+                - queryThrottleTime: '750'
+            createdAt: '2019-02-08T12:02:13.761Z'
+      - radiogroup1:
+          pluginTemplate:
+            id: radiogroup1
+            type: widget
+            subtype: RadioGroupWidget
+            template:
+              ordered:
+                - values: '[0, 4,7,14, 28]'
+                - docsSlug: radiogroup
+                - tooltipText: ''
+                - value: '4'
+                - label: New Trial End Date
+                - labelMaxWidth: ''
+                - labelPlacedOnLeft: ''
+                - onChangeQuery: ''
+                - disabled: >-
+                    {{  _.get(getOrganization, 'data.trialExpiryDate[0]') ==
+                    null  }}
+                - labels: >-
+                    ['Now', '4 days from now', '1 week from now', '2 weeks from
+                    now', '4 weeks from now']
+            position2:
+              position2:
+                container: container1
+                row: 1
+                height: 5
+                width: 12
+            createdAt: '2019-02-08T12:03:07.392Z'
+      - container2:
+          pluginTemplate:
+            id: container2
+            type: widget
+            subtype: ContainerWidget
+            template:
+              ordered:
+                - title: ''
+                - disabled: ''
+                - spinWhenChildrenAreFetching: true
+                - showBorder: true
+                - showDropShadow: true
+                - backgroundColor: white
+                - scroll: false
+            position2:
+              position2:
+                row: 10
+                col: 4
+                height: 32
+                width: 8
+            createdAt: '2019-02-08T12:07:19.805Z'
+      - getOrgUsers:
+          pluginTemplate:
+            id: getOrgUsers
+            type: datasource
+            subtype: SqlQuery
+            resourceName: '[dev] internal_retool (readonly)'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - query: |-
+                    select
+                      users.id,
+                      MAX(users.sid) as sid,
+                      MAX(users.email) as email,
+                      MAX("firstName") as "firstName",
+                      MAX("lastName") as "lastName",
+                      MAX("profilePhotoUrl") as "profilePhotoUrl",
+                      MAX(users."organizationId") as "organizationId",
+                      EVERY(users.enabled) as enabled,
+                      EVERY("twoFactorAuthEnabled") as "2fa",
+                      BOOL_OR(admin_groups.name IS NOT NULL) as "isAdmin",
+                      users."hashedPassword" IS NOT NULL as haspwd
+                    from
+                      users
+                      left join user_groups on users.id = user_groups."userId"
+                      left join (
+                        select
+                          *
+                        from
+                          groups
+                        where
+                          name = 'admin'
+                      ) admin_groups on user_groups."groupId" = admin_groups.id
+                    where
+                      users."organizationId" = {{ table1.selectedRow.data.organizationId }}
+                      and users.email ilike {{ '%' + textinput2.value + '%' }}
+                    group by
+                      users.id
+                    order by enabled desc
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - triggersOnFailure: []
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - importedQueryInputDefaults:
+                    ordered: []
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - enableCaching: false
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+            createdAt: '2019-02-08T12:07:46.611Z'
+      - table2:
+          pluginTemplate:
+            id: table2
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - actionButtonQuery: ''
+                - sortMappedValue:
+                    ordered: []
+                - normalizedData: null
+                - actionButtonType: runQuery
+                - columnWidths:
+                    - object:
+                        id: email
+                        value: 319.859375
+                - actionButtonDisabled: ''
+                - columnWidthsMobile: []
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - googleToken: ''
+                      - lastName: ''
+                      - enabled: ''
+                      - haspwd: ''
+                      - isAdmin: ''
+                      - profilePhotoUrl: ''
+                      - hashedPassword: ''
+                      - resetPasswordExpires: ''
+                      - 2fa: ''
+                      - sid: ''
+                      - organizationId: ''
+                      - updatedAt: ''
+                      - resetPasswordToken: ''
+                      - twoFactorAuthSecret: ''
+                      - googleId: ''
+                      - userName: ''
+                      - id: ''
+                      - createdAt: ''
+                      - firstName: ''
+                      - every: ''
+                      - email: ''
+                      - lastLoggedIn: ''
+                      - twoFactorAuthEnabled: ''
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered: []
+                - showFilterButton: true
+                - actionButtonUrl: ''
+                - actionButton: false
+                - actionButtonNewWindow: false
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered:
+                      - googleToken: true
+                      - lastName: true
+                      - enabled: true
+                      - haspwd: true
+                      - isAdmin: true
+                      - profilePhotoUrl: false
+                      - hashedPassword: true
+                      - resetPasswordExpires: true
+                      - name: true
+                      - sales: true
+                      - 2fa: true
+                      - sid: false
+                      - organizationId: false
+                      - updatedAt: true
+                      - resetPasswordToken: true
+                      - twoFactorAuthSecret: true
+                      - googleId: true
+                      - userName: true
+                      - id: false
+                      - createdAt: true
+                      - firstName: true
+                      - every: true
+                      - email: true
+                      - lastLoggedIn: true
+                      - twoFactorAuthEnabled: true
+                - selectedPageIndex: '0'
+                - actionButtonColumnName: Actions
+                - filterStackType: and
+                - downloadRawData: true
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{  getOrgUsers.data  }}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: false
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - sortedDesc: false
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - actionButtonInternalUrlPath: ''
+                - pageSize: 9
+                - useDynamicColumnSettings: false
+                - selectedColumn: null
+                - actionButtonPosition: right
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - actionButtonText: ''
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: ''
+                - defaultSortDescending: false
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    ordered:
+                      - array: []
+                - newRow: null
+                - columnEditable:
+                    ordered: []
+                - filters:
+                    ordered:
+                      - array: []
+                - displayedDataIndices: null
+                - columnMappers:
+                    ordered: []
+                - showClearSelection: false
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns:
+                    - id
+                    - email
+                    - firstName
+                    - lastName
+                    - profilePhotoUrl
+                    - googleId
+                    - googleToken
+                    - hashedPassword
+                    - organizationId
+                    - createdAt
+                    - updatedAt
+                    - lastLoggedIn
+                    - enabled
+                    - resetPasswordToken
+                    - resetPasswordExpires
+                    - sid
+                    - userName
+                    - twoFactorAuthSecret
+                    - twoFactorAuthEnabled
+                    - every
+                    - isAdmin
+                    - 2fa
+                    - haspwd
+                - sort: null
+                - actionButtonInternalUrlQuery: ''
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - nextAfterCursor: ''
+                - useCompactMode: false
+            position2:
+              position2:
+                container: container2
+                row: 1
+                height: 11
+                width: 12
+            createdAt: '2019-02-08T12:08:06.056Z'
+      - text3:
+          pluginTemplate:
+            id: text3
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: '##### Users'
+                - renderAsMarkdown: true
+                - renderAsHtml: true
+                - scrollOverflow: false
+                - truncateOverflow: false
+                - tooltipText: ''
+            position2:
+              position2:
+                container: container2
+                height: 1
+                width: 5
+            createdAt: '2019-02-08T12:08:37.437Z'
+      - container3:
+          pluginTemplate:
+            id: container3
+            type: widget
+            subtype: ContainerWidget
+            template:
+              ordered:
+                - title: ''
+                - disabled: ''
+                - spinWhenChildrenAreFetching: true
+                - showBorder: true
+                - showDropShadow: true
+                - backgroundColor: white
+                - scroll: false
+            position2:
+              position2:
+                row: 10
+                height: 15
+                width: 4
+            createdAt: '2019-02-08T13:16:34.262Z'
+      - text4:
+          pluginTemplate:
+            id: text4
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: '##### Intercom Profile'
+                - renderAsMarkdown: true
+                - renderAsHtml: true
+                - scrollOverflow: false
+                - truncateOverflow: false
+                - tooltipText: ''
+            position2:
+              position2:
+                container: container3
+                height: 1
+                width: 12
+            createdAt: '2019-02-08T13:16:45.996Z'
+      - text5:
+          pluginTemplate:
+            id: text5
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: >+
+                    <b>Social media</b>
+
+                    <% for (var i = 0; i <
+                    getIntercomData.data.social_profiles.social_profiles.length;
+                    i++) { %>
+
+                    <div style="padding-top: 10px;">
+
+                    <a href="{{
+                    getIntercomData.data.social_profiles.social_profiles[i].url}}"
+                    target="_blank"> {{
+                    getIntercomData.data.social_profiles.social_profiles[i].name}}</a>
+
+                    </div>
+
+                    <% } %>
+
+                - renderAsMarkdown: false
+                - renderAsHtml: true
+                - scrollOverflow: true
+                - truncateOverflow: false
+                - tooltipText: ''
+            position2:
+              position2:
+                container: container3
+                row: 1
+                col: 8
+                height: 5
+                width: 4
+            createdAt: '2019-02-08T13:22:13.056Z'
+      - text6:
+          pluginTemplate:
+            id: text6
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: >-
+                    <b>Location</b>
+
+
+                    <p>
+
+                    {{ getIntercomData.data.location_data.city_name}}, {{
+                    getIntercomData.data.location_data.country_name}}
+
+                    </p>
+
+                    <br />
+
+                    <b> Current Time </b> 
+
+                    <p>
+
+                    {{
+                    moment.tz(getIntercomData.data.location_data.timezone).format('lll')}}
+
+                    </p>
+
+                    <p><i> {{
+                    getIntercomData.data.location_data.timezone}}</i></p>
+
+
+                    <br/>
+
+
+                    <b> Last Seen </b>
+
+                    <p> {{ moment(getIntercomData.data.last_request_at *
+                    1000).format('lll')}}
+                - renderAsMarkdown: false
+                - renderAsHtml: true
+                - scrollOverflow: false
+                - truncateOverflow: false
+                - tooltipText: ''
+            position2:
+              position2:
+                container: container3
+                row: 1
+                height: 5
+                width: 8
+            createdAt: '2019-02-08T13:52:33.129Z'
+      - text7:
+          pluginTemplate:
+            id: text7
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: |+
+                    ##### Salesforce Profile
+
+                - renderAsMarkdown: true
+                - renderAsHtml: true
+                - scrollOverflow: false
+                - truncateOverflow: false
+                - tooltipText: ''
+            position2:
+              position2:
+                container: container3
+                row: 6
+                height: 1
+                width: 12
+            createdAt: '2019-02-09T00:01:56.487Z'
+      - text8:
+          pluginTemplate:
+            id: text8
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: >-
+                    <b>Linkedin</b>
+
+
+                    <p>
+
+                    <a target="_blank"
+                    href="{{getSalesforceData.data['0'].LinkedIn__c}}">
+                    {{getSalesforceData.data['0'].LinkedIn__c || '--missing--'}}
+                    </a>
+
+                    </p>
+
+                    <br />
+
+                    <b> Company </b> 
+
+                    <p>
+
+                    {{ getSalesforceData.data['0'].Company }}
+
+                    </p>
+
+
+                    <br/>
+
+
+                    <b> Number of Employees </b>
+
+                    <p> {{ getSalesforceData.data['0'].NumberOfEmployees }}
+                      
+                    </p>
+
+                    <br />
+
+                    <b> Annual Revenue </b>
+
+                    <p> {{ getSalesforceData.data['0'].AnnualRevenue }}
+                      
+                    </p>
+
+
+                    <br />
+
+                    <b> Commercial Use </b> <span style="padding-left: 10px">{{
+                    getOrganization.data.isCompanyAccount ? '✅' : '🚫'}}</span>
+                      
+                - renderAsMarkdown: false
+                - renderAsHtml: true
+                - scrollOverflow: false
+                - truncateOverflow: false
+                - tooltipText: ''
+            position2:
+              position2:
+                container: container3
+                row: 7
+                height: 6
+                width: 8
+            createdAt: '2019-02-09T00:02:12.369Z'
+      - text9:
+          pluginTemplate:
+            id: text9
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: >-
+                    <a
+                    href="https://www.google.com/search?q={{table1.selectedRow.data.name}}
+                    {{ getSalesforceData.data['0'].Company}}" target="_blank">
+                    Google Me </a>
+
+
+                    <br /><br />
+
+
+                    <a href="https://www.google.com/search?q=crunchbase {{
+                    getSalesforceData.data['0'].Company}} " target="_blank">
+                    Google Crunchbase </a>
+
+
+                    <br /><br />
+
+
+                    <a
+                    href="https://na49.lightning.force.com/lightning/r/Lead/{{
+                    getSalesforceData.data['0'].Id}}/view" target="_blank"> Open
+                    In Salesforce </a>
+
+
+                    <br/> <br/>
+
+
+                    <a
+                    href=https://app.fullstory.com/ui/4ZFX6/segments/everyone/people:search:((NOW%2FDAY-29DAY:NOW%2FDAY%2B1DAY):((UserEmail:%5E$:%22{{encodeURIComponent(table1.selectedRow.data.email)}}%22)):():():():)/0"
+                    target="_blank"> Open in Fullstory </a>
+                - renderAsMarkdown: false
+                - renderAsHtml: true
+                - scrollOverflow: false
+                - truncateOverflow: false
+                - tooltipText: ''
+            position2:
+              position2:
+                container: container3
+                row: 7
+                col: 8
+                height: 5
+                width: 4
+            createdAt: '2019-02-09T00:05:35.701Z'
+      - button2:
+          pluginTemplate:
+            id: button2
+            type: widget
+            subtype: ButtonWidget
+            template:
+              ordered:
+                - valueToCopy: ''
+                - color: '#3c92dc'
+                - internalUrlHashParams: ''
+                - exportFileType: csv
+                - buttonType: action
+                - exportTemplate: null
+                - url: ''
+                - newWindow: false
+                - value: Refresh
+                - exportQuery: ''
+                - action: searchForUsers
+                - internalUrlQuery: ''
+                - internalUrlPath: ''
+                - exportFileName: ''
+                - loading: ''
+                - disabled: ''
+            position2:
+              position2:
+                container: container3
+                row: 13
+                col: 8
+                height: 1
+                width: 4
+            createdAt: '2019-02-09T00:27:18.037Z'
+      - getApps:
+          pluginTemplate:
+            id: getApps
+            type: datasource
+            subtype: SqlQuery
+            resourceName: '[dev] internal_retool (readonly)'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - query: >-
+                    select pages.id, MAX(pages.name) as name, count(*) as saves,
+                    max(page_saves."createdAt") as last_saved from pages join
+                    page_saves on pages.id = page_saves."pageId"
+
+                    where pages."organizationId" = {{
+                    table1.selectedRow.data.organizationId}}
+
+                    group by pages.id
+
+                    order by count(*) desc
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - warningCodes: []
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - triggersOnFailure: []
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - importedQueryInputDefaults:
+                    ordered: []
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '70000'
+                - requireConfirmation: false
+                - enableCaching: false
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+            createdAt: '2019-02-09T01:03:56.465Z'
+      - table3:
+          pluginTemplate:
+            id: table3
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - actionButtonQuery: ''
+                - sortMappedValue:
+                    ordered: []
+                - normalizedData: null
+                - actionButtonType: runQuery
+                - columnWidths:
+                    - object:
+                        id: id
+                        value: 65.328125
+                    - object:
+                        id: name
+                        value: 179.828125
+                - actionButtonDisabled: ''
+                - columnWidthsMobile: []
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - folderId: ''
+                      - name: ''
+                      - organizationId: ''
+                      - updatedAt: ''
+                      - saves: ''
+                      - releasedTagId: ''
+                      - id: ''
+                      - createdAt: ''
+                      - uuid: ''
+                      - last_saved: ''
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered:
+                      - last_saved: datetime
+                - showFilterButton: true
+                - actionButtonUrl: ''
+                - actionButton: false
+                - actionButtonNewWindow: false
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered:
+                      - folderId: true
+                      - name: true
+                      - sales: true
+                      - organizationId: true
+                      - updatedAt: true
+                      - saves: true
+                      - releasedTagId: true
+                      - id: true
+                      - createdAt: true
+                      - uuid: true
+                      - email: true
+                      - last_saved: true
+                - selectedPageIndex: '0'
+                - actionButtonColumnName: Actions
+                - filterStackType: and
+                - downloadRawData: true
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{ getApps.data }}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: false
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - sortedDesc: false
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - actionButtonInternalUrlPath: ''
+                - pageSize: 11
+                - useDynamicColumnSettings: false
+                - selectedColumn: null
+                - actionButtonPosition: right
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - actionButtonText: ''
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: ''
+                - defaultSortDescending: false
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    ordered:
+                      - array: []
+                - newRow: null
+                - columnEditable:
+                    ordered: []
+                - filters:
+                    ordered:
+                      - array: []
+                - displayedDataIndices: null
+                - columnMappers:
+                    ordered: []
+                - showClearSelection: false
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns:
+                    - id
+                    - name
+                    - createdAt
+                    - updatedAt
+                    - organizationId
+                    - folderId
+                    - uuid
+                    - releasedTagId
+                    - saves
+                    - last_saved
+                - sort: null
+                - actionButtonInternalUrlQuery: ''
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - nextAfterCursor: ''
+                - useCompactMode: true
+            position2:
+              position2:
+                container: container2
+                row: 15
+                height: 8
+                width: 6
+            createdAt: '2019-02-09T01:04:14.642Z'
+      - text10:
+          pluginTemplate:
+            id: text10
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: '##### Apps'
+                - renderAsMarkdown: true
+                - renderAsHtml: true
+                - scrollOverflow: false
+                - truncateOverflow: false
+                - tooltipText: ''
+            position2:
+              position2:
+                container: container2
+                row: 14
+                height: 1
+                width: 3
+            createdAt: '2019-02-09T01:05:58.264Z'
+      - container4:
+          pluginTemplate:
+            id: container4
+            type: widget
+            subtype: ContainerWidget
+            template:
+              ordered:
+                - title: ''
+                - disabled: ''
+                - spinWhenChildrenAreFetching: true
+                - showBorder: true
+                - showDropShadow: true
+                - backgroundColor: white
+                - scroll: false
+            position2:
+              position2:
+                row: 34
+                height: 6
+                width: 4
+            createdAt: '2019-02-09T01:09:11.063Z'
+      - text11:
+          pluginTemplate:
+            id: text11
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: '##### Quick Actions'
+                - renderAsMarkdown: true
+                - renderAsHtml: true
+                - scrollOverflow: false
+                - truncateOverflow: false
+                - tooltipText: ''
+            position2:
+              position2:
+                container: container4
+                height: 1
+                width: 12
+            createdAt: '2019-02-09T01:09:17.882Z'
+      - button3:
+          pluginTemplate:
+            id: button3
+            type: widget
+            subtype: ButtonWidget
+            template:
+              ordered:
+                - valueToCopy: ''
+                - color: '#3c92dc'
+                - internalUrlHashParams: ''
+                - exportFileType: csv
+                - buttonType: action
+                - exportTemplate: null
+                - url: ''
+                - newWindow: false
+                - value: Require 2FA
+                - exportQuery: ''
+                - action: require2FA
+                - internalUrlQuery: ''
+                - internalUrlPath: ''
+                - exportFileName: ''
+                - loading: ''
+                - disabled: ''
+            position2:
+              position2:
+                container: container4
+                row: 2
+                height: 1
+                width: 12
+            createdAt: '2019-02-09T01:11:23.137Z'
+      - require2FA:
+          pluginTemplate:
+            id: require2FA
+            type: datasource
+            subtype: RetoolTableQuery
+            resourceName: '[dev] internal_retool (write)'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - records: ''
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess:
+                    - getOrganization
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - recordId: ''
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - filterBy: >-
+                    [{"key":"id","value":"{{
+                    table1.selectedRow.data.organizationId }}","operation":"="}]
+                - actionType: UPDATE_BY
+                - triggersOnFailure: []
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: '[{"key":"twoFactorAuthRequired","value":"true"}]'
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - enableBulkUpdates: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - importedQueryInputDefaults:
+                    ordered: []
+                - bulkUpdatePrimaryKey: ''
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - tableName: organizations
+                - queryTimeout: '10000'
+                - requireConfirmation: true
+                - enableCaching: false
+                - databaseUsernameOverride: ''
+                - doNotThrowOnNoOp: false
+                - queryThrottleTime: '750'
+            createdAt: '2019-02-09T01:11:35.335Z'
+      - editabletext1:
+          pluginTemplate:
+            id: editabletext1
+            type: widget
+            subtype: EditableTextWidget
+            template:
+              ordered:
+                - leftIconName: search
+                - onChange: renameOrganization
+                - tooltipText: ''
+                - value: '{{ getOrganization.data.name[0]}}'
+                - placeholder: Search here...
+                - label: Update Organization Name
+                - labelMaxWidth: ''
+                - labelPlacedOnLeft: ''
+                - disabled: ''
+            position2:
+              position2:
+                container: container4
+                row: 3
+                height: 2
+                width: 12
+            createdAt: '2019-02-10T18:02:15.485Z'
+      - renameOrganization:
+          pluginTemplate:
+            id: renameOrganization
+            type: datasource
+            subtype: RetoolTableQuery
+            resourceName: '[dev] internal_retool (write)'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - records: ''
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess:
+                    - getOrganization
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - recordId: ''
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - filterBy: >-
+                    [{"key":"id","value":"{{
+                    table1.selectedRow.data.organizationId}}","operation":"="}]
+                - actionType: UPDATE_BY
+                - triggersOnFailure: []
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: '[{"key":"name","value":"{{ editabletext1.value }}"}]'
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - enableBulkUpdates: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - importedQueryInputDefaults:
+                    ordered: []
+                - bulkUpdatePrimaryKey: ''
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - tableName: organizations
+                - queryTimeout: '10000'
+                - requireConfirmation: true
+                - enableCaching: false
+                - databaseUsernameOverride: ''
+                - doNotThrowOnNoOp: false
+                - queryThrottleTime: '750'
+            createdAt: '2019-02-10T18:02:41.175Z'
+      - button4:
+          pluginTemplate:
+            id: button4
+            type: widget
+            subtype: ButtonWidget
+            template:
+              ordered:
+                - valueToCopy: ''
+                - color: '#3c92dc'
+                - internalUrlHashParams: ''
+                - exportFileType: csv
+                - buttonType: action
+                - exportTemplate: null
+                - url: ''
+                - newWindow: false
+                - value: Make Admin
+                - exportQuery: ''
+                - action: promoteUser
+                - internalUrlQuery: ''
+                - internalUrlPath: ''
+                - exportFileName: ''
+                - loading: ''
+                - disabled: ''
+            position2:
+              position2:
+                container: container3
+                row: 13
+                height: 1
+                width: 8
+            createdAt: '2019-02-10T18:16:17.975Z'
+      - adminGroup:
+          pluginTemplate:
+            id: adminGroup
+            type: datasource
+            subtype: SqlQuery
+            resourceName: '[dev] internal_retool (readonly)'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - query: >-
+                    select * from groups where name = 'admin' and
+                    "organizationId" = {{ table1.selectedRow.data.organizationId
+                    }}
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - triggersOnFailure: []
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - importedQueryInputDefaults:
+                    ordered: []
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - enableCaching: false
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+            createdAt: '2019-02-10T18:21:35.329Z'
+      - promoteUser:
+          pluginTemplate:
+            id: promoteUser
+            type: datasource
+            subtype: RetoolTableQuery
+            resourceName: '[dev] internal_retool (write)'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - records: ''
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess:
+                    - getOrgUsers
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - recordId: ''
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - filterBy: ''
+                - actionType: INSERT
+                - triggersOnFailure: []
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: >-
+                    [{"key":"userId","value":"{{
+                    table1.selectedRow.data.id}}"},{"key":"groupId","value":"{{
+                    adminGroup.data.id[0]}}"},{"key":"createdAt","value":"now()"},{"key":"updatedAt","value":"now()"}]
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - enableBulkUpdates: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - importedQueryInputDefaults:
+                    ordered: []
+                - bulkUpdatePrimaryKey: ''
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - tableName: user_groups
+                - queryTimeout: '10000'
+                - requireConfirmation: true
+                - enableCaching: false
+                - databaseUsernameOverride: ''
+                - doNotThrowOnNoOp: false
+                - queryThrottleTime: '750'
+            createdAt: '2019-02-10T18:23:19.270Z'
+      - keyvaluemap1:
+          pluginTemplate:
+            id: keyvaluemap1
+            type: widget
+            subtype: KeyValueMapWidget
+            template:
+              ordered:
+                - rowHeaderNames:
+                    ordered: []
+                - rowFormats:
+                    ordered: []
+                - valueTitle: Value
+                - data: '{{ getOrganization.data}}'
+                - prevRowMappers:
+                    ordered: []
+                - rowMappersRenderAsHTML:
+                    ordered: []
+                - rowVisibility:
+                    ordered:
+                      - a: true
+                      - lastName: true
+                      - b: true
+                      - veriifed: true
+                      - billingCardholderName: true
+                      - twoFactorAuthRequired: true
+                      - c: true
+                      - domain: true
+                      - planId: true
+                      - subdomain: true
+                      - billingCardholderEmail: true
+                      - isAdmin: true
+                      - stripeSubscriptionId: true
+                      - stripeCustomerId: true
+                      - profilePhotoUrl: true
+                      - message: true
+                      - billingCardLastFour: true
+                      - billingCardExpirationDate: true
+                      - companyName: true
+                      - error: true
+                      - verified: true
+                      - contactNumber: true
+                      - onboardingChecklist: true
+                      - name: true
+                      - javaScriptLinks: true
+                      - jitEnabled: true
+                      - sid: true
+                      - organizationId: true
+                      - updatedAt: true
+                      - applyPreloadedCSSToHomepage: true
+                      - hostname: true
+                      - idpMetadataXML: true
+                      - gitBranch: true
+                      - planName: true
+                      - preloadedJavaScript: true
+                      - trialExpiryDate: true
+                      - isCompanyAccount: true
+                      - preloadedCSS: true
+                      - onboardingStagesCompleted: true
+                      - id: true
+                      - createdAt: true
+                      - firstName: true
+                      - every: true
+                      - billingCardBrand: true
+                      - email: true
+                      - gitUrl: true
+                - prevRowFormats:
+                    ordered: []
+                - rowMappers:
+                    ordered: []
+                - rows:
+                    - a
+                    - b
+                    - c
+                    - id
+                    - sid
+                    - email
+                    - firstName
+                    - lastName
+                    - profilePhotoUrl
+                    - organizationId
+                    - every
+                    - isAdmin
+                    - domain
+                    - name
+                    - hostname
+                    - createdAt
+                    - updatedAt
+                    - verified
+                    - subdomain
+                    - trialExpiryDate
+                    - preloadedJavaScript
+                    - javaScriptLinks
+                    - gitUrl
+                    - planId
+                    - stripeCustomerId
+                    - billingCardholderName
+                    - billingCardLastFour
+                    - billingCardExpirationDate
+                    - stripeSubscriptionId
+                    - billingCardBrand
+                    - billingCardholderEmail
+                    - preloadedCSS
+                    - isCompanyAccount
+                    - companyName
+                    - contactNumber
+                    - gitBranch
+                    - twoFactorAuthRequired
+                    - planName
+                    - error
+                    - message
+                    - applyPreloadedCSSToHomepage
+                    - onboardingChecklist
+                    - idpMetadataXML
+                    - jitEnabled
+                    - veriifed
+                    - onboardingStagesCompleted
+                - keyTitle: Key
+            position2:
+              position2:
+                row: 40
+                height: 11
+                width: 4
+            createdAt: '2019-02-10T21:50:41.627Z'
+      - button5:
+          pluginTemplate:
+            id: button5
+            type: widget
+            subtype: ButtonWidget
+            template:
+              ordered:
+                - valueToCopy: ''
+                - color: '#3c92dc'
+                - internalUrlHashParams: ''
+                - exportFileType: csv
+                - buttonType: internal-url
+                - exportTemplate: null
+                - url: ''
+                - newWindow: true
+                - value: View Account Health
+                - exportQuery: ''
+                - action: ''
+                - internalUrlQuery: >-
+                    "[{\"key\":\"search\",\"value\":\"{{getOrganization.data.sid[0]}}\"}]"
+                - internalUrlPath: 4befa41a-3027-11e9-a6ea-f32a099b01d8
+                - exportFileName: ''
+                - loading: ''
+                - disabled: ''
+            position2:
+              position2:
+                row: 43
+                col: 10
+                height: 1
+                width: 2
+            createdAt: '2019-02-14T18:14:34.553Z'
+      - button6:
+          pluginTemplate:
+            id: button6
+            type: widget
+            subtype: ButtonWidget
+            template:
+              ordered:
+                - valueToCopy: ''
+                - color: '#cc5248'
+                - internalUrlHashParams: ''
+                - exportFileType: csv
+                - buttonType: action
+                - exportTemplate: null
+                - url: ''
+                - newWindow: false
+                - value: Move to Enterprise
+                - exportQuery: ''
+                - action: moveToEnterprise
+                - internalUrlQuery: ''
+                - internalUrlPath: ''
+                - exportFileName: ''
+                - loading: ''
+                - disabled: ''
+            position2:
+              position2:
+                container: container1
+                row: 7
+                height: 1
+                width: 6
+            createdAt: '2019-02-18T19:04:01.557Z'
+      - moveToEnterprise:
+          pluginTemplate:
+            id: moveToEnterprise
+            type: datasource
+            subtype: RetoolTableQuery
+            resourceName: '[dev] internal_retool (write)'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - records: ''
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess:
+                    - getOrganization
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - recordId: ''
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - filterBy: >-
+                    [{"key":"id","value":"{{
+                    table1.selectedRow.data.organizationId}}","operation":"="}]
+                - actionType: UPDATE_BY
+                - triggersOnFailure: []
+                - databaseNameOverride: ''
+                - confirmationMessage: Are you sure you want to move him to an Enterprise plan?
+                - isFetching: false
+                - changeset: >-
+                    [{"key":"planId","value":"{{ null
+                    }}"},{"key":"trialExpiryDate","value":"{{ null }}"}]
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - enableBulkUpdates: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - importedQueryInputDefaults:
+                    ordered: []
+                - bulkUpdatePrimaryKey: ''
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - tableName: organizations
+                - queryTimeout: '10000'
+                - requireConfirmation: true
+                - enableCaching: false
+                - databaseUsernameOverride: ''
+                - doNotThrowOnNoOp: false
+                - queryThrottleTime: '750'
+            createdAt: '2019-02-18T19:04:16.379Z'
+      - button7:
+          pluginTemplate:
+            id: button7
+            type: widget
+            subtype: ButtonWidget
+            template:
+              ordered:
+                - valueToCopy: ''
+                - color: '#3c92dc'
+                - internalUrlHashParams: ''
+                - exportFileType: csv
+                - buttonType: action
+                - exportTemplate: null
+                - url: ''
+                - newWindow: false
+                - value: Restart Trial
+                - exportQuery: ''
+                - action: restartTrial
+                - internalUrlQuery: ''
+                - internalUrlPath: ''
+                - exportFileName: ''
+                - loading: ''
+                - disabled: ''
+            position2:
+              position2:
+                container: container1
+                row: 7
+                col: 6
+                height: 1
+                width: 6
+            createdAt: '2019-02-21T20:01:48.939Z'
+      - restartTrial:
+          pluginTemplate:
+            id: restartTrial
+            type: datasource
+            subtype: RetoolTableQuery
+            resourceName: '[dev] internal_retool (write)'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - records: ''
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess:
+                    - getOrganization
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - recordId: ''
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - filterBy: >-
+                    [{"key":"id","value":"{{
+                    table1.selectedRow.data.organizationId}}","operation":"="}]
+                - actionType: UPDATE_BY
+                - triggersOnFailure: []
+                - databaseNameOverride: ''
+                - confirmationMessage: Are you sure you want to restart their trial?
+                - isFetching: false
+                - changeset: >-
+                    [{"key":"planId","value":"{{ null
+                    }}"},{"key":"trialExpiryDate","value":"{{ moment().add(14,
+                    'd')}}"}]
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - enableBulkUpdates: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - importedQueryInputDefaults:
+                    ordered: []
+                - bulkUpdatePrimaryKey: ''
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - tableName: organizations
+                - queryTimeout: '10000'
+                - requireConfirmation: true
+                - enableCaching: false
+                - databaseUsernameOverride: ''
+                - doNotThrowOnNoOp: false
+                - queryThrottleTime: '750'
+            createdAt: '2019-02-21T20:02:00.954Z'
+      - button8:
+          pluginTemplate:
+            id: button8
+            type: widget
+            subtype: ButtonWidget
+            template:
+              ordered:
+                - valueToCopy: ''
+                - color: '#3c92dc'
+                - internalUrlHashParams: ''
+                - exportFileType: csv
+                - buttonType: action
+                - exportTemplate: null
+                - url: ''
+                - newWindow: false
+                - value: Reset {{ table2.selectedRow.data.email}} 2FA
+                - exportQuery: ''
+                - action: reset2FA
+                - internalUrlQuery: ''
+                - internalUrlPath: ''
+                - exportFileName: ''
+                - loading: ''
+                - disabled: ''
+            position2:
+              position2:
+                container: container2
+                row: 12
+                height: 1
+                width: 7
+            createdAt: '2019-03-11T18:55:10.550Z'
+      - reset2FA:
+          pluginTemplate:
+            id: reset2FA
+            type: datasource
+            subtype: RetoolTableQuery
+            resourceName: '[dev] internal_retool (write)'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - records: ''
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess:
+                    - getOrgUsers
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - recordId: ''
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - filterBy: >-
+                    [{"key":"id","value":"{{
+                    table2.selectedRow.data.id}}","operation":"="}]
+                - actionType: UPDATE_BY
+                - triggersOnFailure: []
+                - databaseNameOverride: ''
+                - confirmationMessage: >-
+                    Are you sure you want to reset the 2fa for {{
+                    table2.selectedRow.data.email}}?
+                - isFetching: false
+                - changeset: '[{"key":"twoFactorAuthEnabled","value":"false"}]'
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - enableBulkUpdates: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - importedQueryInputDefaults:
+                    ordered: []
+                - bulkUpdatePrimaryKey: ''
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - tableName: users
+                - queryTimeout: '10000'
+                - requireConfirmation: true
+                - enableCaching: false
+                - databaseUsernameOverride: ''
+                - doNotThrowOnNoOp: false
+                - queryThrottleTime: '750'
+            createdAt: '2019-03-11T18:55:20.405Z'
+      - toggleUserEnabled:
+          pluginTemplate:
+            id: toggleUserEnabled
+            type: datasource
+            subtype: RetoolTableQuery
+            resourceName: '[dev] internal_retool (write)'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - records: ''
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess:
+                    - searchForUsers
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - recordId: ''
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - filterBy: >-
+                    [{"key":"id","value":"{{ table2.selectedRow.data.id
+                    }}","operation":"="}]
+                - actionType: UPDATE_BY
+                - triggersOnFailure: []
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: >-
+                    [{"key":"enabled","value":"{{
+                    !table2.selectedRow.data.enabled }}"}]
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - enableBulkUpdates: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - importedQueryInputDefaults:
+                    ordered: []
+                - bulkUpdatePrimaryKey: ''
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - tableName: users
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - enableCaching: false
+                - databaseUsernameOverride: ''
+                - doNotThrowOnNoOp: false
+                - queryThrottleTime: '750'
+            createdAt: '2019-03-14T08:04:06.561Z'
+      - button9:
+          pluginTemplate:
+            id: button9
+            type: widget
+            subtype: ButtonWidget
+            template:
+              ordered:
+                - valueToCopy: ''
+                - color: '{{ table2.selectedRow.data.enabled ? ''#eb144c'' : ''green'' }}'
+                - internalUrlHashParams: ''
+                - exportFileType: csv
+                - buttonType: action
+                - exportTemplate: null
+                - url: ''
+                - newWindow: false
+                - value: >-
+                    {{ table2.selectedRow.data.enabled ? 'Deactivate User' :
+                    'Activate User' }}
+                - exportQuery: ''
+                - action: toggleUserEnabled
+                - internalUrlQuery: ''
+                - internalUrlPath: ''
+                - exportFileName: ''
+                - loading: ''
+                - disabled: ''
+            position2:
+              position2:
+                container: container2
+                row: 13
+                col: 7
+                height: 1
+                width: 5
+            createdAt: '2019-03-14T08:06:57.351Z'
+      - editabletext2:
+          pluginTemplate:
+            id: editabletext2
+            type: widget
+            subtype: EditableTextWidget
+            template:
+              ordered:
+                - leftIconName: search
+                - onChange: editabletext2onChangeTrigger
+                - tooltipText: ''
+                - value: '{{ table2.selectedRow.data.email}}'
+                - placeholder: Search here...
+                - label: ''
+                - labelMaxWidth: ''
+                - labelPlacedOnLeft: ''
+                - disabled: ''
+            position2:
+              position2:
+                container: container2
+                row: 12
+                col: 7
+                height: 1
+                width: 5
+            createdAt: '2019-03-14T18:32:07.501Z'
+      - editabletext2onChangeTrigger:
+          pluginTemplate:
+            id: editabletext2onChangeTrigger
+            type: datasource
+            subtype: RetoolTableQuery
+            resourceName: '[dev] internal_retool (write)'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - records: ''
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess:
+                    - getOrgUsers
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - recordId: ''
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - filterBy: >-
+                    [{"key":"id","value":"{{
+                    table2.selectedRow.data.id}}","operation":"="}]
+                - actionType: UPDATE_BY
+                - triggersOnFailure: []
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: '[{"key":"email","value":"{{ editabletext2.value}}"}]'
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - enableBulkUpdates: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - importedQueryInputDefaults:
+                    ordered: []
+                - bulkUpdatePrimaryKey: ''
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - tableName: users
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - enableCaching: false
+                - databaseUsernameOverride: ''
+                - doNotThrowOnNoOp: false
+                - queryThrottleTime: '750'
+            createdAt: '2019-03-14T18:32:33.421Z'
+      - textinput2:
+          pluginTemplate:
+            id: textinput2
+            type: widget
+            subtype: TextInputWidget
+            template:
+              ordered:
+                - validationMaxlengthValue: ''
+                - readonly: ''
+                - disabledKeyCodes: ''
+                - validationMaxValue: ''
+                - onBlur: ''
+                - docsSlug: textinput
+                - validatonType: ''
+                - currencyType: USD
+                - leftIconName: search
+                - initialValue: ''
+                - validationMessage: ''
+                - tooltipText: ''
+                - value: ''
+                - suffix: ''
+                - validationMinlengthValue: ''
+                - validationLengthValue: ''
+                - placeholder: Search here...
+                - validationType: regexp
+                - label: Name
+                - currencyMajorOnly: false
+                - formattedValue: ''
+                - labelMaxWidth: ''
+                - enableValidationType: false
+                - labelPlacedOnLeft: ''
+                - onSubmit: ''
+                - validationMinValue: ''
+                - validationState:
+                    object:
+                      required: ''
+                      validationType: ''
+                - type: text
+                - allowedRegex: ''
+                - required: false
+            position2:
+              position2:
+                container: container2
+                col: 7
+                height: 1
+                width: 5
+            createdAt: '2019-03-14T18:41:21.929Z'
+      - table5:
+          pluginTemplate:
+            id: table5
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - actionButtonQuery: ''
+                - sortMappedValue:
+                    ordered: []
+                - normalizedData: null
+                - actionButtonType: runQuery
+                - columnWidths: []
+                - actionButtonDisabled: ''
+                - columnWidthsMobile: []
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - id: ''
+                      - name: ''
+                      - type: ''
+                      - email: ''
+                      - sales: ''
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered: []
+                - showFilterButton: true
+                - actionButtonUrl: ''
+                - actionButton: false
+                - actionButtonNewWindow: false
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered:
+                      - id: true
+                      - name: true
+                      - type: true
+                      - email: true
+                      - sales: true
+                - selectedPageIndex: '0'
+                - actionButtonColumnName: Actions
+                - filterStackType: and
+                - downloadRawData: true
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{  getResources.data }}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: false
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - sortedDesc: false
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - actionButtonInternalUrlPath: ''
+                - pageSize: 11
+                - useDynamicColumnSettings: false
+                - selectedColumn: null
+                - actionButtonPosition: right
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - actionButtonText: ''
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: ''
+                - defaultSortDescending: false
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    ordered:
+                      - array: []
+                - newRow: null
+                - columnEditable:
+                    ordered: []
+                - filters:
+                    ordered:
+                      - array: []
+                - displayedDataIndices: null
+                - columnMappers:
+                    ordered: []
+                - showClearSelection: false
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns:
+                    - id
+                    - name
+                    - email
+                    - sales
+                    - type
+                - sort: null
+                - actionButtonInternalUrlQuery: ''
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - nextAfterCursor: ''
+                - useCompactMode: true
+            position2:
+              position2:
+                container: container2
+                row: 15
+                col: 6
+                height: 8
+                width: 6
+            createdAt: '2019-03-27T23:33:25.011Z'
+      - getResources:
+          pluginTemplate:
+            id: getResources
+            type: datasource
+            subtype: SqlQuery
+            resourceName: '[dev] internal_retool (readonly)'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - query: >-
+                    select resources.id, resources.name, resources.type
+
+                    from resources
+
+                    where resources."organizationId" = {{
+                    table1.selectedRow.data.organizationId}}
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - warningCodes: []
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - triggersOnFailure: []
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - importedQueryInputDefaults:
+                    ordered: []
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - enableCaching: false
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+            createdAt: '2019-03-27T23:33:41.763Z'
+      - button10:
+          pluginTemplate:
+            id: button10
+            type: widget
+            subtype: ButtonWidget
+            template:
+              ordered:
+                - valueToCopy: ''
+                - color: '#3c92dc'
+                - internalUrlHashParams: ''
+                - exportFileType: json
+                - buttonType: export
+                - exportTemplate: null
+                - url: ''
+                - newWindow: false
+                - value: Download app
+                - exportQuery: '{ page: {{ formatDataAsArray(query22.data)[0] }} }'
+                - action: ''
+                - internalUrlQuery: ''
+                - internalUrlPath: ''
+                - exportFileName: ''
+                - loading: ''
+                - disabled: ''
+            position2:
+              position2:
+                row: 44
+                col: 10
+                height: 1
+                width: 2
+            mobilePosition2:
+              position2:
+                container: container2
+                row: 23
+                col: 4
+                height: 1
+                width: 2
+            createdAt: '2019-08-02T18:08:15.115Z'
+      - query21:
+          pluginTemplate:
+            id: query21
+            type: datasource
+            subtype: SqlQuery
+            resourceName: internal_retool (readonly)
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - query: |-
+                    select
+                      id, length(data::text) as size, "createdAt" as created
+                    from
+                      page_saves
+                    where
+                      page_saves."pageId" = {{ table3.selectedRow.data.id }}
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - warningCodes: []
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - triggersOnFailure: []
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - importedQueryInputDefaults:
+                    ordered: []
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - enableCaching: false
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+            createdAt: '2019-08-02T18:08:20.018Z'
+      - table6:
+          pluginTemplate:
+            id: table6
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - sortMappedValue:
+                    ordered: []
+                - normalizedData: null
+                - columnWidths: []
+                - columnWidthsMobile: []
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - size: ''
+                      - userId: ''
+                      - created: ''
+                      - pageId: ''
+                      - data: ''
+                      - updatedAt: ''
+                      - changesRecord: ''
+                      - gitSha: ''
+                      - id: ''
+                      - createdAt: ''
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered: []
+                - showFilterButton: true
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered:
+                      - size: true
+                      - userId: true
+                      - created: true
+                      - pageId: true
+                      - data: true
+                      - Sales: true
+                      - updatedAt: true
+                      - changesRecord: true
+                      - Title: true
+                      - gitSha: true
+                      - id: true
+                      - createdAt: true
+                      - Description: true
+                - selectedPageIndex: '0'
+                - actionButtonColumnName: Actions
+                - filterStackType: and
+                - downloadRawData: true
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{ query21.data }}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: true
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - sortedDesc: false
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - pageSize: 6
+                - useDynamicColumnSettings: false
+                - selectedColumn: null
+                - actionButtonPosition: left
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: ''
+                - defaultSortDescending: false
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    ordered:
+                      - array: []
+                - newRow: null
+                - columnEditable:
+                    ordered: []
+                - filters:
+                    ordered:
+                      - array: []
+                - displayedDataIndices: null
+                - columnMappers:
+                    ordered: []
+                - showClearSelection: false
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns:
+                    - Title
+                    - Description
+                    - Sales
+                    - id
+                    - data
+                    - createdAt
+                    - updatedAt
+                    - pageId
+                    - changesRecord
+                    - userId
+                    - gitSha
+                    - size
+                    - created
+                - sort: null
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - nextAfterCursor: ''
+                - useCompactMode: false
+            position2:
+              position2:
+                container: container2
+                row: 23
+                height: 8
+                width: 9
+            mobilePosition2:
+              position2:
+                container: container2
+                row: 23
+                height: 8
+                width: 8
+            createdAt: '2019-08-02T18:11:18.967Z'
+      - query22:
+          pluginTemplate:
+            id: query22
+            type: datasource
+            subtype: SqlQuery
+            resourceName: internal_retool (readonly)
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - query: >-
+                    select * from page_saves where id = {{
+                    table6.selectedRow.data.id}}
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - warningCodes: []
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - triggersOnFailure: []
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - importedQueryInputDefaults:
+                    ordered: []
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - enableCaching: false
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+            createdAt: '2019-08-02T18:12:23.967Z'
+  urlFragmentDefinitions:
+    - ordered:
+        - name: search
+        - value: '{{ textinput1.value}}'
+  pageLoadValueOverrides:
+    - ordered:
+        - name: textinput1.value
+        - value: '{{ urlparams.hash.search}}'
+  rootScreen: null
+  version: 2.54.21
