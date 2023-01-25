@@ -1,0 +1,298 @@
+version: 43.0.9
+pageUuid: 4da94fd2-1261-11ea-8511-cba630200a9d
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: FirebaseQuery
+            resourceName: '[dev] firestore'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - firestoreCollection: numbers
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - endAt: ''
+                - firebaseService: firestore
+                - showSuccessToaster: true
+                - equalTo: ''
+                - cacheKeyTtl: ''
+                - uid: ''
+                - actionType: queryFirestore
+                - triggersOnFailure: []
+                - setDbValue: ''
+                - value: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - filterType: ''
+                - rawData: null
+                - userOptions: ''
+                - docId: ''
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - ordering: ''
+                - startAt: ''
+                - limitType: ''
+                - dbRef: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - phoneNumber: ''
+                - nextPageToken: ''
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10000'
+                - useRawCollectionId: false
+                - firestoreOrderBy: value
+                - requireConfirmation: false
+                - orderByChildValue: ''
+                - limit: ''
+                - enableCaching: false
+                - firestoreOrderDirection: ''
+                - firestoreWhere: ''
+                - email: ''
+                - queryThrottleTime: '750'
+            createdAt: 2019-11-29T04:32:51.845Z
+      - table1:
+          pluginTemplate:
+            id: table1
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - sortMappedValue:
+                    ordered: []
+                - normalizedData: null
+                - columnWidths: []
+                - columnWidthsMobile: []
+                - hasNextAfterCursor: ''
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - value2: ''
+                      - candy: ''
+                      - books: ''
+                      - user_id: ''
+                      - __metadata: ''
+                      - value: ''
+                      - asdf: ''
+                      - timestamp: ''
+                      - title: ''
+                      - _id: ''
+                      - type: ''
+                      - test_date: ''
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered: []
+                - showFilterButton: true
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered:
+                      - value2: true
+                      - candy: true
+                      - books: true
+                      - Sales: true
+                      - user_id: true
+                      - __metadata: true
+                      - value: true
+                      - asdf: true
+                      - timestamp: true
+                      - Title: true
+                      - title: true
+                      - _id: true
+                      - type: true
+                      - test_date: true
+                      - Description: true
+                - selectedPageIndex: '0'
+                - actionButtonColumnName: Actions
+                - filterStackType: and
+                - downloadRawData: true
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{ query1.data }}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: true
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - sortedDesc: false
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - pageSize: 6
+                - useDynamicColumnSettings: false
+                - actionButtonPosition: left
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: ''
+                - defaultSortDescending: false
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    ordered:
+                      - array: []
+                - newRow: null
+                - columnEditable:
+                    ordered: []
+                - filters:
+                    ordered:
+                      - array: []
+                - displayedDataIndices: null
+                - columnMappers:
+                    ordered: []
+                - showClearSelection: false
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns:
+                    - Title
+                    - Description
+                    - Sales
+                    - test_date
+                    - books
+                    - title
+                    - user_id
+                    - _id
+                    - __metadata
+                    - type
+                    - timestamp
+                    - candy
+                    - asdf
+                    - value
+                    - value2
+                - sort: null
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - nextAfterCursor: ''
+                - useCompactMode: false
+            position2:
+              position2:
+                height: 8
+                width: 12
+            mobilePosition2:
+              position2:
+                row: 1
+                col: 2
+                height: 8
+                width: 8
+            createdAt: 2019-11-29T04:53:04.179Z
+      - query2:
+          pluginTemplate:
+            id: query2
+            type: datasource
+            subtype: FirebaseQuery
+            resourceName: '[dev] firestore'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - firestoreCollection: ''
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - endAt: ''
+                - firebaseService: database
+                - showSuccessToaster: true
+                - equalTo: ''
+                - cacheKeyTtl: ''
+                - uid: ''
+                - actionType: queryDb
+                - triggersOnFailure: []
+                - setDbValue: ''
+                - value: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - filterType: ''
+                - rawData: null
+                - userOptions: ''
+                - docId: ''
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - ordering: byChild
+                - startAt: ''
+                - limitType: ''
+                - dbRef: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - phoneNumber: ''
+                - nextPageToken: ''
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10000'
+                - useRawCollectionId: false
+                - firestoreOrderBy: ''
+                - requireConfirmation: false
+                - orderByChildValue: ''
+                - limit: ''
+                - enableCaching: false
+                - firestoreOrderDirection: ''
+                - firestoreWhere: ''
+                - email: ''
+                - queryThrottleTime: '750'
+            createdAt: 2020-04-06T22:38:30.622Z
+  rootScreen: null
+  version: 2.57.1
