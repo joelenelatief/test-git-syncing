@@ -1,0 +1,510 @@
+version: 43.0.9
+pageUuid: 2a892824-0cff-11ed-8ff4-ef05fe23b0ce
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: SqlQuery
+            resourceName: d57b73b3-57b1-4c6c-93d9-715f0ca2cd35
+            resourceDisplayName: '[dev] bigquery'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - servedFromCache: false
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - error: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - hidden: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - databaseHostOverride: ''
+                - metadata: null
+                - queryRunTime: null
+                - changesetObject: ''
+                - shouldUseLegacySql: false
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - finished: null
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10001'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-07-26T16:22:38.807Z
+      - container1:
+          pluginTemplate:
+            id: container1
+            type: widget
+            subtype: ContainerWidget2
+            template:
+              ordered:
+                - _disabledByIndex:
+                    - ''
+                    - false
+                - heightType: auto
+                - currentViewKey: null
+                - iconByIndex:
+                    array: []
+                - clickable: false
+                - _iconByIndex:
+                    - ''
+                    - ''
+                - hidden: false
+                - showHeader: true
+                - hoistFetching: true
+                - views:
+                    array: []
+                - showInEditor: false
+                - tooltipText: ''
+                - hiddenByIndex:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                    - false
+                - currentViewIndex: null
+                - _hasMigratedNestedItems: true
+                - transition: none
+                - itemMode: static
+                - _tooltipByIndex:
+                    - ''
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - showFooter: false
+                - _viewKeys:
+                    - View 1
+                    - View 2
+                - events:
+                    ordered: []
+                - _ids:
+                    - 2e7e3
+                    - af2cb
+                - viewKeys:
+                    array: []
+                - iconPositionByIndex:
+                    array: []
+                - _iconPositionByIndex:
+                    - ''
+                    - left
+                - hovered: false
+                - loading: false
+                - overflowType: scroll
+                - disabled: false
+                - _labels:
+                    - ''
+                    - ''
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - showBody: true
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 18.8
+                col: 3
+                height: 0.2
+                width: 6
+            createdAt: 2022-07-26T23:30:58.304Z
+      - containerTitle1:
+          pluginTemplate:
+            id: containerTitle1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '#### Container title'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container1
+                rowGroup: header
+                height: 0.6
+                width: 12
+            createdAt: 2022-07-26T23:30:58.386Z
+      - text1:
+          pluginTemplate:
+            id: text1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: 👋 **Hello {{ current_user.firstName || 'friend' }}!**
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                container: container1
+                subcontainer: af2cb
+                col: 2
+                height: 0.6
+                width: 7
+            createdAt: 2022-07-26T23:31:03.771Z
+      - button1:
+          pluginTemplate:
+            id: button1
+            type: widget
+            subtype: ButtonWidget2
+            template:
+              ordered:
+                - horizontalAlign: stretch
+                - clickable: false
+                - iconAfter: ''
+                - submitTargetId: null
+                - hidden: false
+                - text: hello
+                - showInEditor: false
+                - tooltipText: ''
+                - styleVariant: solid
+                - submit: false
+                - iconBefore: '{{  }}'
+                - events:
+                    ordered: []
+                - loading: false
+                - loaderPosition: auto
+                - disabled: false
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 0.2
+                col: 2
+                height: 1
+                width: 3
+            createdAt: 2022-08-02T16:09:54.271Z
+      - query2:
+          pluginTemplate:
+            id: query2
+            type: datasource
+            subtype: SqlQuery
+            resourceName: d57b73b3-57b1-4c6c-93d9-715f0ca2cd35
+            resourceDisplayName: '[dev] bigquery'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - servedFromCache: false
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - error: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - databaseHostOverride: ''
+                - metadata: null
+                - queryRunTime: null
+                - changesetObject: ''
+                - shouldUseLegacySql: false
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - finished: null
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-08-02T16:20:25.049Z
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: false
+            style:
+              ordered: []
+            createdAt: 2022-11-05T06:18:39.044Z
+      - select1:
+          pluginTemplate:
+            id: select1
+            type: widget
+            subtype: SelectWidget2
+            template:
+              ordered:
+                - imageByIndex:
+                    array: []
+                - _disabledByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - showSelectionIndicator: true
+                - _values:
+                    - Option 1
+                    - Option 2
+                    - Option 3
+                - iconByIndex:
+                    array: []
+                - values:
+                    array: []
+                - readOnly: false
+                - iconAfter: ''
+                - _iconByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - overlayMinWidth: null
+                - allowDeselect: false
+                - inputValue: ''
+                - hidden: false
+                - customValidation: ''
+                - data:
+                    array: []
+                - searchMode: fuzzy
+                - hideValidationMessage: false
+                - fallbackTextByIndex:
+                    array: []
+                - textBefore: ''
+                - _fallbackTextByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - selectedItem: null
+                - validationMessage: ''
+                - automaticItemColors: false
+                - itemAdornmentShape: circle
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: null
+                - hiddenByIndex:
+                    array: []
+                - labelCaption: ''
+                - labelWidth: '33'
+                - deprecatedLabels:
+                    array: []
+                - _hiddenByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - placeholder: Select an option
+                - _captionByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - itemAdornmentSize: auto
+                - label: Label
+                - _hasMigratedNestedItems: true
+                - captionByIndex:
+                    array: []
+                - _validate: false
+                - itemMode: static
+                - labelWidthUnit: '%'
+                - allowCustomValue: false
+                - invalid: false
+                - selectedIndex: null
+                - _tooltipByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - _colorByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - tooltipByIndex:
+                    array: []
+                - iconBefore: ''
+                - colorByIndex:
+                    array: []
+                - selectedLabel: ''
+                - events:
+                    ordered: []
+                - _ids:
+                    - 5207f
+                    - 2f714
+                    - '39433'
+                - emptyMessage: ''
+                - overlayMaxHeight: 375
+                - loading: false
+                - disabled: false
+                - labelPosition: left
+                - _labels:
+                    - ''
+                    - ''
+                    - ''
+                - labelWrap: false
+                - disabledValues:
+                    array: []
+                - disabledByIndex:
+                    array: []
+                - maintainSpaceWhenHidden: false
+                - _imageByIndex:
+                    - ''
+                    - ''
+                    - ''
+                - required: false
+                - labels:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 0.2
+                col: 9
+                height: 1
+                width: 3
+            createdAt: 2022-11-05T06:34:25.315Z
+      - text2:
+          pluginTemplate:
+            id: text2
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: 'true'
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: 👋 **Hello {{ current_user.firstName || 'friend' }}!**
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 3.2
+                height: 0.6
+                width: 3
+            createdAt: 2022-11-30T06:15:15.701Z
+  rootScreen: null
+  version: 2.106.0
+  markdownLinkBehavior: auto
