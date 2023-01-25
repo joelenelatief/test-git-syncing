@@ -1,0 +1,201 @@
+version: 43.0.9
+pageUuid: e0d7eb94-125f-11ea-9ed8-978bf234afa0
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: DynamoQuery
+            resourceName: '[dev] dynamodb'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - UpdateExpression: ''
+                - method: scan
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - ExpressionAttributeNames: '{}'
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - ExpressionAttributeValues: ''
+                - runWhenModelUpdates: true
+                - autoPaginate: true
+                - ProjectionExpression: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - table: retool-test-1
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - FilterExpression: ''
+                - triggersOnFailure: []
+                - confirmationMessage: null
+                - isFetching: false
+                - rawData: null
+                - ConditionExpression: ''
+                - Item: '{}'
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - KeyConditionExpression: age = :a
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - customParameters: '{}'
+                - Limit: ''
+                - enableCaching: false
+                - Select: ''
+                - IndexName: ''
+                - usingCustomParameters: false
+                - queryThrottleTime: '750'
+                - Key: '{}'
+            createdAt: 2019-11-29T04:22:40.132Z
+      - table1:
+          pluginTemplate:
+            id: table1
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - sortMappedValue:
+                    ordered: []
+                - normalizedData: null
+                - columnWidths: []
+                - columnWidthsMobile: []
+                - hasNextAfterCursor: ''
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - food: ''
+                      - id: ''
+                      - name: ''
+                      - age: ''
+                      - email: ''
+                      - sales: ''
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered: []
+                - showFilterButton: true
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered:
+                      - name: true
+                      - Sales: true
+                      - sales: true
+                      - Title: true
+                      - id: true
+                      - email: true
+                      - Description: true
+                      - food: true
+                      - age: true
+                - selectedPageIndex: '0'
+                - actionButtonColumnName: Actions
+                - filterStackType: and
+                - downloadRawData: true
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{ query1.data.Items}}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: true
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - sortedDesc: false
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - pageSize: 6
+                - useDynamicColumnSettings: false
+                - actionButtonPosition: left
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: ''
+                - defaultSortDescending: false
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    ordered:
+                      - array: []
+                - newRow: null
+                - columnEditable:
+                    ordered: []
+                - filters:
+                    ordered:
+                      - array: []
+                - displayedDataIndices: null
+                - columnMappers:
+                    ordered: []
+                - showClearSelection: false
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns:
+                    - Title
+                    - Description
+                    - Sales
+                    - id
+                    - name
+                    - email
+                    - sales
+                    - food
+                    - age
+                - sort: null
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - nextAfterCursor: ''
+                - useCompactMode: false
+            position2:
+              position2:
+                row: 1
+                col: 2
+                height: 8
+                width: 8
+            mobilePosition2:
+              position2:
+                row: 2
+                col: 3
+                height: 8
+                width: 8
+            createdAt: 2019-11-29T04:27:55.511Z
+  rootScreen: null
+  version: 2.59.4
