@@ -1,0 +1,122 @@
+version: 43.0.9
+pageUuid: bfb5436e-4f81-11ed-9e81-abe3253a3c2d
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: RESTQuery
+            resourceName: 509115aa-35ba-4369-b44a-c9a54deac8d6
+            resourceDisplayName: '[sample] restapi'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - paginationLimit: ''
+                - body: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - paginationPaginationField: ''
+                - headers: ''
+                - showFailureToaster: true
+                - paginationEnabled: false
+                - query: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - error: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - cookies: ''
+                - metadata: null
+                - changesetObject: ''
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - paginationDataField: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10001'
+                - requireConfirmation: false
+                - type: GET
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - bodyType: json
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-10-19T07:43:40.381Z
+      - testModule1:
+          pluginTemplate:
+            id: testModule1
+            type: widget
+            subtype: GlobalWidget
+            template:
+              ordered:
+                - showFetchingIndicator: boolean
+                - heightType: auto
+                - name: test module
+                - pageUuid: 67aca554-4f81-11ed-9e81-d3aef8a7c25a
+                - childNamespace: testModule1
+            style:
+              ordered: []
+            position2:
+              position2:
+                height: 2.4
+                width: 12
+            createdAt: 2022-10-19T07:43:44.726Z
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: false
+            style:
+              ordered: []
+            createdAt: 2022-10-19T07:43:44.753Z
+  rootScreen: null
+  version: 2.102.2
+  markdownLinkBehavior: auto
