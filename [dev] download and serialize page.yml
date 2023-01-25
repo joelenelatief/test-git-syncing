@@ -1,0 +1,400 @@
+version: 43.0.9
+pageUuid: 26fb8fe4-80a9-11ed-8ce9-2b39b9aaf423
+appTemplate:
+  plugins:
+    ordered:
+      - button1:
+          pluginTemplate:
+            id: button1
+            type: widget
+            subtype: ButtonWidget2
+            template:
+              ordered:
+                - horizontalAlign: stretch
+                - clickable: false
+                - iconAfter: ''
+                - submitTargetId: null
+                - hidden: false
+                - text: downloadPage
+                - showInEditor: false
+                - tooltipText: ''
+                - styleVariant: solid
+                - submit: false
+                - iconBefore: ''
+                - events:
+                    - ordered:
+                        - event: click
+                        - type: script
+                        - method: run
+                        - pluginId: ''
+                        - targetId: null
+                        - params:
+                            ordered:
+                              - src: >-
+                                  utils.downloadPage('download.pdf', {
+                                  componentsToExclude: ['editableText2', 'pdf1',
+                                  'fileInput1', 'pdf2'] })
+                        - waitType: debounce
+                        - waitMs: '0'
+                - loading: false
+                - loaderPosition: auto
+                - disabled: false
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                height: 1
+                width: 3
+            createdAt: 2022-12-20T20:59:20.683Z
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: false
+            style:
+              ordered: []
+            createdAt: 2022-12-20T20:59:20.733Z
+      - text1:
+          pluginTemplate:
+            id: text1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: Component to the right should show up in downloadPage
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                col: 3
+                height: 0.6
+                width: 4
+            createdAt: 2022-12-20T20:59:24.084Z
+      - editableText1:
+          pluginTemplate:
+            id: editableText1
+            type: widget
+            subtype: EditableTextWidget2
+            template:
+              ordered:
+                - spellCheck: false
+                - readOnly: false
+                - iconAfter: ''
+                - editIcon: bold/interface-edit-write-1
+                - inputValue: ''
+                - autoComplete: false
+                - maxLength: null
+                - hidden: false
+                - customValidation: ''
+                - patternType: ''
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textSize: default
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: false
+                - pattern: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: ''
+                - labelCaption: ''
+                - labelWidth: '33'
+                - autoFill: ''
+                - placeholder: Hello I should show up
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - iconBefore: ''
+                - minLength: null
+                - inputTooltip: '`Enter` to save, `Esc` to cancel'
+                - events:
+                    ordered: []
+                - autoCapitalize: none
+                - loading: false
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                col: 7
+                height: 0.6
+                width: 5
+            createdAt: 2022-12-20T20:59:51.068Z
+      - text2:
+          pluginTemplate:
+            id: text2
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: Component to the right should not show up in downloadPage
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 0.6
+                col: 3
+                height: 0.6
+                width: 4
+            createdAt: 2022-12-20T20:59:59.449Z
+      - editableText2:
+          pluginTemplate:
+            id: editableText2
+            type: widget
+            subtype: EditableTextWidget2
+            template:
+              ordered:
+                - spellCheck: false
+                - readOnly: false
+                - iconAfter: ''
+                - editIcon: bold/interface-edit-write-1
+                - inputValue: ''
+                - autoComplete: false
+                - maxLength: null
+                - hidden: false
+                - customValidation: ''
+                - patternType: ''
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textSize: default
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: false
+                - pattern: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: ''
+                - labelCaption: ''
+                - labelWidth: '33'
+                - autoFill: ''
+                - placeholder: Hello I should not show up
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - iconBefore: ''
+                - minLength: null
+                - inputTooltip: '`Enter` to save, `Esc` to cancel'
+                - events:
+                    ordered: []
+                - autoCapitalize: none
+                - loading: false
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1.2
+                col: 7
+                height: 0.6
+                width: 5
+            createdAt: 2022-12-20T20:59:59.574Z
+      - pdf1:
+          pluginTemplate:
+            id: pdf1
+            type: widget
+            subtype: PDFViewerWidget2
+            template:
+              ordered:
+                - src: '{{ fileInput1.value[0] }}'
+                - hidden: false
+                - scaleMode: width
+                - showInEditor: false
+                - tooltipText: ''
+                - scrollSnap: false
+                - title: ''
+                - showTopBar: true
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 2.1999999999999997
+                height: 4
+                width: 6
+            createdAt: 2022-12-21T00:18:46.608Z
+      - fileInput1:
+          pluginTemplate:
+            id: fileInput1
+            type: widget
+            subtype: FileInputWidget
+            template:
+              ordered:
+                - parsedValue:
+                    array: []
+                - iconAfter: ''
+                - parseFiles: false
+                - maxSize: ''
+                - appendNewSelection: false
+                - selectionType: single
+                - accept:
+                    array: []
+                - hidden: false
+                - customValidation: ''
+                - maxCount: null
+                - hideValidationMessage: false
+                - textBefore: Browse
+                - validationMessage: ''
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: false
+                - parsing: false
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value:
+                    array: []
+                - labelCaption: ''
+                - labelWidth: '33'
+                - minSize: ''
+                - placeholder: ''
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - files:
+                    array: []
+                - iconBefore: bold/programming-browser-search
+                - events:
+                    ordered: []
+                - loading: false
+                - disabled: false
+                - labelPosition: left
+                - minCount: null
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1.7999999999999998
+                col: 6
+                height: 1
+                width: 6
+            createdAt: 2022-12-21T00:18:57.754Z
+      - button2:
+          pluginTemplate:
+            id: button2
+            type: widget
+            subtype: ButtonWidget2
+            template:
+              ordered:
+                - horizontalAlign: stretch
+                - clickable: false
+                - iconAfter: ''
+                - submitTargetId: null
+                - hidden: false
+                - text: serializePage
+                - showInEditor: false
+                - tooltipText: ''
+                - styleVariant: solid
+                - submit: false
+                - iconBefore: ''
+                - events:
+                    - ordered:
+                        - event: click
+                        - type: script
+                        - method: run
+                        - pluginId: ''
+                        - targetId: null
+                        - params:
+                            ordered:
+                              - src: >-
+                                  state1.setValue(await utils.serializePage({
+                                  componentsToInclude: ['button1', 'button2',
+                                  'text1', 'text2', 'editableText1'] }))
+                        - waitType: debounce
+                        - waitMs: '0'
+                - loading: false
+                - loaderPosition: auto
+                - disabled: false
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1.2000000000000002
+                height: 1
+                width: 3
+            createdAt: 2022-12-21T01:39:43.413Z
+      - pdf2:
+          pluginTemplate:
+            id: pdf2
+            type: widget
+            subtype: PDFViewerWidget2
+            template:
+              ordered:
+                - src: '{{ state1.value }}'
+                - hidden: false
+                - scaleMode: width
+                - showInEditor: false
+                - tooltipText: ''
+                - scrollSnap: false
+                - title: ''
+                - showTopBar: true
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 6.2
+                height: 4
+                width: 6
+            createdAt: 2022-12-21T01:40:23.501Z
+      - state1:
+          pluginTemplate:
+            id: state1
+            type: state
+            subtype: State
+            template:
+              ordered:
+                - _persistedValueGetter: null
+                - _persistedValueSetter: null
+                - persistValue: false
+                - persistedValueKey: ''
+                - value: null
+            createdAt: 2022-12-21T01:40:35.648Z
+  queryStatusVisibility: false
+  rootScreen: null
+  version: 2.106.3
+  markdownLinkBehavior: auto
+  experimentalDataTabEnabled: true
