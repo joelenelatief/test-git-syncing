@@ -1,0 +1,258 @@
+version: 43.0.9
+pageUuid: e6a766b4-2592-11ed-8bb5-7741d84799bd
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: JavascriptQuery
+            resourceName: JavascriptQuery
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - showFailureToaster: true
+                - query: return 'Hello world!'
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - error: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - metadata: null
+                - changesetObject: ''
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: true
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-06-03T18:29:40.135Z
+      - text1:
+          pluginTemplate:
+            id: text1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - _defaultValue: ''
+                - tooltipText: ''
+                - value: '{{retoolContext.appName}}'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                height: 0.6
+                width: 3
+            createdAt: 2022-06-03T18:29:44.185Z
+      - text2:
+          pluginTemplate:
+            id: text2
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '{{ query1.data }}'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 0.6
+                height: 0.6
+                width: 3
+            createdAt: 2022-06-23T21:10:43.767Z
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+            style:
+              ordered: []
+            createdAt: 2022-08-26T23:00:43.914Z
+      - sidebarFrame1:
+          pluginTemplate:
+            id: sidebarFrame1
+            type: frame
+            subtype: SidebarFrameWidget
+            template:
+              ordered:
+                - heightType: auto
+                - isHiddenOnDesktop: false
+                - hidden: false
+                - showHeader: false
+                - hoistFetching: false
+                - isHiddenOnMobile: false
+                - showFooter: true
+                - loading: false
+                - overflowType: scroll
+                - disabled: false
+                - isInEditMode: false
+            style:
+              ordered: []
+            createdAt: 2022-08-26T23:00:48.679Z
+      - $header:
+          pluginTemplate:
+            id: $header
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: header
+                - sticky: true
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: false
+            style:
+              ordered: []
+            createdAt: 2022-08-26T23:00:50.387Z
+      - text3:
+          pluginTemplate:
+            id: text3
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: Hello from the Header Frame
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                subcontainer: header
+                height: 0.6
+                width: 3
+            createdAt: 2022-08-26T23:00:58.335Z
+      - text4:
+          pluginTemplate:
+            id: text4
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: Hello from the Sidebar body
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                subcontainer: sidebarFrame1
+                height: 0.6
+                width: 1
+            createdAt: 2022-08-26T23:01:09.134Z
+      - text5:
+          pluginTemplate:
+            id: text5
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: Hello from the Sidebar footer
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                rowGroup: footer
+                subcontainer: sidebarFrame1
+                height: 0.6
+                width: 1
+            createdAt: 2022-08-26T23:01:20.460Z
+  queryStatusVisibility: false
+  rootScreen: null
+  version: 2.99.0
+  markdownLinkBehavior: auto
