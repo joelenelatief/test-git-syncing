@@ -1,0 +1,60 @@
+version: 43.0.9
+pageUuid: 4f5e16c2-2108-11ea-97bb-27f2db9510ea
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: LambdaQuery
+            resourceName: '[dev] Lambda'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - functionInvocationType: RequestResponse
+                - queryDisabledMessage: ''
+                - functionName: echo
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - triggersOnFailure: []
+                - confirmationMessage: null
+                - isFetching: false
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - timestamp: 0
+                - functionPayload: abcdefg
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - enableCaching: false
+                - queryThrottleTime: '750'
+            createdAt: 2019-12-17T20:03:37.918Z
+  rootScreen: null
+  version: 2.53.22
