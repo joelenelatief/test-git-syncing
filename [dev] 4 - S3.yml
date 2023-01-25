@@ -1,0 +1,927 @@
+version: 43.0.9
+pageUuid: d887b7da-1255-11ea-b589-d3d015525485
+appTemplate:
+  plugins:
+    ordered:
+      - allFiles:
+          pluginTemplate:
+            id: allFiles
+            type: datasource
+            subtype: S3Query
+            resourceName: '[dev] S3'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - queryDisabledMessage: ''
+                - fileKey: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - delimiter: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - uploadFileName: export.csv
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - uploadData: ''
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - actionType: list
+                - triggersOnFailure: []
+                - copySource: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - prefix: '{{ fileSearch.value }}'
+                - rawData: null
+                - signedOperationOptions: ''
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - bucketName: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - signedOperationName: ''
+                - enableTransformer: false
+                - uploadFileType: csv
+                - maxKeys: ''
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - enableCaching: false
+                - queryThrottleTime: '750'
+            createdAt: 2019-01-24T11:24:21.998Z
+      - fileList:
+          pluginTemplate:
+            id: fileList
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - actionButtonQuery: ''
+                - sortMappedValue:
+                    ordered: []
+                - normalizedData: null
+                - actionButtonType: runQuery
+                - columnWidths:
+                    - object:
+                        id: LastModified
+                        value: 96.5
+                    - object:
+                        id: Key
+                        value: 273
+                - actionButtonDisabled: ''
+                - columnWidthsMobile: []
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - Size: ''
+                      - name: ''
+                      - sales: ''
+                      - ETag: ''
+                      - id: ''
+                      - email: ''
+                      - StorageClass: ''
+                      - Key: ''
+                      - LastModified: ''
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered:
+                      - Size: default
+                - showFilterButton: true
+                - actionButtonUrl: ''
+                - actionButton: false
+                - actionButtonNewWindow: false
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered:
+                      - Size: true
+                      - name: true
+                      - sales: true
+                      - ETag: false
+                      - id: true
+                      - email: true
+                      - StorageClass: false
+                      - Key: true
+                      - LastModified: true
+                - selectedPageIndex: '0'
+                - actionButtonColumnName: Actions
+                - filterStackType: and
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{ allFiles.data.Contents }}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: false
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - sortedDesc: false
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - actionButtonInternalUrlPath: ''
+                - pageSize: 7
+                - useDynamicColumnSettings: false
+                - selectedColumn: null
+                - actionButtonPosition: right
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - actionButtonText: ''
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: ''
+                - defaultSortDescending: false
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    ordered:
+                      - array: []
+                - columnEditable:
+                    ordered: []
+                - filters:
+                    ordered:
+                      - array: []
+                - displayedDataIndices: null
+                - columnMappers:
+                    ordered:
+                      - Size: '{{Math.ceil(self/1024)}} KB'
+                      - LastModified: '{{moment(self).fromNow()}}'
+                - showClearSelection: false
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns:
+                    - id
+                    - name
+                    - email
+                    - sales
+                    - Key
+                    - LastModified
+                    - ETag
+                    - Size
+                    - StorageClass
+                - sort: null
+                - actionButtonInternalUrlHashParams: ''
+                - actionButtonInternalUrlQuery: ''
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - nextAfterCursor: ''
+                - useCompactMode: false
+            position2:
+              position2:
+                row: 1
+                height: 9
+                width: 6
+            createdAt: 2019-01-24T11:24:40.616Z
+      - fileContainer:
+          pluginTemplate:
+            id: fileContainer
+            type: widget
+            subtype: ContainerWidget
+            template:
+              ordered:
+                - disabled: ''
+                - spinWhenChildrenAreFetching: true
+            position2:
+              position2:
+                col: 6
+                height: 13
+                width: 6
+            createdAt: 2019-01-24T11:26:59.928Z
+      - filePreviewTitle:
+          pluginTemplate:
+            id: filePreviewTitle
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: '#### 🔍 File Preview'
+                - html: false
+                - scrollOverflow: false
+                - truncateOverflow: false
+            position2:
+              position2:
+                container: fileContainer
+                height: 1
+                width: 7
+            createdAt: 2019-01-24T11:27:32.049Z
+      - filePreview:
+          pluginTemplate:
+            id: filePreview
+            type: datasource
+            subtype: S3Query
+            resourceName: '[dev] S3'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - queryDisabledMessage: ''
+                - fileKey: '{{ fileList.selectedRow.data.Key }}'
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - delimiter: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - uploadFileName: export.csv
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - uploadData: ''
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - actionType: read
+                - triggersOnFailure: []
+                - copySource: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - prefix: ''
+                - rawData: null
+                - signedOperationOptions: ''
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - bucketName: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - signedOperationName: ''
+                - enableTransformer: false
+                - uploadFileType: csv
+                - maxKeys: ''
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - enableCaching: false
+                - queryThrottleTime: '750'
+            createdAt: 2019-01-24T11:27:43.068Z
+      - filePreviewContentType:
+          pluginTemplate:
+            id: filePreviewContentType
+            type: state
+            subtype: State
+            template:
+              ordered:
+                - value: '{{ filePreview.data.ContentType }}'
+            createdAt: 2019-01-24T12:26:53.462Z
+      - filePreviewContainer:
+          pluginTemplate:
+            id: filePreviewContainer
+            type: widget
+            subtype: TabbedContainerWidget
+            template:
+              ordered:
+                - disabled: ''
+                - selectedTab: '{{ filePreviewContainer.tabNames.indexOf(fileType.value) }}'
+                - selectedTabIndex: 0
+                - showTabBar: false
+                - tabNames: '[''json'', ''image'', ''text'', ''invalid'', ''table'']'
+                - spinWhenChildrenAreFetching: true
+            position2:
+              position2:
+                container: fileContainer
+                row: 1
+                height: 11
+                width: 12
+            createdAt: 2019-01-24T12:34:25.926Z
+      - fileType:
+          pluginTemplate:
+            id: fileType
+            type: function
+            subtype: Function
+            template:
+              ordered:
+                - funcBody: |-
+                    const type = {{ filePreview.data.ContentType }}
+
+                    if (type == "text/csv") {
+                      return "table";
+                    }
+
+                    if (type.startsWith("text/")) {
+                      return "text";
+                    }
+
+                    if (type.startsWith("image/")) {
+                      return "image";
+                    }
+
+                    if (type == "application/json") {
+                      return "json";
+                    }
+
+                    return 'invalid'
+                - value: ''
+            createdAt: 2019-01-24T12:41:10.640Z
+      - jsonPreview:
+          pluginTemplate:
+            id: jsonPreview
+            type: widget
+            subtype: JSONExplorerWidget
+            template:
+              ordered:
+                - value: >-
+                    {{ filePreview.data.ContentType == 'application/json' ?
+                    filePreview.data.Body : {} }}
+                - html: false
+                - expandNodes: false
+            position2:
+              position2:
+                container: filePreviewContainer
+                row: 3
+                height: 7
+                width: 12
+            createdAt: 2019-01-24T12:48:57.607Z
+      - textPreview:
+          pluginTemplate:
+            id: textPreview
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: >-
+                    {{ filePreview.data.ContentType.startsWith('text/') ?
+                    filePreview.data.Body : '...' }}
+                - html: false
+                - scrollOverflow: false
+                - truncateOverflow: false
+            position2:
+              position2:
+                container: filePreviewContainer
+                row: 3
+                height: 7
+                width: 12
+                tabNum: 2
+            createdAt: 2019-01-24T12:49:53.229Z
+      - text3:
+          pluginTemplate:
+            id: text3
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: |-
+                    <center style="font-size: 1.2em">
+                      
+                      <h1>😭</h1>
+
+                      This file type can't be previewed!</center>
+                - html: true
+                - scrollOverflow: false
+                - truncateOverflow: false
+            position2:
+              position2:
+                container: filePreviewContainer
+                height: 7
+                width: 12
+                tabNum: 3
+            createdAt: 2019-01-24T12:50:50.240Z
+      - image:
+          pluginTemplate:
+            id: image
+            type: widget
+            subtype: ImageWidget
+            template:
+              ordered:
+                - valueToCopy: ''
+                - internalUrlHashParams: ''
+                - exportFileType: csv
+                - buttonType: action
+                - exportTemplate: null
+                - url: ''
+                - newWindow: false
+                - exportQuery: ''
+                - imageUrl: >-
+                    {{
+                    encodeURI('https://s3.us-east-2.amazonaws.com/retool-public-demo/'+fileList.selectedRow.data.Key)
+                    }}
+                - action: ''
+                - internalUrlQuery: ''
+                - internalUrlPath: ''
+                - exportFileName: ''
+                - loading: ''
+                - disabled: ''
+            position2:
+              position2:
+                container: filePreviewContainer
+                row: 3
+                height: 7
+                width: 12
+                tabNum: 1
+            createdAt: 2019-01-24T13:01:51.006Z
+      - fileSearch:
+          pluginTemplate:
+            id: fileSearch
+            type: widget
+            subtype: TextInputWidget
+            template:
+              ordered:
+                - readonly: ''
+                - disabledKeyCodes: ''
+                - onBlur: ''
+                - docsSlug: textinput
+                - currencyType: USD
+                - leftIconName: search
+                - initialValue: ''
+                - tooltipText: ''
+                - value: ''
+                - placeholder: Search files by prefix
+                - label: ''
+                - formattedValue: ''
+                - labelMaxWidth: ''
+                - labelPlacedOnLeft: ''
+                - onSubmit: ''
+                - type: text
+                - allowedRegex: .*
+                - required: false
+            position2:
+              position2:
+                col: 3
+                height: 1
+                width: 3
+            createdAt: 2019-01-24T13:12:47.089Z
+      - downloadFileButton:
+          pluginTemplate:
+            id: downloadFileButton
+            type: widget
+            subtype: ButtonWidget
+            template:
+              ordered:
+                - valueToCopy: ''
+                - color: ''
+                - internalUrlHashParams: ''
+                - exportFileType: csv
+                - buttonType: action
+                - exportTemplate: null
+                - url: ''
+                - newWindow: false
+                - value: ↓ Download File
+                - exportQuery: ''
+                - action: downloadSelectedFile
+                - internalUrlQuery: ''
+                - internalUrlPath: ''
+                - exportFileName: ''
+                - loading: ''
+                - disabled: ''
+            position2:
+              position2:
+                container: fileContainer
+                col: 7
+                height: 1
+                width: 5
+            createdAt: 2019-01-24T13:14:14.199Z
+      - downloadSelectedFile:
+          pluginTemplate:
+            id: downloadSelectedFile
+            type: datasource
+            subtype: S3Query
+            resourceName: '[dev] S3'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - queryDisabledMessage: ''
+                - fileKey: '{{ fileList.selectedRow.data.Key }}'
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - delimiter: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - uploadFileName: export.csv
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - uploadData: ''
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - actionType: download
+                - triggersOnFailure: []
+                - copySource: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - prefix: ''
+                - rawData: null
+                - signedOperationOptions: ''
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - bucketName: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - signedOperationName: ''
+                - enableTransformer: false
+                - uploadFileType: csv
+                - maxKeys: ''
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - enableCaching: false
+                - queryThrottleTime: '750'
+            createdAt: 2019-01-24T13:14:25.353Z
+      - title:
+          pluginTemplate:
+            id: title
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: '### 🗂Your Files'
+                - html: false
+                - scrollOverflow: false
+                - truncateOverflow: false
+            position2:
+              position2:
+                height: 1
+                width: 3
+            createdAt: 2019-01-24T13:16:42.599Z
+      - csvPreview:
+          pluginTemplate:
+            id: csvPreview
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - actionButtonQuery: ''
+                - sortMappedValue:
+                    ordered: []
+                - normalizedData: null
+                - actionButtonType: runQuery
+                - columnWidths: []
+                - actionButtonDisabled: ''
+                - columnWidthsMobile: []
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered: []
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered:
+                      - gender: ''
+                      - name: ''
+                      - Sales: ''
+                      - sales: ''
+                      - last_name: ''
+                      - Title: ''
+                      - first_name: ''
+                      - id: ''
+                      - email: ''
+                      - Description: ''
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered: []
+                - showFilterButton: true
+                - actionButtonUrl: ''
+                - actionButton: false
+                - actionButtonNewWindow: false
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered:
+                      - gender: true
+                      - name: true
+                      - Sales: true
+                      - sales: true
+                      - last_name: true
+                      - Title: true
+                      - first_name: true
+                      - id: true
+                      - email: true
+                      - Description: true
+                - selectedPageIndex: '0'
+                - actionButtonColumnName: Actions
+                - filterStackType: and
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: >-
+                    {{ fileType.value == 'table' ?
+                    Papa.parse(filePreview.data.Body, {header: true}).data : []
+                    }}
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: false
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - sortedDesc: false
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - actionButtonInternalUrlPath: ''
+                - pageSize: 9
+                - useDynamicColumnSettings: false
+                - selectedColumn: null
+                - actionButtonPosition: right
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - actionButtonText: ''
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: ''
+                - defaultSortDescending: false
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    ordered:
+                      - array: []
+                - columnEditable:
+                    ordered: []
+                - filters:
+                    ordered:
+                      - array: []
+                - displayedDataIndices: null
+                - columnMappers:
+                    ordered: []
+                - showClearSelection: false
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns:
+                    - id
+                    - name
+                    - email
+                    - sales
+                    - Title
+                    - Description
+                    - Sales
+                    - first_name
+                    - last_name
+                    - gender
+                - sort: null
+                - actionButtonInternalUrlHashParams: ''
+                - actionButtonInternalUrlQuery: ''
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - nextAfterCursor: ''
+                - useCompactMode: true
+            position2:
+              position2:
+                container: filePreviewContainer
+                row: 3
+                height: 7
+                width: 12
+                tabNum: 4
+            createdAt: 2019-01-24T13:19:34.915Z
+      - uploadFileContainer:
+          pluginTemplate:
+            id: uploadFileContainer
+            type: widget
+            subtype: ContainerWidget
+            template:
+              ordered:
+                - disabled: ''
+                - spinWhenChildrenAreFetching: true
+            position2:
+              position2:
+                row: 10
+                height: 3
+                width: 6
+            createdAt: 2019-01-24T15:00:28.809Z
+      - uploadFileTitle:
+          pluginTemplate:
+            id: uploadFileTitle
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: '#### Upload File'
+                - html: false
+                - scrollOverflow: false
+                - truncateOverflow: false
+            position2:
+              position2:
+                container: uploadFileContainer
+                height: 1
+                width: 12
+            createdAt: 2019-01-24T15:00:41.001Z
+      - customFilenameInput:
+          pluginTemplate:
+            id: customFilenameInput
+            type: widget
+            subtype: TextInputWidget
+            template:
+              ordered:
+                - readonly: ''
+                - disabledKeyCodes: ''
+                - onBlur: ''
+                - docsSlug: textinput
+                - currencyType: USD
+                - leftIconName: info-circle-o
+                - initialValue: ''
+                - tooltipText: ''
+                - value: ''
+                - placeholder: Custom filename (optional)
+                - label: ''
+                - formattedValue: ''
+                - labelMaxWidth: ''
+                - labelPlacedOnLeft: ''
+                - onSubmit: ''
+                - type: text
+                - allowedRegex: .*
+                - required: false
+            position2:
+              position2:
+                container: uploadFileContainer
+                row: 1
+                height: 1
+                width: 8
+            createdAt: 2019-01-24T15:01:05.480Z
+      - s3UploadButton:
+          pluginTemplate:
+            id: s3UploadButton
+            type: widget
+            subtype: S3UploaderWidget
+            template:
+              ordered:
+                - onUpload: allFiles
+                - fileExtension: ''
+                - s3FileName: '{{ customFilenameInput.value }}'
+                - s3ACL: private
+                - s3Resource: null
+                - s3ContentType: ''
+                - generateNames: false
+                - label: Select File
+                - s3BucketName: ''
+                - s3ResourceName: '[demo] s3'
+                - s3FolderName: ''
+                - disabled: ''
+                - lastUploadedFileUrl: ''
+                - lastUploadedFileName: ''
+            position2:
+              position2:
+                container: uploadFileContainer
+                row: 1
+                col: 8
+                height: 1
+                width: 4
+            createdAt: 2019-01-24T15:01:35.437Z
+      - imageDetails:
+          pluginTemplate:
+            id: imageDetails
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: |-
+                    <b>{{ filePreview.data.Key }}</b>
+
+                    Last modified: {{ filePreview.data.LastModified }}
+                    <br>
+                    File size: {{ filePreview.data.ContentLength }} B
+                    <br>
+                    Content type: {{ filePreview.data.ContentType }}
+                - html: false
+                - scrollOverflow: false
+                - truncateOverflow: false
+            position2:
+              position2:
+                container: filePreviewContainer
+                height: 3
+                width: 12
+                tabNum: 1
+            createdAt: 2019-03-19T14:16:07.671Z
+      - jsonDetails:
+          pluginTemplate:
+            id: jsonDetails
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: |-
+                    <b>{{ filePreview.data.Key }}</b>
+
+                    Last modified: {{ filePreview.data.LastModified }}
+                    <br>
+                    File size: {{ filePreview.data.ContentLength }} B
+                    <br>
+                    Content type: {{ filePreview.data.ContentType }}
+                - html: false
+                - scrollOverflow: false
+                - truncateOverflow: false
+            position2:
+              position2:
+                container: filePreviewContainer
+                height: 3
+                width: 12
+            createdAt: 2019-03-19T14:16:43.324Z
+      - textDetails:
+          pluginTemplate:
+            id: textDetails
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: |-
+                    <b>{{ filePreview.data.Key }}</b>
+
+                    Last modified: {{ filePreview.data.LastModified }}
+                    <br>
+                    File size: {{ filePreview.data.ContentLength }} B
+                    <br>
+                    Content type: {{ filePreview.data.ContentType }}
+                - html: false
+                - scrollOverflow: false
+                - truncateOverflow: false
+            position2:
+              position2:
+                container: filePreviewContainer
+                height: 3
+                width: 12
+                tabNum: 2
+            createdAt: 2019-03-19T14:18:57.740Z
+      - csvDetails:
+          pluginTemplate:
+            id: csvDetails
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: |-
+                    <b>{{ filePreview.data.Key }}</b>
+
+                    Last modified: {{ filePreview.data.LastModified }}
+                    <br>
+                    File size: {{ filePreview.data.ContentLength }} B
+                    <br>
+                    Content type: {{ filePreview.data.ContentType }}
+                - html: false
+                - scrollOverflow: false
+                - truncateOverflow: false
+            position2:
+              position2:
+                container: filePreviewContainer
+                height: 3
+                width: 12
+                tabNum: 4
+            createdAt: 2019-03-19T14:20:05.492Z
+  rootScreen: null
+  version: 2.53.7
