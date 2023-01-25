@@ -1,0 +1,123 @@
+version: 43.0.9
+pageUuid: b33e60c0-116d-11ea-8c85-a368dd700d7c
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: RESTQuery
+            resourceName: REST-WithoutResource
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - paginationLimit: ''
+                - body: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: 0
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - paginationPaginationField: ''
+                - headers: ''
+                - paginationEnabled: false
+                - query: https://httpbin.org/get
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: 0
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - cookies: ''
+                - triggersOnFailure: []
+                - confirmationMessage: null
+                - isFetching: false
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - paginationDataField: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10001'
+                - requireConfirmation: false
+                - type: GET
+                - enableCaching: false
+                - bodyType: json
+                - queryThrottleTime: '750'
+            createdAt: '2019-11-27T23:29:06.196Z'
+      - text1:
+          pluginTemplate:
+            id: text1
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: '# Hello world, am I speaking with {{ textinput1.value }}?'
+                - html: false
+                - scrollOverflow: false
+                - truncateOverflow: false
+            position2:
+              position2:
+                height: 1
+                width: 9
+            mobilePosition2:
+              position2:
+                height: 1
+                width: 3
+            createdAt: '2019-11-27T23:29:19.102Z'
+      - textinput1:
+          pluginTemplate:
+            id: textinput1
+            type: widget
+            subtype: TextInputWidget
+            template:
+              ordered:
+                - readonly: ''
+                - disabledKeyCodes: ''
+                - onBlur: ''
+                - docsSlug: textinput
+                - currencyType: USD
+                - leftIconName: search
+                - initialValue: '{{ current_user.email}}'
+                - tooltipText: ''
+                - value: ''
+                - placeholder: Search here...
+                - label: Your name
+                - formattedValue: ''
+                - labelMaxWidth: ''
+                - labelPlacedOnLeft: ''
+                - onSubmit: ''
+                - type: text
+                - allowedRegex: .*
+                - required: false
+            position2:
+              position2:
+                row: 1
+                height: 2
+                width: 4
+            mobilePosition2:
+              position2:
+                row: 1
+                height: 1
+                width: 4
+            createdAt: 2019-11-28T02:21:18.207Z
+  rootScreen: null
+  version: 2.53.7
