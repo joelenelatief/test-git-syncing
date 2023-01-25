@@ -1,0 +1,588 @@
+version: 43.0.9
+pageUuid: 5532a19e-6f75-11ed-a6c6-9f5d88393108
+appTemplate:
+  plugins:
+    ordered:
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: false
+            style:
+              ordered: []
+            createdAt: 2022-11-28T23:44:49.224Z
+      - transformer1:
+          pluginTemplate:
+            id: transformer1
+            type: function
+            subtype: Function
+            template:
+              ordered:
+                - funcBody: |-
+                    const data = new Array({{ numberInput1.value }}).fill(null)
+                    return data.map((_, id) => ({
+                      id,
+                      currency: id * 100,
+                      percent: id / 10,
+                      boolean: id % 2 === 0,
+                      image: 'https://place-puppy.com/50x50',
+                      text: `Row ${id}`,
+                      textMulti: `Lorem ipsum `.repeat(id * 2),
+                      tag: 'Tag',
+                      multiTag: ['Foo', 'Bar'],
+                      date: '04/08/1998',
+                      dateTime: '1998-07-08',
+                      time: '12:00:00.000Z',
+                      link: "https://retool.com",
+                      markdown: "# Heading",
+                      html: '<h1>Heading</h1>',
+                      email: 'alexi@retool.com',
+                      json: { foo: 'bar' },
+                      rating: id,
+                    }))
+                - value: ''
+            createdAt: 2022-11-28T23:48:39.747Z
+      - $header:
+          pluginTemplate:
+            id: $header
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: header
+                - sticky: true
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: true
+            style:
+              ordered: []
+            createdAt: 2022-11-28T23:49:03.843Z
+      - numberInput1:
+          pluginTemplate:
+            id: numberInput1
+            type: widget
+            subtype: NumberInputWidget
+            template:
+              ordered:
+                - readOnly: false
+                - iconAfter: ''
+                - max: null
+                - inputValue: 0
+                - hidden: false
+                - customValidation: ''
+                - showSeparators: true
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - showInEditor: false
+                - allowNull: false
+                - showClear: false
+                - tooltipText: ''
+                - currency: USD
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: '2'
+                - labelCaption: ''
+                - min: null
+                - labelWidth: '33'
+                - placeholder: Enter value
+                - showStepper: true
+                - label: Rows
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - format: decimal
+                - iconBefore: ''
+                - textAlign: left
+                - inputTooltip: ''
+                - events:
+                    ordered: []
+                - loading: false
+                - disabled: false
+                - labelPosition: left
+                - decimalPlaces: null
+                - labelWrap: false
+                - padDecimal: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                subcontainer: header
+                col: 8
+                height: 1
+                width: 4
+            createdAt: 2022-11-28T23:49:35.854Z
+      - table1:
+          pluginTemplate:
+            id: table1
+            type: widget
+            subtype: TableWidget
+            template:
+              ordered:
+                - showCustomButton: false
+                - sortMappedValue:
+                    ordered: []
+                - _filteredSortedRenderedDataWithTypes: null
+                - heightType: fixed
+                - normalizedData: null
+                - rowHeight: standard
+                - saveChangesDisabled: ''
+                - columnTypeProperties:
+                    ordered:
+                      - multiTag:
+                          ordered:
+                            - multiselectOptionData: '{{ currentColumn }}'
+                            - colorMode: auto
+                            - allowCustomValue: true
+                            - optionLabels: null
+                            - optionColors: null
+                            - optionValues: null
+                      - percent:
+                          ordered:
+                            - showSeparators: true
+                            - padDecimal: true
+                      - boolean:
+                          ordered:
+                            - falseDisplayValue: empty
+                      - json:
+                          ordered: []
+                      - html:
+                          ordered: []
+                      - textMulti:
+                          ordered: []
+                      - text:
+                          ordered: []
+                      - time:
+                          ordered: []
+                      - date:
+                          ordered:
+                            - dateFormat: MMM d, yyyy
+                      - markdown:
+                          ordered: []
+                      - currency:
+                          ordered:
+                            - showSeparators: true
+                            - currency: USD
+                            - padDecimal: true
+                      - tag:
+                          ordered:
+                            - optionData: '{{ currentColumn }}'
+                            - colorMode: auto
+                            - allowCustomValue: true
+                            - optionLabels:
+                                array: []
+                            - optionColors:
+                                array: []
+                            - optionValues:
+                                array: []
+                      - link:
+                          ordered:
+                            - openInNewTab: true
+                      - id:
+                          ordered:
+                            - showSeparators: true
+                            - padDecimal: true
+                      - image:
+                          ordered: []
+                      - dateTime:
+                          ordered:
+                            - manageTimeZone: false
+                            - dateFormat: MMM d, yyyy
+                            - valueTimeZone: '00:00'
+                            - displayTimeZone: local
+                      - email:
+                          ordered:
+                            - allowCustomValue: true
+                      - rating:
+                          ordered: []
+                      - Custom Column 2:
+                          ordered: []
+                - columnWidths:
+                    - object:
+                        id: rating
+                        value: 172
+                - showSummaryFooter: false
+                - disableRowSelectInteraction: false
+                - columnWidthsMobile: []
+                - hasNextAfterCursor: ''
+                - columnTypeSpecificExtras:
+                    ordered: []
+                - onRowAdded: ''
+                - columnHeaderNames:
+                    ordered:
+                      - Custom Column 2: Rating
+                      - rating: rating
+                - alwaysShowPaginator: false
+                - columnColors:
+                    ordered: []
+                - columnFrozenAlignments:
+                    ordered: []
+                - allowMultiRowSelect: false
+                - columnFormats:
+                    ordered:
+                      - multiTag: MultipleTagsDataCell
+                      - percent: PercentDataCell
+                      - boolean: CheckboxDataCell
+                      - json: JsonDataCell
+                      - html: HtmlDataCell
+                      - textMulti: TextMultiDataCell
+                      - text: TextDataCell
+                      - time: TimeDataCell
+                      - date: DateDataCell
+                      - markdown: MarkdownDataCell
+                      - currency: CurrencyDataCell
+                      - tag: SingleTagDataCell
+                      - link: LinkDataCell
+                      - id: NumberDataCell
+                      - image: ImageDataCell
+                      - dateTime: DateTimeDataCell
+                      - email: UserDataCell
+                      - rating: RatingDataCell
+                      - Custom Column 2: RatingDataCell
+                - columnRestrictedEditing:
+                    ordered: []
+                - showFilterButton: true
+                - _columnVisibility:
+                    ordered:
+                      - button: false
+                      - modal: false
+                - _columnSummaryTypes:
+                    ordered:
+                      - multiTag: ''
+                      - percent: average
+                      - boolean: checkedCount
+                      - json: ''
+                      - html: ''
+                      - textMulti: ''
+                      - text: ''
+                      - time: ''
+                      - date: ''
+                      - markdown: ''
+                      - currency: sum
+                      - tag: ''
+                      - link: ''
+                      - id: sum
+                      - image: ''
+                      - dateTime: ''
+                      - email: ''
+                      - rating: average
+                      - Custom Column 2: average
+                - _columnsWithLegacyBackgroundColor:
+                    set: []
+                - showAddRowButton: true
+                - _unfilteredSelectedIndex: null
+                - nextBeforeCursor: ''
+                - columnVisibility:
+                    ordered: []
+                - selectedPageIndex: '0'
+                - applyDynamicSettingsToColumnOrder: true
+                - rowColor:
+                    array: []
+                - actionButtonColumnName: Actions
+                - resetAfterSave: true
+                - filterStackType: and
+                - downloadRawData: false
+                - showFetchingIndicator: true
+                - serverPaginated: false
+                - data: '{{ transformer1.value }}'
+                - displayedData: null
+                - actionButtons: []
+                - actionButtonSelectsRow: true
+                - selectRowByDefault: true
+                - defaultSortByColumn: ''
+                - paginationOffset: 0
+                - columnAlignment:
+                    ordered:
+                      - multiTag: left
+                      - percent: right
+                      - boolean: center
+                      - json: left
+                      - html: left
+                      - textMulti: left
+                      - text: left
+                      - time: left
+                      - date: left
+                      - markdown: left
+                      - currency: right
+                      - Custom Column 2: left
+                      - tag: left
+                      - link: left
+                      - id: right
+                      - image: left
+                      - dateTime: left
+                      - email: left
+                      - rating: left
+                - columnSummaries:
+                    object: {}
+                - showBoxShadow: false
+                - sortedDesc: false
+                - customButtonName: ''
+                - columnMappersRenderAsHTML:
+                    ordered: []
+                - showRefreshButton: true
+                - pageSize: '20'
+                - useDynamicColumnSettings: false
+                - actionButtonPosition: left
+                - dynamicRowHeights: false
+                - bulkUpdateAction: ''
+                - afterCursor: ''
+                - onCustomButtonPressQueryName: ''
+                - changeSet:
+                    object: {}
+                - sortedColumn: ''
+                - _columnSummaryValues:
+                    ordered:
+                      - multiTag: ''
+                      - percent: ''
+                      - boolean: ''
+                      - json: ''
+                      - html: ''
+                      - textMulti: ''
+                      - text: ''
+                      - time: ''
+                      - date: ''
+                      - markdown: ''
+                      - currency: ''
+                      - tag: ''
+                      - link: ''
+                      - id: ''
+                      - image: ''
+                      - dateTime: ''
+                      - email: ''
+                      - rating: ''
+                      - Custom Column 2: ''
+                - checkboxRowSelect: true
+                - _compatibilityMode: false
+                - showColumnBorders: false
+                - clearSelectionLabel: Clear selection
+                - _renderedDataWithTypes: null
+                - columnAllowOverflow:
+                    ordered: []
+                - beforeCursor: ''
+                - serverPaginationType: limitOffsetBased
+                - onRowSelect: ''
+                - showDownloadButton: true
+                - selectedIndex: null
+                - defaultSortDescending: false
+                - _sortedDisplayedDataIndices: null
+                - dynamicColumnSettings: null
+                - totalRowCount: ''
+                - recordUpdates:
+                    array: []
+                - newRow: null
+                - emptyMessage: No rows found
+                - columnEditable:
+                    ordered:
+                      - multiTag: true
+                      - percent: true
+                      - boolean: true
+                      - json: true
+                      - html: true
+                      - textMulti: true
+                      - text: true
+                      - modal: true
+                      - time: true
+                      - date: true
+                      - markdown: true
+                      - currency: true
+                      - button: true
+                      - tag: true
+                      - link: true
+                      - id: true
+                      - image: true
+                      - dateTime: true
+                      - email: true
+                      - rating: true
+                - _viewerColumnSummaryTypes:
+                    object: {}
+                - filters:
+                    array: []
+                - displayedDataIndices: null
+                - disableSorting:
+                    ordered: []
+                - columnMappers:
+                    ordered:
+                      - tag: ''
+                      - multiTag: ''
+                      - Custom Column 1: hello
+                - showClearSelection: false
+                - doubleClickToEdit: true
+                - overflowType: pagination
+                - _reverseSortedDisplayedDataIndices: null
+                - showTableBorder: true
+                - selectedCell:
+                    object:
+                      index: null
+                      data: null
+                      columnName: null
+                - columns: []
+                - defaultSelectedRow: first
+                - freezeActionButtonColumns: false
+                - sort: null
+                - _columns:
+                    - id
+                    - currency
+                    - percent
+                    - boolean
+                    - image
+                    - text
+                    - rating
+                    - textMulti
+                    - tag
+                    - multiTag
+                    - date
+                    - dateTime
+                    - time
+                    - link
+                    - markdown
+                    - html
+                    - email
+                    - json
+                - sortByRawValue:
+                    ordered: []
+                - calculatedColumns: []
+                - selectedRow:
+                    object:
+                      index: null
+                      data: null
+                - showPaginationOnTop: false
+                - _reverseDisplayedDataIndices: null
+                - nextAfterCursor: ''
+                - useCompactMode: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                height: 8.4
+                width: 11
+            createdAt: 2022-11-28T23:50:16.571Z
+      - text_1:
+          pluginTemplate:
+            id: text_1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: |-
+                    ```
+                    {{JSON.stringify(table1.changeSet, null, 2)}}
+                    ```
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 9.600000000000001
+                height: 0.6
+                width: 5
+            createdAt: 2022-11-29T23:03:56.487Z
+      - text_addRow:
+          pluginTemplate:
+            id: text_addRow
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: |-
+                    ```
+                    {{ JSON.stringify(table1.newRow, null, 2) }}
+                    ```
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 9.599999999999998
+                col: 6
+                height: 0.6
+                width: 5
+            createdAt: 2022-11-29T23:21:38.975Z
+      - text1:
+          pluginTemplate:
+            id: text1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '{{text_1.id}}:'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 9.000000000000002
+                height: 0.6
+                width: 3
+            createdAt: 2022-12-07T22:44:47.740Z
+      - text2:
+          pluginTemplate:
+            id: text2
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '{{text_addRow.id}}:'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 9
+                col: 6
+                height: 0.6
+                width: 3
+            createdAt: 2022-12-07T22:45:25.026Z
+  queryStatusVisibility: false
+  experimentalPerfFeatures:
+    object:
+      batchCommitModelEnabled: false
+      skipDepCycleCheckingEnabled: false
+      serverDepGraphEnabled: false
+      useRuntimeV2: false
+  rootScreen: null
+  version: 2.106.0
+  markdownLinkBehavior: auto
