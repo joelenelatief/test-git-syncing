@@ -1,0 +1,172 @@
+version: 43.0.9
+pageUuid: f6a535f4-2884-11ea-bf7e-c79291c508e9
+appTemplate:
+  plugins:
+    ordered:
+      - normalInput:
+          pluginTemplate:
+            id: normalInput
+            type: widget
+            subtype: TextInputWidget
+            template:
+              ordered:
+                - readonly: ''
+                - disabledKeyCodes: ''
+                - onBlur: ''
+                - currencyType: USD
+                - leftIconName: search
+                - initialValue: ''
+                - tooltipText: ''
+                - value: ''
+                - placeholder: Search here...
+                - label: Normal TextInput
+                - formattedValue: ''
+                - labelMaxWidth: ''
+                - labelPlacedOnLeft: ''
+                - onSubmit: ''
+                - type: text
+                - allowedRegex: .*
+                - required: false
+            position2:
+              position2:
+                row: 2
+                height: 2
+                width: 4
+            mobilePosition2:
+              position2:
+                row: 2
+                height: 1
+                width: 4
+            createdAt: 2019-12-27T08:43:54.191Z
+      - numberInput:
+          pluginTemplate:
+            id: numberInput
+            type: widget
+            subtype: TextInputWidget
+            template:
+              ordered:
+                - readonly: ''
+                - disabledKeyCodes: ''
+                - onBlur: ''
+                - currencyType: USD
+                - leftIconName: search
+                - initialValue: ''
+                - tooltipText: ''
+                - value: ''
+                - placeholder: Search here...
+                - label: Number TextInput
+                - formattedValue: ''
+                - labelMaxWidth: ''
+                - labelPlacedOnLeft: ''
+                - onSubmit: ''
+                - type: number
+                - allowedRegex: .*
+                - required: false
+            position2:
+              position2:
+                row: 2
+                col: 6
+                height: 2
+                width: 4
+            mobilePosition2:
+              position2:
+                col: 5
+                height: 1
+                width: 4
+            createdAt: 2019-12-27T08:44:11.346Z
+      - text1:
+          pluginTemplate:
+            id: text1
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: '# Non-nullable TextInputs'
+                - html: false
+                - scrollOverflow: false
+                - truncateOverflow: false
+                - tooltipText: ''
+            position2:
+              position2:
+                height: 2
+                width: 6
+            mobilePosition2:
+              position2:
+                height: 1
+                width: 3
+            createdAt: 2019-12-27T08:44:20.759Z
+      - text2:
+          pluginTemplate:
+            id: text2
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: '# Nullable TextInputs'
+                - html: false
+                - scrollOverflow: false
+                - truncateOverflow: false
+                - tooltipText: ''
+            position2:
+              position2:
+                col: 6
+                height: 2
+                width: 6
+            mobilePosition2:
+              position2:
+                row: 2
+                height: 2
+                width: 6
+            createdAt: 2019-12-27T08:44:39.155Z
+      - numberValue:
+          pluginTemplate:
+            id: numberValue
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: '{{ JSON.stringify(numberInput.value)}}'
+                - html: false
+                - scrollOverflow: false
+                - truncateOverflow: false
+                - tooltipText: ''
+            position2:
+              position2:
+                row: 2
+                col: 10
+                height: 2
+                width: 2
+            mobilePosition2:
+              position2:
+                row: 4
+                col: 9
+                height: 1
+                width: 3
+            createdAt: 2019-12-27T08:45:05.615Z
+      - normalValue:
+          pluginTemplate:
+            id: normalValue
+            type: widget
+            subtype: TextWidget
+            template:
+              ordered:
+                - value: '{{ JSON.stringify(normalInput.value)}}'
+                - html: false
+                - scrollOverflow: false
+                - truncateOverflow: false
+                - tooltipText: ''
+            position2:
+              position2:
+                row: 2
+                col: 4
+                height: 2
+                width: 2
+            mobilePosition2:
+              position2:
+                row: 4
+                col: 10
+                height: 2
+                width: 2
+            createdAt: 2019-12-27T08:45:43.845Z
+  rootScreen: null
+  version: 2.53.30
