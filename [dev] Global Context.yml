@@ -1,0 +1,175 @@
+version: 43.0.9
+pageUuid: 5a446a26-f808-11ec-8eac-e781a531de57
+appTemplate:
+  plugins:
+    ordered:
+      - text1:
+          pluginTemplate:
+            id: text1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: 'All global information:'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                height: 0.6
+                width: 12
+            createdAt: 2022-06-30T00:06:06.120Z
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+            style:
+              ordered: []
+            createdAt: 2022-08-16T19:23:58.626Z
+      - globalInformationText:
+          pluginTemplate:
+            id: globalInformationText
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '{{ transformer1.value }}'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 0.5999999999999996
+                height: 0.6
+                width: 12
+            createdAt: 2022-09-27T19:18:04.660Z
+      - transformer1:
+          pluginTemplate:
+            id: transformer1
+            type: function
+            subtype: Function
+            template:
+              ordered:
+                - funcBody: >-
+                    return JSON.stringify({{ {current_user, localStorage,
+                    retoolContext, theme, urlparams, viewport } }}, undefined,
+                    2)
+                - value: ''
+            createdAt: 2022-09-27T19:19:05.018Z
+      - globalStyles:
+          pluginTemplate:
+            id: globalStyles
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: >-
+                    To test global styles, we have added a Global Style that
+                    overrides the color of only this text component to be
+                    `red`. 
+
+
+                    Note 1: The Text style property of this value should be the
+                    default value (aka: not red) in order to prove that this
+                    test works.
+
+
+                    Note 2: This selector was written in a way that makes it
+                    work in Editor, Presentation, and Public mode!
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 33
+                height: 0.6
+                width: 12
+            createdAt: 2022-09-27T19:27:45.622Z
+      - $appStyles:
+          pluginTemplate:
+            id: $appStyles
+            type: setting
+            subtype: AppStyles
+            template:
+              ordered:
+                - value: |-
+                    [data-testid="RetoolGrid:globalStyles"] p,
+                    [data-testid="globalStyles"] p {
+                      color: red !important;
+                    }
+            createdAt: 2022-09-27T19:28:20.392Z
+      - globalJs:
+          pluginTemplate:
+            id: globalJs
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: |-
+                    Here is an object that was set on window in global JS: 
+                    ```
+                    {{ JSON.stringify(window.myCustomValue, undefined, 2) }}
+                    ```
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 33.6
+                height: 0.6
+                width: 12
+            createdAt: 2022-09-27T19:28:31.706Z
+  preloadedAppJavaScript: |-
+    window.myCustomValue = {
+      string: "This is a string value",
+      integer: 90,
+      float: 100.0000001,
+      boolean: false,
+      undef: undefined,
+      nul: null,
+      array: [1,2,3,4,"string"],
+    }
+  rootScreen: null
+  version: 2.101.1
+  markdownLinkBehavior: auto
