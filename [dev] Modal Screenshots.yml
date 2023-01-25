@@ -1,0 +1,193 @@
+version: 43.0.9
+pageUuid: 109df720-3a98-11ed-b64a-dbf777c77e60
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: SqlQueryUnified
+            resourceName: 04388c21-473d-4420-83d1-45e8e168998e
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - records: ''
+                - lastReceivedFromResourceAt: null
+                - databasePasswordOverride: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - error: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - recordId: ''
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - dataArray: []
+                - cacheKeyTtl: ''
+                - filterBy: ''
+                - databaseHostOverride: ''
+                - metadata: null
+                - editorMode: sql
+                - actionType: ''
+                - changesetObject: ''
+                - shouldUseLegacySql: false
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - databaseNameOverride: ''
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - enableBulkUpdates: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - bulkUpdatePrimaryKey: ''
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - tableName: ''
+                - queryTimeout: '10001'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - databaseUsernameOverride: ''
+                - shouldEnableBatchQuerying: false
+                - doNotThrowOnNoOp: false
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-09-22T17:00:30.651Z
+      - regularModal:
+          pluginTemplate:
+            id: regularModal
+            type: widget
+            subtype: ModalWidget
+            template:
+              ordered:
+                - opened: false
+                - modalOverflowType: scroll
+                - onModalClose: ''
+                - modalHeightType: fixed
+                - tooltipText: ''
+                - modalHeight: ''
+                - onModalOpen: ''
+                - modalWidth: ''
+                - closeOnOutsideClick: false
+                - loading: ''
+                - disabled: ''
+                - buttonText: Open Modal
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1.2000000000000002
+                height: 1
+                width: 3
+            createdAt: 2022-09-22T17:00:38.094Z
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: false
+            style:
+              ordered: []
+            createdAt: 2022-09-22T17:00:38.117Z
+      - largeModal:
+          pluginTemplate:
+            id: largeModal
+            type: widget
+            subtype: ModalWidget
+            template:
+              ordered:
+                - opened: false
+                - modalOverflowType: scroll
+                - onModalClose: ''
+                - modalHeightType: fixed
+                - tooltipText: ''
+                - modalHeight: ''
+                - onModalOpen: ''
+                - modalWidth: ''
+                - closeOnOutsideClick: false
+                - loading: ''
+                - disabled: ''
+                - buttonText: Open Modal
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1.2
+                col: 4
+                height: 4.6
+                width: 3
+            createdAt: 2022-09-22T17:00:44.737Z
+      - smallModal:
+          pluginTemplate:
+            id: smallModal
+            type: widget
+            subtype: ModalWidget
+            template:
+              ordered:
+                - opened: false
+                - modalOverflowType: scroll
+                - onModalClose: ''
+                - modalHeightType: fixed
+                - tooltipText: ''
+                - modalHeight: ''
+                - onModalOpen: ''
+                - modalWidth: ''
+                - closeOnOutsideClick: false
+                - loading: ''
+                - disabled: ''
+                - buttonText: Open Modal
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1.4
+                col: 8
+                height: 0.8
+                width: 3
+            createdAt: 2022-09-22T17:00:51.585Z
+  queryStatusVisibility: false
+  rootScreen: null
+  version: 2.101.0
+  markdownLinkBehavior: auto
