@@ -1,0 +1,628 @@
+version: 43.0.9
+pageUuid: b798d7cc-0beb-11ea-aea5-433f0bc63cc1
+appTemplate:
+  plugins:
+    ordered:
+      - textInput1:
+          pluginTemplate:
+            id: textInput1
+            type: widget
+            subtype: TextInputWidget2
+            template:
+              ordered:
+                - spellCheck: false
+                - iconAfter: ''
+                - autoComplete: false
+                - maxLength: null
+                - hidden: false
+                - patternType: ''
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - pattern: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - value: ''
+                - autoFill: ''
+                - placeholder: Enter value
+                - label: Text input
+                - _validate: false
+                - invalid: false
+                - iconBefore: ''
+                - minLength: null
+                - events: []
+                - autoCapitalize: none
+                - disabled: false
+                - labelPosition: left
+                - errorMessage: ''
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1.4
+                height: 1
+                width: 6
+            createdAt: 2021-06-23T23:51:49.075Z
+      - text5:
+          pluginTemplate:
+            id: text5
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: >-
+                    ### ModelUpdate performance test app
+
+
+                    This application uses custom
+                    `@retool/performance/modelUpdate` event to record time it
+                    takes to run modelUpdate for certain components. Integration
+                    spec interacts with some of the components, time it takes to
+                    update the model is recorded, aggregated, and assumptions
+                    are run on it.
+
+
+                    Current expectation is that all v2 components can propagate
+                    model updates within 16ms in viewer mode, and within 32 ms
+                    in editor mode.
+                - disableMarkdown: false
+                - overflowType: scroll
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 0.7999999999999998
+                height: 0.6
+                width: 12
+            createdAt: 2021-06-25T20:00:36.417Z
+      - select1:
+          pluginTemplate:
+            id: select1
+            type: widget
+            subtype: SelectWidget
+            template:
+              ordered:
+                - enableClientSideMatching: true
+                - values: '[1,2,3,4,5,6,7,8,9,0]'
+                - allowOutOfRangeValues: false
+                - enableFuzzyMatching: true
+                - searchValue: ''
+                - showFetchingIndicator: true
+                - enableCaseSensitivity: false
+                - validationMessage: ''
+                - displayValue: ''
+                - tooltipText: ''
+                - value: ''
+                - maxResults: 50
+                - placeholder: Select a value
+                - label: Numbers
+                - clearValueOnFocus: true
+                - labelMaxWidth: ''
+                - labelPlacedOnLeft: false
+                - validationState: ''
+                - onSelect: ''
+                - allowCustomValues: false
+                - disabled: ''
+                - hideClearButton: false
+                - required: false
+                - labels: ''
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 6.200000000000001
+                height: 1
+                width: 6
+            createdAt: 2021-06-25T20:01:33.899Z
+      - numberInput1:
+          pluginTemplate:
+            id: numberInput1
+            type: widget
+            subtype: NumberInputWidget
+            template:
+              ordered:
+                - iconAfter: ''
+                - max: null
+                - hidden: false
+                - showSeparators: true
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - tooltipText: ''
+                - currency: USD
+                - labelAlign: left
+                - value: 0
+                - min: null
+                - placeholder: Enter value
+                - showStepper: true
+                - label: |
+                    Number Input
+                - _validate: false
+                - invalid: false
+                - format: decimal
+                - iconBefore: ''
+                - textAlign: left
+                - disabled: false
+                - labelPosition: left
+                - errorMessage: ''
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 3.4
+                height: 1
+                width: 6
+            createdAt: 2021-06-25T20:02:26.357Z
+      - slider1:
+          pluginTemplate:
+            id: slider1
+            type: widget
+            subtype: SliderWidget2
+            template:
+              ordered:
+                - hideOutput: false
+                - max: 5
+                - hidden: false
+                - step: 1
+                - validationMessage: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - value: 2
+                - min: 0
+                - label: Slider
+                - _validate: false
+                - invalid: false
+                - disabled: false
+                - labelPosition: left
+                - errorMessage: ''
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 4.4
+                height: 1
+                width: 6
+            createdAt: 2021-06-25T20:03:05.338Z
+      - multiselect1:
+          pluginTemplate:
+            id: multiselect1
+            type: widget
+            subtype: MultiSelectWidget
+            template:
+              ordered:
+                - enableClientSideMatching: true
+                - values: '[1,2,3]'
+                - allowOutOfRangeValues: false
+                - enableFuzzyMatching: true
+                - searchValue: ''
+                - showFetchingIndicator: true
+                - enableCaseSensitivity: false
+                - validationMessage: ''
+                - displayValue: ''
+                - tooltipText: ''
+                - value: ''
+                - maxResults: 50
+                - placeholder: Select a value
+                - label: Numbers
+                - clearValueOnFocus: true
+                - labelMaxWidth: ''
+                - labelPlacedOnLeft: false
+                - validationState: ''
+                - onSelect: ''
+                - allowCustomValues: false
+                - disabled: ''
+                - hideClearButton: false
+                - required: false
+                - labels: ''
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 12.8
+                height: 1
+                width: 6
+            createdAt: 2021-06-25T20:03:42.824Z
+      - radiogroup1:
+          pluginTemplate:
+            id: radiogroup1
+            type: widget
+            subtype: RadioGroupWidget2
+            template:
+              ordered:
+                - values: '[''foo'', ''bar'', ''baz'', ''foo1'', ''bar1'', ''buzz1'']'
+                - hidden: false
+                - validationMessage: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - value: foo
+                - label: Label
+                - _validate: false
+                - invalid: false
+                - disabled: false
+                - labelPosition: top
+                - disabledValues:
+                    array: []
+                - errorMessage: ''
+                - required: false
+                - labels: '[''foo'', ''bar'', ''baz'', ''foo1'', ''bar1'', ''buzz1'']'
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 13.8
+                height: 1
+                width: 6
+            createdAt: 2021-06-25T20:04:00.354Z
+      - checkboxtree1:
+          pluginTemplate:
+            id: checkboxtree1
+            type: widget
+            subtype: CheckboxTreeWidget
+            template:
+              ordered:
+                - delimiter: '-'
+                - checked:
+                    array: []
+                - checkedPathArray:
+                    array: []
+                - onChange: ''
+                - tooltipText: ''
+                - structure: |-
+                    [
+                      {
+                        "label": "Shoes",
+                        "value": "shoes",
+                        "children": [
+                          {
+                            "label": "Atheletic",
+                            "value": "athletic",
+                            "children": [
+                              {
+                                "label": "Tennis Shoes",
+                                "value": "tennis"
+                              },
+                              {
+                                "label": "Running",
+                                "value": "running"
+                              }
+                            ]
+                          },
+                          {
+                            "label": "Dress Shoes",
+                            "value": "dress"
+                          },
+                          {
+                            "label": "Sandals",
+                            "value": "sandals",
+                            "children": [
+                              {
+                                "label": "Flip-Flop",
+                                "value": "flipflop"
+                              },
+                              {
+                                "label": "Thong",
+                                "value": "thong"
+                              },
+                              {
+                                "label": "Fisherman",
+                                "value": "fisherman"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Jewelry",
+                        "value": "jewelry",
+                        "children": [
+                          {
+                            "label": "Necklace",
+                            "value": "necklace"
+                          },
+                          {
+                            "label": "Bracelet",
+                            "value": "bracelet"
+                          },
+                          {
+                            "label": "Ring",
+                            "value": "ring"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Misc",
+                        "value": "misc"
+                      }
+                    ]
+                - label: Categories
+                - checkedPathStrings:
+                    array: []
+                - labelMaxWidth: ''
+                - leafPathArray:
+                    array: []
+                - labelPlacedOnLeft: false
+                - expanded: '[''shoes'', ''athletic'', ''jewelry'']'
+                - selected:
+                    array: []
+                - disabled: ''
+                - checkStrictly: false
+                - leafPathStrings:
+                    array: []
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 14.8
+                height: 11.8
+                width: 6
+            createdAt: 2021-06-25T20:04:21.164Z
+      - textInputWithValidation:
+          pluginTemplate:
+            id: textInputWithValidation
+            type: widget
+            subtype: TextInputWidget2
+            template:
+              ordered:
+                - spellCheck: false
+                - iconAfter: ''
+                - autoComplete: false
+                - maxLength: null
+                - hidden: false
+                - patternType: regex
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - pattern: ^foo|bar$
+                - tooltipText: ''
+                - labelAlign: left
+                - value: ''
+                - autoFill: ''
+                - placeholder: Enter value
+                - label: Enter "foo" or "bar"
+                - _validate: false
+                - invalid: false
+                - iconBefore: ''
+                - minLength: null
+                - autoCapitalize: none
+                - disabled: false
+                - labelPosition: left
+                - errorMessage: ''
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 2.4
+                height: 1
+                width: 6
+            createdAt: 2021-06-25T20:32:42.883Z
+      - state1:
+          pluginTemplate:
+            id: state1
+            type: state
+            subtype: State
+            template:
+              ordered:
+                - value: null
+            createdAt: 2021-06-29T05:21:01.080Z
+      - textReadinessIndicator:
+          pluginTemplate:
+            id: textReadinessIndicator
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '{{query1.data?.length ? ''Ready'' :  ''...Loading''}}'
+                - disableMarkdown: false
+                - overflowType: scroll
+            style:
+              ordered: []
+            position2:
+              position2:
+                height: 0.6
+                width: 3
+            createdAt: 2021-06-29T21:32:53.240Z
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: JavascriptQuery
+            resourceName: JavascriptQuery
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: return ['ready']
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - privateParams: []
+                - triggersOnSuccess: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - showSuccessConfetti: false
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - metadata: null
+                - triggersOnFailure: []
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: false
+                - runWhenPageLoads: true
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - enableCaching: false
+                - allowedGroups: []
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: true
+                - notificationDuration: ''
+            createdAt: 2021-06-29T21:33:05.647Z
+      - checkboxgroup1:
+          pluginTemplate:
+            id: checkboxgroup1
+            type: widget
+            subtype: CheckboxGroupWidget2
+            template:
+              ordered:
+                - values: '  [''foo'', ''bar'', ''baz'', ''foo1'', ''bar1'', ''buzz1'']'
+                - hidden: false
+                - validationMessage: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - value: '[''foo'']'
+                - label: Label
+                - _validate: false
+                - invalid: false
+                - disabled: false
+                - labelPosition: top
+                - disabledValues:
+                    array: []
+                - errorMessage: ''
+                - required: false
+                - labels: '[''foo'', ''bar'', ''baz'', ''foo1'', ''bar1'', ''buzz1'']'
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1.4
+                col: 6
+                height: 0.6
+                width: 5
+            createdAt: 2021-07-01T18:56:22.550Z
+      - segmentedcontrol1:
+          pluginTemplate:
+            id: segmentedcontrol1
+            type: widget
+            subtype: SegmentedControlWidget
+            template:
+              ordered:
+                - values: '[''left'', ''right'']'
+                - hidden: false
+                - validationMessage: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - value: left
+                - label: Label
+                - _validate: false
+                - invalid: false
+                - disabled: false
+                - labelPosition: left
+                - errorMessage: ''
+                - required: false
+                - labels: '[''Left'', ''Right'']'
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 7.600000000000002
+                col: 6
+                height: 0.8
+                width: 4
+            createdAt: 2021-07-01T18:57:26.325Z
+      - switchgroup1:
+          pluginTemplate:
+            id: switchgroup1
+            type: widget
+            subtype: SwitchGroup
+            template:
+              ordered:
+                - values: '[''foo'', ''bar'', ''baz'', ''foo1'', ''bar1'', ''buzz1'']'
+                - hidden: false
+                - validationMessage: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - value: '[''foo'']'
+                - label: Label
+                - _validate: false
+                - invalid: false
+                - disabled: false
+                - labelPosition: top
+                - disabledValues:
+                    array: []
+                - errorMessage: ''
+                - required: false
+                - labels: '[''foo'', ''bar'', ''baz'', ''foo1'', ''bar1'', ''buzz1'']'
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 13.6
+                col: 6
+                height: 0.6
+                width: 5
+            createdAt: 2021-07-01T18:57:53.131Z
+      - jsoneditor1:
+          pluginTemplate:
+            id: jsoneditor1
+            type: widget
+            subtype: JSONEditorWidget
+            template:
+              ordered:
+                - value: |-
+                    {
+                      "a": {
+                        "b": [1,2,3,4,5,6,7,8,9],
+                        "c": {
+                          "d": false
+                        },
+                        "e": "hi"
+                      }
+                    }
+                - valid: true
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 17.999999999999996
+                col: 6
+                height: 8
+                width: 6
+            createdAt: 2021-07-01T19:06:14.291Z
+  rootScreen: null
+  version: 2.72.5
