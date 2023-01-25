@@ -1,0 +1,363 @@
+version: 43.0.9
+pageUuid: 40da2fa4-54b4-11ed-bbdf-77799c000a1f
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: JavascriptQuery
+            resourceName: JavascriptQuery
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: false
+                - showFailureToaster: true
+                - query: |
+                    return [...Array(numberInput1.value).keys()]
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - error: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - metadata: null
+                - changesetObject: ''
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: true
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-10-25T22:27:47.717Z
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: false
+            style:
+              ordered: []
+            createdAt: 2022-10-25T22:28:06.047Z
+      - customComponent1:
+          pluginTemplate:
+            id: customComponent1
+            type: widget
+            subtype: CustomComponentWidget
+            template:
+              ordered:
+                - allowTopNavigation: false
+                - heightType: auto
+                - allowDownloads: false
+                - allowFullscreen: false
+                - allowForms: false
+                - model: |-
+                    {
+                      "displayText": "Clicking the \"Update model\" button below will update the model and change this text.",
+                      "queryToTrigger": "query1",
+                       "items": {{query1.data}}
+                    }
+                - allowCamera: false
+                - allowModals: false
+                - allowPopups: false
+                - iframeCode: >
+
+                    <style>
+                      @import url('https://rsms.me/inter/inter.css');
+                      html { font-family: 'Inter', sans-serif; }
+                      @supports (font-variation-settings: normal) {
+                        html { font-family: 'Inter var', sans-serif; }
+                      }
+
+                      * {
+                        font-family: 'Inter', sans-serif;
+                      }
+
+                      body {
+                        margin: 0;
+                      }
+                    </style>
+
+
+                    <!-- You can add any HTML/CSS/JS here. UMD versions are
+                    required.
+
+                    Keep in mind that Custom Components are sensitive to bundle
+                    sizes, so try using a
+
+                    custom implementation when possible. -->
+
+                    <script crossorigin
+                    src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+                    <script crossorigin
+                    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+
+                    <div id="react"></div>
+
+
+                    <script type="text/babel">
+                      const MyCustomComponent = ({ triggerQuery, model, modelUpdate }) => {
+                        console.log(model.items)
+                        return (
+                        <div>
+                          {(model.items || []).map(item => <div key={item}>{item}</div>)}
+                        </div>
+                      )}
+
+                      // This is the entrypoint for the React component.
+                      const ConnectedComponent = Retool.connectReactComponent(MyCustomComponent)
+                      const container = document.getElementById('react')
+                      const root = ReactDOM.createRoot(container)
+                      root.render(<ConnectedComponent />)
+                    </script>
+                - allowMicrophone: false
+                - allowSameOrigin: false
+                - allowPopupsToEscapeSandbox: false
+                - allowPayment: false
+                - allowGeolocation: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1.2000000000000004
+                height: 0.600000000000001
+                width: 3
+            createdAt: 2022-10-25T22:41:50.891Z
+      - customComponent2:
+          pluginTemplate:
+            id: customComponent2
+            type: widget
+            subtype: CustomComponentWidget
+            template:
+              ordered:
+                - allowTopNavigation: false
+                - heightType: fixed
+                - allowDownloads: false
+                - allowFullscreen: false
+                - allowForms: false
+                - model: |-
+                    {
+                      "displayText": "Clicking the \"Update model\" button below will update the model and change this text.",
+                      "queryToTrigger": "query1",
+                       "items": {{query1.data}}
+                    }
+                - allowCamera: false
+                - allowModals: false
+                - allowPopups: false
+                - iframeCode: >
+
+                    <style>
+                      @import url('https://rsms.me/inter/inter.css');
+                      html { font-family: 'Inter', sans-serif; }
+                      @supports (font-variation-settings: normal) {
+                        html { font-family: 'Inter var', sans-serif; }
+                      }
+
+                      * {
+                        font-family: 'Inter', sans-serif;
+                      }
+
+                      body {
+                        margin: 0;
+                      }
+
+                      #react {
+                        height: 100%;
+                        width: 100%;
+                      }
+                    </style>
+
+
+                    <!-- You can add any HTML/CSS/JS here. UMD versions are
+                    required.
+
+                    Keep in mind that Custom Components are sensitive to bundle
+                    sizes, so try using a
+
+                    custom implementation when possible. -->
+
+                    <script crossorigin
+                    src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+                    <script crossorigin
+                    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+
+                    <div id="react"></div>
+
+
+                    <script type="text/babel">
+                      const MyCustomComponent = ({ triggerQuery, model, modelUpdate }) => (
+                        <div>
+                          {(model.items || []).map(item => <div key={item}>{item}</div>)}
+                        </div>
+                      )
+
+                      // This is the entrypoint for the React component.
+                      const ConnectedComponent = Retool.connectReactComponent(MyCustomComponent)
+                      const container = document.getElementById('react')
+                      const root = ReactDOM.createRoot(container)
+                      root.render(<ConnectedComponent />)
+                    </script>
+                - allowMicrophone: false
+                - allowSameOrigin: false
+                - allowPopupsToEscapeSandbox: false
+                - allowPayment: false
+                - allowGeolocation: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1.2
+                col: 3
+                height: 4
+                width: 2
+            createdAt: 2022-10-25T22:44:40.094Z
+      - numberInput1:
+          pluginTemplate:
+            id: numberInput1
+            type: widget
+            subtype: NumberInputWidget
+            template:
+              ordered:
+                - readOnly: false
+                - iconAfter: ''
+                - max: null
+                - inputValue: 0
+                - hidden: false
+                - customValidation: ''
+                - showSeparators: true
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - showInEditor: false
+                - allowNull: false
+                - showClear: false
+                - tooltipText: ''
+                - currency: USD
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: '10'
+                - labelCaption: ''
+                - min: null
+                - labelWidth: '33'
+                - placeholder: Enter value
+                - showStepper: true
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - format: decimal
+                - iconBefore: ''
+                - textAlign: left
+                - inputTooltip: ''
+                - events:
+                    - ordered:
+                        - event: submit
+                        - type: datasource
+                        - method: trigger
+                        - pluginId: query1
+                        - targetId: null
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '0'
+                - loading: false
+                - disabled: false
+                - labelPosition: left
+                - decimalPlaces: null
+                - labelWrap: false
+                - padDecimal: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 0.19999999999999996
+                height: 1
+                width: 5
+            createdAt: 2022-10-25T22:45:14.070Z
+      - text1:
+          pluginTemplate:
+            id: text1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: 👋 **Hello {{ current_user.firstName || 'friend' }}!**
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1.3999999999999986
+                height: 0.6
+                width: 2
+            createdAt: 2022-10-25T22:51:20.356Z
+  queryStatusVisibility: false
+  rootScreen: null
+  version: 2.102.2
+  markdownLinkBehavior: auto
