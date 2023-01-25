@@ -1,0 +1,25 @@
+version: 43.0.9
+pageUuid: 5a80eaa8-410c-11ed-9b57-b7e9b0affad4
+appTemplate:
+  plugins:
+    ordered:
+      - sidebarFrame1:
+          pluginTemplate:
+            id: sidebarFrame1
+            type: frame
+            subtype: SidebarFrameWidget
+            template:
+              ordered:
+                - loading: false
+                - showFooter: true
+                - showHeader: false
+                - hidden: false
+                - isInEditMode: false
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: true
+            style:
+              ordered: []
+            createdAt: 2022-09-30T22:08:11.983Z
+  rootScreen: null
+  version: 2.101.1
+  markdownLinkBehavior: auto
