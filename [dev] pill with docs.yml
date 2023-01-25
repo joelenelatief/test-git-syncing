@@ -1,0 +1,8 @@
+version: 43.0.9
+pageUuid: 416d50bc-4420-11ed-8f57-5b5cde3e4630
+appTemplate:
+  plugins:
+    ordered: []
+  rootScreen: null
+  version: 2.102.0
+  markdownLinkBehavior: auto
