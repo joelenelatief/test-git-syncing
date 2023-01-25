@@ -1,0 +1,210 @@
+version: 43.0.9
+pageUuid: ad41fb76-3aca-11ed-8e54-f3c3c1a5de8f
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: RESTQuery
+            resourceName: 509115aa-35ba-4369-b44a-c9a54deac8d6
+            resourceDisplayName: '[sample] restapi'
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - paginationLimit: ''
+                - body: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - paginationPaginationField: ''
+                - headers: ''
+                - showFailureToaster: true
+                - paginationEnabled: false
+                - query: ''
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - error: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - cookies: ''
+                - metadata: null
+                - changesetObject: ''
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: null
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - paginationDataField: ''
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events: []
+                - queryTimeout: '10001'
+                - requireConfirmation: false
+                - type: GET
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - bodyType: json
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-09-22T23:02:48.219Z
+      - devInputOutputModule1:
+          pluginTemplate:
+            id: devInputOutputModule1
+            type: widget
+            subtype: GlobalWidget
+            template:
+              ordered:
+                - showFetchingIndicator: boolean
+                - heightType: auto
+                - name: '[dev] input output module'
+                - pageUuid: 24401f48-3a97-11ed-b9cb-6b082171e5d6
+                - input1: '{{appLevelInput.value}}'
+                - childNamespace: devInputOutputModule1
+                - output1: '{{output1.value}}'
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 1.4
+                height: 2.4
+                width: 12
+            createdAt: 2022-09-22T23:03:30.404Z
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: false
+            style:
+              ordered: []
+            createdAt: 2022-09-22T23:03:30.442Z
+      - appLevelModuleOuput:
+          pluginTemplate:
+            id: appLevelModuleOuput
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: '{{devInputOutputModule1.output1}}'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 3.8
+                col: 4
+                height: 0.6
+                width: 3
+            createdAt: 2022-09-22T23:03:56.618Z
+      - appLevelInput:
+          pluginTemplate:
+            id: appLevelInput
+            type: widget
+            subtype: TextInputWidget2
+            template:
+              ordered:
+                - spellCheck: false
+                - readOnly: false
+                - iconAfter: ''
+                - showCharacterCount: false
+                - autoComplete: false
+                - maxLength: null
+                - hidden: false
+                - customValidation: ''
+                - patternType: ''
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - showInEditor: false
+                - showClear: false
+                - pattern: ''
+                - tooltipText: ''
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: ''
+                - labelCaption: ''
+                - labelWidth: '33'
+                - autoFill: ''
+                - placeholder: Enter value
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - iconBefore: ''
+                - minLength: null
+                - inputTooltip: ''
+                - events:
+                    ordered: []
+                - autoCapitalize: none
+                - loading: false
+                - disabled: false
+                - labelPosition: left
+                - labelWrap: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 0.2
+                col: 3
+                height: 1
+                width: 4
+            createdAt: 2022-09-22T23:04:58.212Z
+  queryStatusVisibility: false
+  rootScreen: null
+  version: 2.101.0
+  markdownLinkBehavior: auto
+  experimentalDataTabEnabled: true
