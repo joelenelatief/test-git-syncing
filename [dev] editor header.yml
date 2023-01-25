@@ -1,0 +1,35 @@
+version: 43.0.9
+pageUuid: 90222866-750f-11ed-b796-e7c5d3716199
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: RESTQuery
+            resourceName: 509115aa-35ba-4369-b44a-c9a54deac8d6
+            resourceDisplayName: '[sample] restapi'
+            template:
+              queryRefreshTime: ''
+              queryDisabledMessage: ''
+              successMessage: ''
+              queryDisabled: ''
+              resourceNameOverride: ''
+              runWhenModelUpdates: true
+              query: ''
+              privateParams: []
+              data: null
+              showSuccessToaster: true
+              confirmationMessage: null
+              watchedParams: []
+              timestamp: 0
+              runWhenPageLoads: false
+              queryTimeout: '10001'
+              requireConfirmation: false
+              queryThrottleTime: '750'
+            createdAt: 2022-12-06T02:42:02.132Z
+  queryStatusVisibility: false
+  rootScreen: null
+  version: 2.106.1
+  markdownLinkBehavior: auto
