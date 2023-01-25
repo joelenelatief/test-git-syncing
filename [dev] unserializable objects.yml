@@ -1,0 +1,90 @@
+version: 43.0.9
+pageUuid: 1c13d74a-7126-11ed-be1a-bbd39d465348
+appTemplate:
+  plugins:
+    ordered:
+      - transformerThatReturnsWindowObject:
+          pluginTemplate:
+            id: transformerThatReturnsWindowObject
+            type: function
+            subtype: Function
+            template:
+              ordered:
+                - funcBody: >-
+                    // Tip: assign your external references to variables instead
+                    of chaining off the curly brackets.
+
+
+                    return self
+                - value: ''
+            createdAt: 2022-12-01T03:13:27.627Z
+      - text1:
+          pluginTemplate:
+            id: text1
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: 'window object: {{transformerThatReturnsWindowObject.value}}'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                col: 2
+                height: 0.6
+                width: 3
+            createdAt: 2022-12-01T03:13:32.419Z
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: false
+            style:
+              ordered: []
+            createdAt: 2022-12-01T03:13:32.515Z
+      - text2:
+          pluginTemplate:
+            id: text2
+            type: widget
+            subtype: TextWidget2
+            template:
+              ordered:
+                - heightType: auto
+                - horizontalAlign: left
+                - hidden: false
+                - imageWidth: fit
+                - showInEditor: false
+                - verticalAlign: center
+                - tooltipText: ''
+                - value: 'not a template string: should just render normally'
+                - disableMarkdown: false
+                - overflowType: scroll
+                - maintainSpaceWhenHidden: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                col: 6
+                height: 0.6
+                width: 3
+            createdAt: 2022-12-01T03:14:08.406Z
+  queryStatusVisibility: false
+  rootScreen: null
+  version: 2.106.0
+  markdownLinkBehavior: auto
