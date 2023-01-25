@@ -1,0 +1,200 @@
+version: 43.0.9
+pageUuid: f16fcd02-605c-11ed-9dcc-877d4780e46e
+appTemplate:
+  plugins:
+    ordered:
+      - query1:
+          pluginTemplate:
+            id: query1
+            type: datasource
+            subtype: SqlTransformQuery
+            resourceName: SQL Transforms
+            template:
+              ordered:
+                - queryRefreshTime: ''
+                - lastReceivedFromResourceAt: null
+                - queryDisabledMessage: ''
+                - successMessage: ''
+                - queryDisabled: ''
+                - playgroundQuerySaveId: latest
+                - resourceNameOverride: ''
+                - runWhenModelUpdates: true
+                - showFailureToaster: true
+                - query: select * from {{ jsonEditor1.value }}
+                - playgroundQueryUuid: ''
+                - playgroundQueryId: null
+                - error: null
+                - privateParams: []
+                - runWhenPageLoadsDelay: ''
+                - data: null
+                - importedQueryInputs:
+                    ordered: []
+                - isImported: false
+                - showSuccessToaster: true
+                - cacheKeyTtl: ''
+                - metadata: null
+                - changesetObject: ''
+                - errorTransformer: >-
+                    // The variable 'data' allows you to reference the request's
+                    data in the transformer. 
+
+                    // example: return data.find(element => element.isError)
+
+                    return data.error
+                - confirmationMessage: null
+                - isFetching: false
+                - changeset: ''
+                - rawData: null
+                - queryTriggerDelay: '0'
+                - resourceTypeOverride: ''
+                - watchedParams: []
+                - enableErrorTransformer: false
+                - showLatestVersionUpdatedWarning: false
+                - timestamp: 0
+                - importedQueryDefaults:
+                    ordered: []
+                - enableTransformer: false
+                - showUpdateSetValueDynamicallyToggle: true
+                - runWhenPageLoads: false
+                - transformer: >-
+                    // type your code here
+
+                    // example: return formatDataAsArray(data).filter(row =>
+                    row.quantity > 20)
+
+                    return data
+                - events:
+                    - ordered:
+                        - event: success
+                        - type: widget
+                        - method: setValue
+                        - pluginId: numberInput1
+                        - targetId: null
+                        - params:
+                            ordered:
+                              - value: '{{numberInput1.value + 1}}'
+                        - waitType: debounce
+                        - waitMs: '0'
+                    - ordered:
+                        - event: failure
+                        - type: util
+                        - method: confetti
+                        - pluginId: ''
+                        - targetId: null
+                        - params:
+                            ordered: []
+                        - waitType: debounce
+                        - waitMs: '0'
+                - queryTimeout: '10000'
+                - requireConfirmation: false
+                - queryFailureConditions: ''
+                - changesetIsObject: false
+                - enableCaching: false
+                - allowedGroups: []
+                - queryThrottleTime: '750'
+                - updateSetValueDynamically: false
+                - notificationDuration: ''
+            createdAt: 2022-11-09T18:33:02.214Z
+      - $main:
+          pluginTemplate:
+            id: $main
+            type: frame
+            subtype: Frame
+            template:
+              ordered:
+                - type: main
+                - sticky: false
+                - isHiddenOnDesktop: false
+                - isHiddenOnMobile: false
+            style:
+              ordered: []
+            createdAt: 2022-11-09T18:33:30.322Z
+      - numberInput1:
+          pluginTemplate:
+            id: numberInput1
+            type: widget
+            subtype: NumberInputWidget
+            template:
+              ordered:
+                - readOnly: false
+                - iconAfter: ''
+                - max: null
+                - inputValue: 0
+                - hidden: false
+                - customValidation: ''
+                - showSeparators: true
+                - hideValidationMessage: false
+                - textBefore: ''
+                - validationMessage: ''
+                - textAfter: ''
+                - showInEditor: false
+                - allowNull: false
+                - showClear: false
+                - tooltipText: ''
+                - currency: USD
+                - labelAlign: left
+                - formDataKey: '{{ self.id }}'
+                - value: 0
+                - labelCaption: ''
+                - min: null
+                - labelWidth: '33'
+                - placeholder: Enter value
+                - showStepper: true
+                - label: Label
+                - _validate: false
+                - labelWidthUnit: '%'
+                - invalid: false
+                - format: decimal
+                - iconBefore: ''
+                - textAlign: left
+                - inputTooltip: ''
+                - events:
+                    ordered: []
+                - loading: false
+                - disabled: false
+                - labelPosition: left
+                - decimalPlaces: null
+                - labelWrap: false
+                - padDecimal: false
+                - maintainSpaceWhenHidden: false
+                - required: false
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 0.4
+                col: 3
+                height: 1
+                width: 4
+            createdAt: 2022-11-09T18:33:36.229Z
+      - jsonEditor1:
+          pluginTemplate:
+            id: jsonEditor1
+            type: widget
+            subtype: JSONEditorWidget
+            template:
+              ordered:
+                - formDataKey: '{{ self.id }}'
+                - value: |-
+                    {
+                      "a": {
+                        "b": [1,2,3,4,5,6,7,8,9],
+                        "c": {
+                          "d": false
+                        },
+                        "e": "hi"
+                      }
+                    }
+                - valid: true
+            style:
+              ordered: []
+            position2:
+              position2:
+                row: 5.6
+                col: 8
+                height: 4
+                width: 4
+            createdAt: 2022-11-09T18:35:15.065Z
+  rootScreen: null
+  version: 2.103.2
+  markdownLinkBehavior: auto
